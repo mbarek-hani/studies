@@ -1,0 +1,128 @@
+Exercice :
+
+1)
+
+MotValide(mot: chaine): booléen
+    Var
+        i: Entier
+    Début
+        Si long(mot) < 4 ou long(mot) > 25 alors
+            retourner faux
+        FinSi
+        Pour i de 1 à long(mot) faire
+            Si ascii(mot[i]) < 65 ou ascii(mot[i] > 90) alors
+                retourner faux
+            FinSi
+        FinPour
+        retourner vrai
+    Fin
+
+2)
+
+convertirCH(mot: chaine; var Tcar: tableau[1..25] de caractère)
+    Var
+        i: Entier
+    Début
+        Pour i de 1 à long(mot) faire
+            Tcar[i] := mot[i]
+        FinPour
+    Fin
+
+3)
+
+initialiserSolution(var Tcar : tableau[1..25] de caractère, var n: entier)
+    Var
+        mot: chaine
+    Début
+        Répéter
+            Ecrire("saisir un mot (min=4 et max=25 caractère): ")
+            Lire(mot)
+        Jusqu'à MotValide(mot)
+        n := long(mot)
+        convertirCH(mot, Tcar)
+    Fin
+
+4)
+
+creeEssai(var Tessaie : tableau[1..25] de caractère,n : entier)
+    Var
+        i : Entier
+    Début
+        Pour i de 1 à n faire
+            Tessaie[i] := '*'
+        FinPour
+    Fin
+
+5)
+
+afficherC(Tcar: tableau[1..25] de caractère, n : entier )
+    Var
+        i : Entier
+        mot : chaine    
+    Début
+        Pour i de 1 à n faire
+            mot := mot + Tcar[i]
+        FinPour
+        Ecrire(mot)
+    Fin
+
+6)
+jouer(Tcar: tableau[1..25] de caractère, var Tessaie : tableau[1..25] de caractère, c: caractère, n: entier): booléen
+    Var
+        i: Entier
+        estTrouvé: booléen
+    Début
+        estTrouvé := faux
+        Pour i de 1 à n faire
+            Si Tcar[i] = caractère alors
+                estTrouvé := vrai
+                Tessaie[i] := caractère
+            FinSi
+        FinPour
+        retourner estTrouvé
+    Fin
+
+7)
+
+estfini(Tessaie: tableau[1..25] de caractère, n: entier): booléen
+    Var
+        i: Entier
+    Début
+        Pour i de 1 à n faire
+            Si Tessaie[i] = '*' alors
+                retourner faux
+            FinSi
+        FinPour
+        retourner vrai
+    Fin
+
+8)
+
+Algorithme Jeux_Pendu
+Var
+    i, n, essais :Entier
+    Tcar: tableau[1..25] de caractère
+    Tessaie: tableau[1..25] de caractère
+    car: caractère
+    carTrouvé: booléen
+
+Début
+    essais := 5
+    initialiserSolution(Tcar, n)
+    creeEssai(Tessaie, n)
+    Ecrire("Vous avez 5 essais pour deviner le mot")
+    Répéter
+        afficherC(Tessaie, n)
+        repeter
+            Ecrire("devinez un caractère (", essais, "essais restant): ")
+            Lire(car)
+        jusqua ascii(car) >= 65 et ascii(car) <= 90
+        Si !jouer(Tcar,Tessaie, car, n) alors
+            essais := essais-1
+        FinSi
+    Jusqu'à estfini(Tessaie, n) ou essais = 0
+    Si essais > 0 alors
+        Ecrire("Vous avez gagné!")
+    Sinon
+        Ecrire("Vous avez perdu!")
+Fin

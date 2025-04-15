@@ -1,0 +1,140 @@
+Exercice 1:
+
+1)
+
+**les entrée:
+    -le nombre de produits à acheter
+    -la quantité et le prix de chaque produit
+    -TVA
+    -REMISE
+**les sorties:
+    -le montant finale de la facture
+
+2)
+
+Const
+    TVA := 0.1, REMISE := 0.05: Réel
+Var
+    nbr_produit, qte, i : Entier
+    prix, totale, facture : Réel
+
+3)
+
+facture := totale * (1+TVA) * (1-REMISE)
+
+4)
+
+Facture
+Const
+    TVA := 0.1, REMISE := 0.05: Réel
+Var
+    nbr_produit, qte, i : Entier
+    prix, totale, facture : Réel
+Début
+    Ecrire("Entrer le nombre des produit : ")
+    Lire(nbr_produit)
+    totale := 0
+    Pour i de 1 à nbr_produit faire
+        Ecrire("Entrer la quantité du produit ", i)
+        Lire(qte)
+        Ecrire("Entrer le prix du produit ", i)
+        Lire(prix)
+        totale := totale + prix * qte
+    FinPour
+    facture := totale * (1+TVA) * (1-REMISE)
+    Ecrire("Le montant finale de la facture est : ", facture)
+Fin
+
+Exercice 2 :
+
+1)
+**les entrées:
+    -l'age de l'utilisateur
+    -le jour du semaine
+    -le tarif pleine
+    -le tarif réduit
+    -la réduction spéciale
+    -la réduction du dimanche
+**les sortie:
+    -le tarif finale
+
+2)
+
+Const
+    TARIF_PLEIN := 200, TARIF_REDUIT := 190: Entier
+    RED_SPECIAL := 0.3, RED_NORMAL := 0.2
+Var
+    age: Entier
+    jour: Chaine de caractère
+    tarif_final: Réel
+Début
+    tarif_final := 0
+    Ecrire("Quelle âge as-tu ?")
+    Lire(age)
+    Ecrire("Quel jour aujourd'hui ?")
+    Lire(jour)
+    Si age < 12 alors
+        tarif_final := TARIF_REDUIT
+    Sinon
+        Si age <= 60 alors
+            tarif_final := TARIF_PLEIN
+        Sinon
+            tarif_final := TARIF_PLEIN * (1 - RED_SPECIAL)
+        FinSi
+    FinSi
+    Si jour = "dimanche" alors
+        tarif_final := tarif_final * (1 - RED_NORMAL)
+    FinSi
+    Ecrire("le tarif final est ", tarif_final)
+Fin
+
+Exercice 3 :
+
+1)
+Entrées :
+    -Le nombre des patients
+    -La tension artérielle systolique pour chaque patient
+    -la tension artérielle diastolique pour chaque patient
+    -la fréquence cardiaque pour chaque patient
+Sorties : les patients qui ont des valeurs anormales
+2)
+Var
+    nbr_patients, tension_systolique, tension_diastolique, frequence_cardiaque : Entier
+
+3)
+
+tension_systolique < 90 ou tension_systolique > 120
+tension_diastolique < 60 ou tension_diastolique > 80
+frequence_cardiaque < 60 ou frequence_cardiaque > 100
+
+4)
+
+SuiviSantéPatients
+
+Var
+    nbr_patients, tension_systolique, tension_diastolique, frequence_cardiaque, i : Entier
+
+Début
+    Ecrire("Entrer le nombre des patients : ")
+    Lire(nbr_patients)
+    Pour i de 1 à nbr_patients Faire
+        Écrire("Entrer la tension systolique pour le patient ", i, " : ")
+        Lire(tension_systolique)
+        Écrire("Entrer la tension diastolique pour le patient ", i, " : ")
+        Lire(tension_diastolique)
+        Écrire("Entrer la fréquence cardiaque pour le patient ", i, " : " )
+        Lire(frequence_cardiaque)
+        Si tension_systolique < 90 ou tension_systolique > 120 Alors
+            Écrire("Patient ", i, " : Tension systolique anormale")
+        FinSi
+        Si tension_diastolique < 60 ou tension_diastolique > 80 Alors
+            Écrire("Patient ", i, " : Tension diastolique anormale")
+        FinSi
+        Si frequence_cardiaque < 60 ou frequence_cardiaque > 100 Alors
+            Écrire("Patient ", i, " : Fréquence cardiaque anormale")
+        FinSi
+    FinPour
+Fin
+
+
+    

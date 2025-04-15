@@ -1,0 +1,136 @@
+Exercice 1:
+
+1)
+
+CalculerImpot(salaire: réel): réel
+    Début
+        Si salaire < 20000 alors
+            retourner salaire * 0.1
+        Sinon Si salaire <= 40000 alors
+            retourner salaire * 0.2
+        Sinon
+            retourner salaire * 0.3
+        FinSi
+    Fin
+2)
+
+Algorithme impot
+Var
+    salaire, impot: réel
+Début
+    Ecrire("Combien votre salaire? ")
+    Lire(salaire)
+    impot := ClaculerImpot(salaire)
+    Ecrire("L'impot est : ", impôt)
+Fin
+
+Exercice 2 :
+
+1)
+EstParfait(n: entier) : booléen
+    Var
+        s, i: entier
+    Début
+        s := 0
+        Pour i de 1 à Entier(n/2) faire
+            Si n mod i = 0 alors
+                s := s + i
+        FinPour
+        retourner s = n
+    Fin
+
+2)
+
+Algorithme Nbr_parfait
+Var
+    N: entier
+Début
+    Ecrire("Entrer un nombre entier : ")
+    Lire(N)
+    Si EstParfait(N) alors
+        Ecrire(N, " est un nombre parfait.")
+    Sinon
+        Ecrire(N, " n'est pas un nombre parfait.")
+Fin
+
+Exercice 3:
+
+1)
+
+Statistiques(moyennes: tableau[1..n] de réel ; var moyenne_classe, taux_réussite : réel)
+    Var
+        s : réel
+        eleveReussi, i: Entier
+    Début
+        eleveReussi := 0
+        s := 0
+        Pour i de 1 à n faire
+            Si moyennes[i] >= 10 alors
+                eleveReussi := eleveReussi + 1
+            FinSi
+            s := s + moyennes[i]
+        FinPour
+        moyenne_class := s / n
+        taux_réussite := eleveReussi / n * 100
+    Fin
+
+2)
+
+Algorithme class_stats
+Var
+    n, i : entier
+    moyennes: tableau[1..n] de réel
+    moyenne_classe, taux_réussite : réel
+Début
+    Ecrire("combien y a-t-il des élèves ? ")
+    Lire(n)
+    Pour i de 1 à n faire:
+        Ecrire("donner la moyenne de l'élève ", i)
+        Lire(moyennes[i])
+    FinPour
+    Statistiques(moyennes, moyenne_classe, taux_réussite)
+    Ecrire("La moyenne de la classe est ", moyenne_classe)
+    Ecrire("Le taux de réussite est ", taux_réussite, "%")
+Fin
+
+Exercice 4 :
+
+1)
+
+TrierTableau(Var T : tableau[1..N] d'entier)
+    Var
+        i, x : Entier
+        échange : Booléen
+    Début
+        Répéter
+            échange := Faux
+            Pour i de 1 à (N-1) Faire
+                Si (T[i] > T[i+1]) Alors
+                    x:= T[i]
+                    T[i]:= T[i+1]
+                    T[i+1]:= x
+                    échange:= Vrai
+                FinSi
+            FinPour
+        Jusqu’à (échange = Faux)
+Fin
+
+2)
+
+Algorithme tri
+Var
+    N, i:Entier
+    T: tableau[1..N] d'entier
+Début
+    Ecrire("combien de nombre vous allez trier :")
+    Lire(N)
+    Pour i de 1 à N faire
+        Ecrire("Entrer le nombre ",i)
+        Lire(T[i])
+    FinPour
+    TrierTableau(T)
+    Ecrire("voilà les nombres dans l'ordre croissant")
+    Pour i de 1 à N faire
+        Ecrire(T[i])
+    FinPour
+Fin

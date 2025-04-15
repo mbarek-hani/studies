@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let items = ["Javascript", "Python", "Php"];
+            const div = document.createElement("div");
+            div.setAttribute("id", "div1");
+            const p = document.createElement("p");
+            p.textContent = "Languages de programmation :";
+            div.append(p);
+            const ul = document.createElement("ul");
+            let li;
+            for (item of items) {
+                li = document.createElement("li");
+                li.textContent = item;
+                ul.append(li);
+            }
+            div.append(ul);
+            document.body.append(div);
+        </script>
+    </body>
+</html>

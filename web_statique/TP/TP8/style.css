@@ -1,0 +1,20 @@
+input:valid{
+    background-color: rgb(79, 214, 79);
+}
+input:invalid{
+    background-color: rgb(221, 65, 65);
+}
+
+input{
+    margin: 5px;
+    font-size: 18px;
+    min-width: 0;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(45, 187, 243);
+}

@@ -1,0 +1,42 @@
+Exercice 1 : Manipulation de Fichiers Texte
+Créez un programme pour analyser un fichier texte contenant des données (data.txt) :
+1. Créez une fonction read_file(filename) pour lire le contenu du fichier ligne par ligne.
+2. Implémentez une fonction count_words(content) qui compte le nombre total de mots
+dans le fichier.
+3. Créez une fonction find_most_common_word(content) pour trouver le mot le plus fréquent.
+4. Sauvegardez les résultats dans un nouveau fichier results.txt :
+• Nombre total de mots.
+• Mot le plus fréquent.
+Exercice 2 : Manipulation de Données CSV
+Un collége souhaite analyser les résultats des étudiants contenues dans un fichier results.csv
+:
+1. Créez une fonction read_csv(filename) pour charger le fichier CSV contenant les colonnes
+: Nom, Matière, Note.
+2. Implémentez une fonction average_grade(data) pour calculer la moyenne des notes par
+étudiant.
+3. Implémentez une fonction top_students(data, n) pour trouver les n étudiants avec les
+meilleures moyennes.
+4. Sauvegardez les résultats dans un fichier top_students.txt avec les informations des
+étudiants sélectionnés.
+1
+Exercice 3 : Analyse des Données avec Pandas
+Utilisez la bibliothèque pandas pour analyser un fichier CSV sales.csv contenant les colonnes
+: Produit, Quantité, Prix :
+1. Chargez les données dans un DataFrame avec pandas.
+2. Implémentez les fonctionnalités suivantes :
+• Calculer le revenu total par produit.
+• Trouver le produit le plus vendu.
+• Identifier les produits avec un revenu total supérieur à une valeur donnée (par ex-
+emple, 1000 MAD).
+3. Sauvegardez les résultats dans un fichier CSV sales_report.csv.
+Exercice 4 : Visualisation de Données avec Matplotlib
+Créez un programme pour visualiser les données dún fichier population.csv contenant les
+colonnes : Année, Population :
+1. Chargez les données dans un DataFrame pandas.
+2. Créez une fonction plot_population(data) pour :
+• Générer un graphique de l’évolution de la population en fonction de l’année.
+• Ajouter un titre, des étiquettes pour les axes, et une légende.
+3. Sauvegardez le graphique sous forme d’image population_trend.png.
+Note : N’oubliez pas d’utiliser les bibliothèques pandas et matplotlib pour les exercices 3
+et 4. Assurez-vous que les fichiers de données sont correctement formatés avant d’exécuter vos
+programmes.

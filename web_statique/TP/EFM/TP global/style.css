@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    animation-name: title-anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes title-anim {
+    from {
+        color: blue;
+    }
+    to {
+        color: violet;
+    }
+}
+
+.menu li {
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.7s ease;
+}
+
+.menu li:not(:first-child) {
+    margin-left: 40px;
+}
+
+.menu li:hover {
+    background-color: blueviolet;
+}
+
+.presentation {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery img {
+    max-width: 30%;
+    transition: transform 0.6s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.25);
+}
+
+.float {
+    float: left;
+    width: 30%;
+    background-color: gray;
+}
+
+.flexbox {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        transition: transform 0.6s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+}

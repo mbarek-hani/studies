@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 600px;
+                margin: 20px auto;
+            }
+
+            th,
+            td {
+                border: 1px solid red;
+                padding: 10px;
+            }
+
+            th {
+                color: orange;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .pays-col {
+                background-color: #ffebcd;
+            }
+
+            .capitale-col {
+                background-color: #add8e6;
+            }
+
+            .devise-col {
+                background-color: #dcdcdc;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>PAYS</th>
+                <th>CAPITALE</th>
+                <th>DEVISE</th>
+            </tr>
+            <tr>
+                <td class="pays-col">France</td>
+                <td class="capitale-col">Paris</td>
+                <td class="devise-col">Euro</td>
+            </tr>
+            <tr>
+                <td class="pays-col">Canada</td>
+                <td class="capitale-col">Ottawa</td>
+                <td class="devise-col">Dollars canadien</td>
+            </tr>
+            <tr>
+                <td class="pays-col">Suisse</td>
+                <td class="capitale-col">Berne</td>
+                <td class="devise-col">Franc suisse</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Résumé POO - OFPPT</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            h1 {
+                color: #2c3e50;
+                border-bottom: 3px solid #3498db;
+            }
+
+            h2 {
+                color: #3498db;
+                margin-top: 30px;
+            }
+
+            .definition {
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-left: 4px solid #3498db;
+                margin: 15px 0;
+            }
+
+            .code-example {
+                background-color: #f0f0f0;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: monospace;
+                margin: 10px 0;
+            }
+
+            .important {
+                color: #e74c3c;
+                font-weight: bold;
+            }
+
+            ul {
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programmation Orientée Objet - Résumé</h1>
+
+        <!-- Chapitre 3 : Créer un objet -->
+        <section>
+            <h2>Chapitre 3 : Créer un objet</h2>
+
+            <div class="definition">
+                <h3>Définition d'un objet</h3>
+                <p>
+                    Un objet =
+                    <span class="important"
+                        >Référent + État + Comportement</span
+                    >
+                </p>
+                <ul>
+                    <li>Référent : identifiant unique (adresse mémoire)</li>
+                    <li>État : valeurs des attributs à un instant donné</li>
+                    <li>Comportement : méthodes qui modifient l'état</li>
+                </ul>
+                <p>Exemple d'objet composite :</p>
+                <div class="code-example">
+                    Voiture { Moteur; // Objet composant Couleur: "rouge"; }
+                </div>
+            </div>
+
+            <div class="definition">
+                <h3>Instanciation</h3>
+                <ul>
+                    <li>
+                        2 phases : allocation mémoire + initialisation attributs
+                    </li>
+                    <li>Rôle du constructeur</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <h3>Destruction d'objet</h3>
+                <p>Via le destructeur quand l'objet n'est plus référencé</p>
+            </div>
+        </section>
+
+        <!-- Chapitre 4 : Encapsulation -->
+        <section>
+            <h2>Chapitre 4 : Encapsulation</h2>
+
+            <div class="definition">
+                <h3>Principe</h3>
+                <ul>
+                    <li>Protection des données internes</li>
+                    <li>Interface publique pour l'interaction</li>
+                    <li>
+                        Utilisation des
+                        <span class="important">getters/setters</span>
+                    </li>
+                </ul>
+                <div class="code-example">
+                    class Compte { private solde; public deposer() { ... } }
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapitre 5 : Méthodes -->
+        <section>
+            <h2>Chapitre 5 : Manipuler les méthodes</h2>
+
+            <div class="definition">
+                <h3>Caractéristiques</h3>
+                <ul>
+                    <li>Visibilité (public, protected, private)</li>
+                    <li>Paramètres et valeur de retour</li>
+                    <li>Différence méthodes de classe vs d'instance</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Partie 2 : Héritage -->
+        <section>
+            <h2>Héritage</h2>
+
+            <div class="definition">
+                <h3>Principe</h3>
+                <ul>
+                    <li>Relation parent-enfant entre classes</li>
+                    <li>Réutilisation du code</li>
+                    <li>
+                        Exemple :
+                        <span class="code-example"
+                            >Etudiant hérite de Personne</span
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <h3>Types</h3>
+                <ul>
+                    <li>Simple : une classe mère</li>
+                    <li>Multiple : plusieurs classes mères</li>
+                    <li>En cascade : hiérarchie multi-niveaux</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <h3>Chaînage des constructeurs</h3>
+                <p>
+                    Appel du constructeur parent via
+                    <span class="code-example">super()</span>
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

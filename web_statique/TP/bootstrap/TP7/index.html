@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap Components</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css"
+            rel="stylesheet"
+        />
+        <style>
+            /* Only minimal custom CSS that can't be achieved with Bootstrap classes */
+            .bg-warning-light {
+                background-color: rgba(255, 243, 205, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="bg-white text-primary rounded p-1 me-2"
+                        >B</span
+                    >
+                    Bootstrap
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav"
+                >
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                More
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Another action</a
+                                    >
+                                </li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >Something else here</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                        />
+                        <button class="btn btn-outline-light" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Alert -->
+            <div
+                class="alert alert-primary alert-dismissible fade show mb-4 d-flex justify-content-between align-items-center"
+                role="alert"
+            >
+                Information importante : Consultez les nouveautés !
+                <span class="badge bg-danger ms-2">Urgent</span>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                ></button>
+            </div>
+
+            <!-- Badges Section -->
+            <h2 class="mb-3">Badges d'Exemple</h2>
+            <div class="mb-4">
+                Notifications :
+                <span class="badge bg-primary">4</span>
+                <span class="badge bg-success">8</span>
+                <span class="badge bg-warning">2</span>
+            </div>
+
+            <!-- Pagination -->
+            <h2 class="mb-3">Pagination étendue</h2>
+            <nav class="mb-4 d-flex justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Progress Bars -->
+            <h2 class="mb-3">Barre de Progression</h2>
+            <div class="mb-3">
+                <div class="progress mb-3">
+                    <div
+                        class="progress-bar progress-bar-striped bg-success"
+                        role="progressbar"
+                        style="width: 40%"
+                    >
+                        40%
+                    </div>
+                </div>
+                <div class="progress mb-3">
+                    <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 70%"
+                    >
+                        70%
+                    </div>
+                </div>
+                <div class="progress mb-3">
+                    <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        style="width: 90%"
+                    >
+                        90%
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Simuler Progression</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

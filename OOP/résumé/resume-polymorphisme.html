@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résumé du Polymorphisme en POO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    
+    h2 {
+      color: #2980b9;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      margin-top: 25px;
+    }
+    
+    .concept {
+      background-color: #f5f9fa;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #3498db;
+    }
+    
+    ul {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    .exemple {
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    
+    .code {
+      font-family: monospace;
+      color: #16a085;
+    }
+    
+    .important {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>CHAPITRE 2: Définir le polymorphisme</h1>
+
+  <h2>1. Principe du polymorphisme</h2>
+  <div class="concept">
+    <p>Le polymorphisme désigne un concept de la théorie des types, selon lequel un nom d'objet peut désigner des instances de classes différentes issues d'une même arborescence.</p>
+    
+    <div class="exemple">
+      <p><strong>Exemple:</strong></p>
+      <ul>
+        <li>Une instance de Etudiant peut « être vue comme » une instance de Personne (Pas l'inverse!!)</li>
+        <li><span class="code">p = e</span> → autorisé car le type de p est plus générique que le type de e</li>
+        <li><span class="code">e = p</span> → non autorisé car le type de e est plus spécifique que celui de p</li>
+      </ul>
+    </div>
+    
+    <p>Le type de la variable est utilisé par le compilateur pour déterminer si on accède à un membre (attribut ou méthode) valide:</p>
+    <ul>
+      <li><span class="code">b1.MethodeA()</span> → OK car b1 est de type déclaré B qui hérite de A</li>
+      <li><span class="code">b1.MethodeB()</span> → OK car b1 est de type déclaré B</li>
+      <li><span class="code">a2.MethodeA()</span> → OK car a2 est de type déclaré A</li>
+      <li><span class="code">a2.MethodeB()</span> → <span class="important">ERREUR</span> car a2 est de type A (même si le type l'objet référencé est B)</li>
+    </ul>
+  </div>
+
+  <h2>2. Redéfinition des méthodes</h2>
+  <div class="concept">
+    <p>La redéfinition d'une méthode héritée est motivée par le fait que sa version, dans la classe mère, ne correspond pas aux besoins de la classe fille.</p>
+    
+    <ul>
+      <li>La redéfinition permet de proposer un code différent à une méthode héritée tout en gardant son entête.</li>
+      <li>Autrement, il ne peut s'agir d'une redéfinition mais d'une nouvelle méthode complétement différente de celle héritée.</li>
+      <li>À partir d'une classe fille, il est possible, à tout moment, d'invoquer une méthode redéfinie, dans sa version initiale, déclarée dans la classe mère.</li>
+    </ul>
+    
+    <div class="exemple">
+      <p><strong>Exemple:</strong></p>
+      <ul>
+        <li>Classe Etudiant qui hérite de classe Personne</li>
+        <li>La méthode <span class="code">afficher()</span> de Personne affiche les attributs Nom, CIN</li>
+        <li>Etudiant hérite et redéfinit <span class="code">afficher()</span> pour ajouter l'affichage des attributs notes1 et note2</li>
+      </ul>
+    </div>
+    
+    <p>Mécanisme de la liaison retardée:</p>
+    <p>Soit <span class="code">etc</span> un objet de type EtudiantTroisièmeCycle:</p>
+    <ul>
+      <li>1er cas: Si <span class="code">EtudiantTroisièmeCycle</span> définit <span class="code">afficher()</span>, c'est cette méthode qui sera exécutée quand on appelle <span class="code">etc.afficher()</span></li>
+      <li>2ème cas: Si <span class="code">EtudiantTroisièmeCycle</span> ne définit pas <span class="code">afficher()</span>, la recherche se poursuit dans les classes parentes.</li>
+    </ul>
+  </div>
+
+  <h2>3. Surcharge des méthodes</h2>
+  <div class="concept">
+    <p>La surcharge d'une méthode permet de définir plusieurs fois une même méthode avec des arguments différents.</p>
+    
+    <ul>
+      <li>Le compilateur choisit la méthode qui doit être appelée en fonction du nombre et du type des arguments.</li>
+      <li>Une méthode est surchargée lorsqu'elle exécute des actions différentes selon le type et le nombre de paramètres transmis.</li>
+    </ul>
+    
+    <div class="exemple">
+      <p><strong>Exemple:</strong></p>
+      <p>Classe Personne avec:</p>
+      <ul>
+        <li><span class="code">meth1Personne(chaine, entier, entier)</span></li>
+        <li><span class="code">meth1Personne(chaine, entier)</span></li>
+      </ul>
+      <p>Ces deux méthodes représentent une surcharge de méthode.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+Nombre total de mots: 346
+Mot le plus fréquent: "les"

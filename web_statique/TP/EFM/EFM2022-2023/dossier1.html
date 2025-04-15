@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Card</title>
+        <style>
+            /* General Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .card {
+                display: flex;
+                width: 654px;
+                height: 430px;
+                border: 1px solid #ccc; /* 1-Cadre */
+                border-radius: 7px;
+                overflow: hidden;
+                background-color: #fff;
+                box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+            }
+
+            .card img {
+                display: block;
+                width: 50%;
+                object-fit: cover;
+                height: auto;
+            }
+
+            .card-body {
+                width: 50%;
+                padding: 56px;
+                color: white;
+            }
+
+            .product-title {
+                font-size: 24px; /* 4-Entête */
+                font-weight: bold;
+                margin-bottom: 5px;
+                text-transform: capitalize;
+            }
+
+            .product-subtitle {
+                font-size: 12px;
+                color: gray;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .product-description {
+                font-size: 14px; /* 5-Description */
+                color: #555;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+
+            .product-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .product-price {
+                font-size: 20px;
+                font-weight: bold;
+                color: #000; /* 6-Pied */
+            }
+
+            .buy-now {
+                background-color: #ccc;
+                color: #000;
+                border: none;
+                padding: 10px 15px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 20px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .buy-now:hover {
+                background-color: #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <!-- Zone Image Produit -->
+            <img src="./vase.jpeg" alt="Product Image" />
+
+            <!-- Zone Produit -->
+            <div class="card-body">
+                <div class="product-title">Harvest Vase</div>
+                <div class="product-subtitle">By Studio and Friends</div>
+                <div class="product-description">
+                    Harvest Vases are a reinterpretation of peeled fruits and
+                    vegetables as functional objects. The surfaces appear to be
+                    sliced and pulled aside, allowing room for growth.
+                </div>
+                <div class="product-footer">
+                    <div class="product-price">78$</div>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

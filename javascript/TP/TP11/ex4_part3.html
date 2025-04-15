@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p class="vert">Paragraphe n°: 1</p>
+        <p>Paragraphe n°: 2</p>
+        <p class="vert">Paragraphe n°: 3</p>
+        <p id="p4">Paragraphe n°: 4</p>
+
+        <script>
+            // Q1
+            const p2 = document.querySelector("p:nth-child(2)");
+            const p5 = document.createElement("p");
+            p5.textContent = "Paragraphe n°: 5";
+            p2.insertAdjacentElement("afterend", p5);
+            // Q2
+            p2.style.border = "1px solid green";
+            p2.style.backgroundColor = "lightblue";
+            p2.setAttribute(
+                "style",
+                "border: 1px solid blue; background-color: lightblue"
+            );
+            // Q3
+            const pVert = document.querySelectorAll("p.vert");
+
+            for (let p of pVert) {
+                p.style.color = "green";
+            }
+            // Q4
+            const p4 = document.getElementById("p4");
+            p4.classList.add("rouge");
+            p4.removeAttribute("id");
+        </script>
+    </body>
+</html>

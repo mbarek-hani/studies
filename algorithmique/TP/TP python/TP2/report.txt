@@ -1,0 +1,7 @@
+Revenu Total : 2570.00 DH
+Produit le Plus Vendu : oeuf,lait
+Produits à Haut Revenu :
+	- huile : 2250.00 DH
+	- sucre : 96.00 DH
+	- oeuf : 56.00 DH
+	- lait : 168.00 DH

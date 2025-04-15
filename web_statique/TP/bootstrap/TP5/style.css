@@ -1,0 +1,137 @@
+.product-card {
+    max-width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.info-section {
+    padding: 1.25rem;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.button-section {
+    background-color: #009688;
+    padding: 1rem;
+    justify-content: end;
+}
+
+.action-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.375rem 1rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: white;
+    color: #009688;
+}
+.card-header {
+    font-weight: bold;
+}
+.btn-custom {
+    width: 45%;
+}
+
+.custom-card {
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 300px;
+    color: white;
+    border: 1px solid white;
+}
+
+.last-card-wrapper {
+    /* background-color: #f0ad4e; */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.arrow-icon {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.tablet-card {
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+
+.header {
+    background-color: #20b2aa;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.content {
+    padding: 1.25rem;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+}
+
+.button-section {
+    background-color: #20b2aa;
+    padding: 1rem;
+}
+
+.action-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.375rem 1rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: white;
+    color: #20b2aa;
+}

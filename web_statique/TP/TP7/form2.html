@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <p>
+            <label for="name">Nom :</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p></p>
+            <label for="password">Mot de passe :</label>
+            <input type="text" name="password" id="password">
+        </p>
+        <p>
+            <label for="commentaires">Commentaires :</label><br>
+            <textarea  style="width: 350px; height: 100px;" name="commentaires" id="commentaires"></textarea>
+        </p>
+        <fieldset>
+            <legend>Sexe</legend>
+            <p>
+                <input type="radio" name="sexe" id="homme">
+                <label for="Homme">Homme</label>
+            </p>
+            <p>
+                <input type="radio" name="sexe" id="femme">
+                <label for="femme">Femme</label>
+
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Loisirs :</legend>
+            <p>
+                <input type="checkbox" name="littérature" id="littérature">
+                <label for="littérature">Littérature</label>
+            </p>
+            <p>
+                
+                <input type="checkbox" name="musique" id="musique">
+                <label for="musique">Musique</label>
+
+            </p>
+
+            <input type="checkbox" name="sport" id="sport">
+            <label for="sport">Sport</label>
+        </fieldset>
+        <p>
+            <label for="ville">Ville :</label>
+            <select name="ville" id="ville">
+                <option value="nantes"> Nantes</option>
+            </select>
+        </p>
+        <p>
+            <label for="Transport :"></label> <br>
+            <select multiple="" id="">
+                <option value="pieds">A Pieds</option>
+                <option value="bus"> Bus</option>
+                <option value="tramway">Tramway</option>
+            </select>
+        </p>
+        <p>
+
+            <label for="photo">Choisisez une photo</label>
+            <input  type="file" name="photo" id="photo">
+        </p>
+        <p>
+            <input type="submit" value="Envoyer les données">
+            <input type="reset" value="Effacer les saisies">
+        </p>
+        
+
+
+
+
+    </form>
+   
+</body>
+</html>

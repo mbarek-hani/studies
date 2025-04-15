@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Titre principal</h1>
+        <div>
+            <p class="blue">Paragraphe n°:1</p>
+            <p id="p2">Paragraphe n°:2</p>
+            <p>Paragraphe n°:3</p>
+            <p>Paragraphe sans attribut</p>
+        </div>
+        <p>Paragraph n°:4</p>
+        <script>
+            const div = document.querySelector("div");
+            const titre = document.querySelector("h1");
+            const p4 =
+                document.body.lastElementChild.previousElementSibling.cloneNode(
+                    true
+                );
+            div.append(p4);
+            const p2 = document.getElementById("p2");
+            titre.insertAdjacentElement("afterend", p2);
+        </script>
+    </body>
+</html>

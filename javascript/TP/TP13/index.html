@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Q1
+            const dateDeAbonnement = new Date("2024-06-15");
+            //Q2
+            const dateActuelle = new Date();
+            // Q3
+            const nbrJourDepuisAbonn = Math.floor(
+                (dateActuelle - dateDeAbonnement) / 1000 / 60 / 60 / 24
+            );
+            // Q4
+            const dateDeExpiration = new Date(dateDeAbonnement);
+            dateDeExpiration.setFullYear(dateDeAbonnement.getFullYear() + 1);
+            dateDeExpiration.setDate(dateDeAbonnement.getDate() - 1);
+            // Q5
+            const locale = "fr-FR";
+            const options = {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+            };
+            console.log(
+                `La date d'abonnement : ${dateDeAbonnement.toLocaleDateString(
+                    locale,
+                    options
+                )}`
+            );
+            console.log(
+                `La date actuelle : ${dateActuelle.toLocaleDateString(
+                    locale,
+                    options
+                )}`
+            );
+            console.log(
+                `Le nombre de jours depuis l'abonnement: ${nbrJourDepuisAbonn}`
+            );
+            console.log(
+                `La date d'expiration : ${dateDeExpiration.toLocaleDateString(
+                    locale,
+                    options
+                )}`
+            );
+        </script>
+    </body>
+</html>

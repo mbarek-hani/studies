@@ -1,0 +1,5 @@
+Classement des meilleurs étudiants :
+
+	1. Rachid: 19.00
+	2. Sara: 18.00
+	3. Ali: 15.00

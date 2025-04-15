@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résumé: Abstraction et Interfaces en POO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    
+    h2 {
+      color: #2980b9;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    
+    h3 {
+      color: #16a085;
+      margin-top: 20px;
+      border-bottom: 1px dotted #16a085;
+      display: inline-block;
+    }
+    
+    .concept {
+      background-color: #f5f9fa;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #3498db;
+    }
+    
+    ul {
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    .exemple {
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    
+    .code {
+      font-family: monospace;
+      color: #16a085;
+    }
+    
+    .important {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    
+    .section {
+      border-top: 1px solid #bdc3c7;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+    
+    .uml {
+      font-style: italic;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Résumé: Abstraction et Interfaces en POO</h1>
+
+  <section class="section">
+    <h2>CHAPITRE 3: Caractériser l'abstraction</h2>
+
+    <h3>1. Principes</h3>
+    <div class="concept">
+      <p>L'abstraction est un principe qui consiste à ignorer certains aspects qui ne sont pas importants pour le problème dans le but de se concentrer sur ceux qui le sont.</p>
+      <ul>
+        <li>La POO permet de se focaliser sur les caractéristiques importantes d'un objet.</li>
+        <li>Son objectif principal est de gérer la complexité en masquant les détails inutiles à l'utilisateur.</li>
+        <li>Cela permet à l'utilisateur d'implémenter une logique plus complexe sans comprendre ni même penser à toute la complexité cachée.</li>
+      </ul>
+    </div>
+
+    <h3>2. Classes abstraites</h3>
+    <div class="concept">
+      <p><span class="important">Contrairement à une classe "normale", on ne peut créer des objets à partir d'une classe abstraite.</span></p>
+      <p>L'utilité d'une classe abstraite est essentiellement en tant que classe mère.</p>
+      
+      <p>En ce sens, une classe abstraite peut servir :</p>
+      <ul>
+        <li>Comme racine d'un héritage en cascade :
+          <ul>
+            <li>Dans ce cas, chaque sous-classe spécifiera ses propres propriétés et méthodes.</li>
+          </ul>
+        </li>
+        <li>Favorise le polymorphisme.</li>
+      </ul>
+      
+      <p>Les classes abstraites :</p>
+      <ul>
+        <li>Permettent de définir des fonctionnalités (des méthodes) que les sous-classes devront impérativement implémenter.</li>
+        <li>Les utilisateurs des sous-classes d'une classe abstraite sont assurés de trouver toutes les méthodes définies dans la classe abstraite dans chacune des sous-classes concrètes.</li>
+        <li>Constituent une sorte de contrat (spécification contraignante) qui garantit que certaines méthodes seront disponibles dans les sous-classes et qui oblige les programmeurs à les implémenter dans toutes les sous-classes concrètes.</li>
+      </ul>
+      
+      <div class="exemple">
+        <p><strong>Exemple :</strong></p>
+        <ul>
+          <li>Sachant que toutes les formes possèdent les propriétés périmètre et surface, il est judicieux de placer les méthodes <span class="code">périmètre()</span> et <span class="code">surface()</span> dans la classe qui est à la racine de l'arborescence (Forme).</li>
+          <li>Les méthodes <span class="code">surface()</span> et <span class="code">périmètre()</span> définies dans la classe Forme ne présentent pas de code et doivent impérativement être implémentées dans les classes filles.</li>
+          <li>Les méthodes <span class="code">surface()</span> et <span class="code">périmètre()</span> sont des méthodes abstraites.</li>
+        </ul>
+        <div class="uml">
+          &lt;&lt;classe Abstraite&gt;&gt;<br>
+          Forme<br>
+          Couleur: Chaine<br>
+          Surface(): réel<br>
+          Périmètre(): réel<br>
+          <br>
+          ↓ héritage ↓<br>
+          <br>
+          Cercle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rectangle<br>
+          Rayon: réel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Longueur: réel
+        </div>
+      </div>
+    </div>
+
+    <h3>3. Méthodes abstraites</h3>
+    <div class="concept">
+      <ul>
+        <li>Une méthode abstraite est une méthode qui ne contient pas de corps. Elle possède simplement une signature de définition (pas de bloc d'instructions).</li>
+        <li>Une méthode abstraite est déclarée dans une classe abstraite.</li>
+        <li><span class="important">Une classe possédant une ou plusieurs méthodes abstraites devient obligatoirement une classe abstraite.</span></li>
+        <li>Il n'est pas indispensable d'avoir des méthodes abstraites dans une classe abstraite.</li>
+      </ul>
+      
+      <p>Les règles suivantes s'appliquent aux classes abstraites :</p>
+      <ul>
+        <li>Une sous-classe d'une classe abstraite ne peut être instanciée que si elle redéfinit chaque méthode abstraite de sa classe parente et qu'elle fournit une implémentation (un corps) pour chacune des méthodes abstraites.</li>
+        <li>Si une sous-classe d'une classe abstraite n'implémente pas toutes les méthodes abstraites dont elle hérite, cette sous-classe est elle-même abstraite (et ne peut donc pas être instanciée).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>CHAPITRE 4: Manipuler les interfaces</h2>
+
+    <h3>1. Définition des interfaces</h3>
+    <div class="concept">
+      <ul>
+        <li>Comme une classe et une classe abstraite, une interface permet de définir un nouveau type (référence).</li>
+        <li><span class="important">Une interface est une forme particulière de classe où toutes les méthodes sont abstraites.</span></li>
+      </ul>
+      <div class="uml">
+        &lt;&lt;interface&gt;&gt;<br>
+        imprimable<br>
+        Imprimer()
+      </div>
+    </div>
+
+    <h3>2. Utilité des interfaces</h3>
+    <div class="concept">
+      <p>Les interfaces permettent de :</p>
+      <ul>
+        <li>Spécifier des propriétés qui peuvent être utilisées par les classes qui implémentent ces interfaces.</li>
+        <li>Obliger les classes qui les implémentent de définir les méthodes abstraites déclarées dans les interfaces.</li>
+        <li>Tirer profit du polymorphisme avec des instances dont les classes ne font pas partie de la même hiérarchie d'héritage.</li>
+      </ul>
+    </div>
+
+    <h3>3. Implémentation des interfaces</h3>
+    <div class="concept">
+      <ul>
+        <li>On dit qu'une classe implémente une interface, si elle fournit une implémentation (c'est-à-dire un corps) pour chacune des méthodes abstraites de cette interface.</li>
+        <li>Si une classe implémente plus d'une interface, elle doit implémenter toutes les méthodes abstraites de chacune des interfaces.</li>
+      </ul>
+      
+      <div class="exemple">
+        <p><strong>Exemple 1 :</strong></p>
+        <ul>
+          <li>Si l'on souhaite caractériser la fonctionnalité de comparaison qui est commune à tous les objets qui ont une relation d'ordre (plus petit, égal, plus grand), on peut définir l'interface Comparable.</li>
+          <li>Les classes Personne et Outils qui implémentent l'interface Comparable doivent présenter une implémentation de la méthode CompareTo() sinon elles seront abstraites.</li>
+        </ul>
+        <div class="uml">
+          &lt;&lt;Interface&gt;&gt;<br>
+          Comparable<br>
+          CompareTo(): boolean<br>
+          ↓ implémente ↓<br>
+          Personne &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outils<br>
+          CompareTo(): boolean &nbsp;&nbsp; CompareTo(): boolean<br>
+          <small>Comparaison des &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comparaison des Outils<br>
+          personnes selon l'âge &nbsp;&nbsp; selon la longueur</small>
+        </div>
+      </div>
+      
+      <div class="exemple">
+        <p><strong>Exemple 2 :</strong></p>
+        <p>Supposons que nous voulions que les classes dérivées de la classe Forme disposent toutes d'une méthode imprimer() permettant d'imprimer les formes géométriques.</p>
+        
+        <p><u>Solution 1:</u></p>
+        <ul>
+          <li>Ajouter une méthode abstraite Imprimer() à la classe Forme et ainsi chacune des sous-classes concrètes devrait implémenter cette méthode.</li>
+          <li>Si d'autres classes (qui n'héritent pas de Forme) souhaitaient également disposer des fonctions d'impression, elles devraient à nouveau déclarer des méthodes abstraites d'impression dans leur arborescence.</li>
+        </ul>
+        
+        <p><u>Solution 2:</u></p>
+        <ul>
+          <li>La classe forme implémente l'interface imprimable ayant la méthode Imprimer()</li>
+        </ul>
+        
+        <div class="uml">
+          &lt;&lt;class Abstraite&gt;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt;interface&gt;&gt;<br>
+          Forme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imprimable<br>
+          X, Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Imprimer()<br>
+          Déplacer() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ←implémente&nbsp;<br>
+          Surface(): réel<br>
+          Périmètre(): réel<br>
+          <small>Méthodes abstraites</small><br>
+          <small>Classe abstraite</small><br>
+          ↓ héritage ↓<br>
+          Rectangle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cercle<br>
+          Surface(): réel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Surface(): réel<br>
+          Périmètre(): réel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Périmètre(): réel<br>
+          Imprimer() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Imprimer()<br>
+          <small>Classes concrètes</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

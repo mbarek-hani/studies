@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://input-pattern.com/en/tutorial.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<link rel="stylesheet" href="./input]Pattern tutorial_files/normalize.css">
+<link rel="stylesheet" href="./input]Pattern tutorial_files/all.min.css">
+<link rel="stylesheet" href="./input]Pattern tutorial_files/pattern.css">
+
+
+<link rel="alternate" hreflang="de" href="https://input-pattern.com/de/anleitung.php">
+<link rel="alternate" hreflang="en" href="https://input-pattern.com/en/tutorial.php">
+<link rel="alternate" hreflang="x-default" href="https://input-pattern.com/en/tutorial.php">
+
+
+
+
+<link rel="canonical" href="https://input-pattern.com/en/tutorial.php">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Thomas Feldes, Schlaitdorf https://tfcpc.de">
+
+<title>input]Pattern tutorial</title>
+<link rel="icon" href="https://input-pattern.com/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://input-pattern.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://input-pattern.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://input-pattern.com/favicon-16x16.png">
+<link rel="manifest" href="https://input-pattern.com/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+
+
+<!-- Google Werbung  -->
+<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-2625749771785663",
+		enable_page_level_ads: true
+	});
+</script>
+<style>
+table tr td	  		{border-right:1px dotted red;}
+table tr td:last-child	  		{border-right:none;}
+table tr th	  		{border-right:1px dotted red;}
+table tr th:last-child	  		{border-right:none;}
+
+table tr td:first-child	  		{font-weight:bold;}
+table tr td:nth-child(3)		{font-weight:bold;}
+table tr td:nth-child(4)		{font-weight:bold;}
+table tr td i  					{color:blue;}
+
+</style>
+</head>
+
+
+<body>
+<section id="top">
+<article>
+<nav><ul><li><a href="https://input-pattern.com/en/index.php" title=""><i class="fab fa-wpforms"></i>Introduction</a></li> <li><a style="background-color:blue; color:white;" href="https://input-pattern.com/en/tutorial.php" title="The core of this site, the guide to creating patterns."><i class="fa fa-file-alt"></i>Tutorial</a></li> <li><a href="https://input-pattern.com/en/training.php" title="Some patterns explained step by step in detail"><i class="fab fa-leanpub"></i>Training</a></li> <li><a href="https://input-pattern.com/en/patternbook.php" title="A growing collection of patterns for all sorts of things"><i class="fa fa-book"></i>Patternbook</a></li> <li><a href="https://input-pattern.com/en/question.php" title="What is so asked, and which leaders are made"><i class="fa fa-question"></i>FAQ and Fail</a></li> <li><a href="https://input-pattern.com/en/test.php" title="A tester for your sample"><i class="fa fa-vial"></i>Analyser</a></li> <li><a href="https://input-pattern.com/en/database.php" title="A collection of thousands of patterns"><i class="fa fa-database"></i>Database</a></li> <li><a href="https://input-pattern.com/en/tutorial.php#.php" title="Discussion and information"><i class="fas fa-user-friends"></i>Bulletin</a></li> <li><a href="https://input-pattern.com/en/legal_notice.php" title="All right"><i class="fa fa-gavel"></i>Legal Notice</a></li> <li><a href="https://input-pattern.com/de/anleitung.php" title="zur deutschsprachigen Seite wechseln"><i class="fa fa-globe"></i>Deutsch</a></li> </ul></nav>
+<div class="header" style="display:block;">
+	<h1><span>input</span>Pattern</h1>
+</div></article>
+
+<h3><i class="fab fa-wpforms"></i>Validate entries</h3>
+
+
+<h4 id="Forms with HTML5">
+	<span><i class="fab fa-html5"></i>Forms with HTML5</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Formulare%20mit%20HTML5"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+<article class="column2">
+<p>Entries in form fields <em>&lt;input&gt;</em> must be checked before further processing. I do not want to discuss which problems are caused by unchecked data here.</p>
+<p> To check an input on the client side, a JavaScript function always had to be written with great effort. With HTML5 there are new element types which cause the modern browser to take over checks.</p>
+<p>For the <em>&lt;input&gt;</em> element a type is defined: <br><em>&lt;input type="text"&gt;</em></p>
+<p>For the types: »text, search, url, tel, email, and password« now exists the element attribute 'pattern', <br><em>&lt;input type="text" pattern="[0-9]{5}"&gt;</em><br>. With the pattern given here the browser can check the input. It compares the input with the pattern created by the website builder. In this way it can be prevented that wrong entries are made already before the further processing. The standard is that the form is only processed in the case of a positive check, otherwise the form is not sent, and a tooltip from the browser alerts the user to the incorrect input. <br>Other checks must, of course, be performed additionally on the client side and on the server side anyway in order to test for security features such as check digits or to prevent the introduction of malicious code.</p>
+<p>There are other input types that cause touchscreens to display special keyboard layouts or let the browser display special selection windows. The types »color, date, datetime, datetime-local, month, week, time, number, range« do not support the element 'pattern' and are therefore not mentioned in this tutorial.</p>
+<p>It is important to set the document type to HTML5<br> <em>&lt;!DOCTYPE html&gt;</em>.<br> and the character set to UTF-8 <br><em>&lt;meta charset="UTF-8"&gt;</em><br>
+In addition, it is required that the title attribute <br><em>&lt;input title="Please enter postcode"&gt;</em><br> be used so that the user immediately knows which input is expected from him. Therefore it made sense to use the placeholder attribute<br><em>&lt;input placeholder="12345"&gt;</em><br>. Mandatory input can be marked by the required attribute<br><em>&lt;input required &gt;</em><br>. Users are then automatically informed by the browser via tooltip that the field must be filled in.</p>
+
+</article>
+
+		<div class="code">
+
+				&lt;!DOCTYPE html&gt;<br>
+				&lt;html&gt;<br>
+				&lt;head&gt;<br>
+				&lt;meta charset="utf-8"&gt;<br>
+				&lt;title&gt;Pattern&lt;/title&gt;<br>
+				&lt;/head&gt;<br>
+				&lt;body&gt;<br>
+				&nbsp;&lt;form action="#.ext" method="post"&gt;<br>
+				&nbsp;&nbsp;&lt;label for="plz"&gt;PLZ: &lt;/label&gt;<br>
+				&nbsp;&nbsp;&lt;input required<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;type="text"<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;id="plz" name="plz"<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;inputmode="numeric"<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pattern="[0-9]{5}" <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;placeholder="12345" <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;title="Please enter the 5-digit postcode"&gt;<br>
+				&nbsp;&lt;/form&gt;<br>
+				&lt;/body&gt;<br>
+				&lt;/html&gt;<br>
+
+			<form action="https://input-pattern.com/en/tutorial.php#.ext" method="post">
+			  <p>postcode:
+			  <input required="" type="text" id="plz" name="plz" pattern="[0-9]{5}" placeholder="12345" title="Please enter the 5-digit postcode [12345]"></p>
+		 	</form>
+		</div>
+
+<h4 id="Forms with CSS3">
+	<span><i class="fab fa-css3"></i>Forms with CSS3</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Formulare%20mit%20CSS3"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+		<article class="column2">
+			<p>Browser mark with an input which does not fit on the given pattern, the input field mostly with a red border.</p>
+			<p>We could now use CSS3 pseudo classes to visualize the highlighting of the incorrect input as well as the correct input. This leaves room for many CSS games with background colors or images. Of course we also work with it.</p>
+		</article>
+		<div class="code">
+			/* style for HTML5 formular input pattern */
+			<p>/*An incorrect input:*/ <br><code>input:invalid{<br>&nbsp;color:red;<br>}</code><br>
+			/*An correct input:*/ <br><code>input:valid{<br>&nbsp;color:green;<br>}</code><br>
+			/*A mandatory field:*/ <br><code>input[required]{<br>&nbsp;background-color:#F08080;<br>}</code>
+			</p>
+		</div>
+<h4 id="pattern">
+	<span><i class="fas fa-chess-board"></i>Pattern</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#muster"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+<article class="column2">
+		<p>The pattern for input fields is the expression with which you compare (not search). The simplest pattern consists exactly of the characters that are compared with the input. These can also be texts, metacharacters, groups of characters or character classes. For example, a pattern that we will examine later might look like this:<br><em>pattern="01(5[1279]\d|6[023]|7\d{2})"</em>.</p>
+		<p>The round parenthesis <em>( )</em> combine pattern blocks. The pipe <em>|</em> stands for the OR function, so the text must contain either one or the other. Selection lists are used to define groups of characters that are to be allowed (or forbidden). These character classes are noted within square parenthesis <em>[ ]</em>. The hyphen <em>-</em> defines ranges of characters within a character class. If the character itself is to be a member of the character class, it can be used as the first or last character in the list or it must be masked by prefixing it with <em>\</em>. The Accent Zirkumflex <em>^</em> excludes characters.</p>
+		<p>Metacharacters are placeholders for a group of other characters. If the character itself is to be part of the pattern, it must be masked. The backslash (itself also a metacharacter) <em>\</em> is responsible for this. The dot <em>.</em> stands for any character. If the parenthesis and the pipe character should be part of the pattern, they have to be masked.</p>
+		<p>Special characters can be used as an alternative to the characters. In connection with the backslash the <em>\s</em>(whitespace) stands for the space or a (copied) tab. <em>\w</em>(word) allows all digits and the characters from A to Z and a to z as well as the underscore, <em>\d</em>(digit) allows all digits. The respective upper case <em>/S /W /D</em> prohibits the corresponding input. However, using this negation is not easy for input-pattern.</p>
+		<p>Quantifiers determine the number of an expression directly in front of it. In this way, the minimum, maximum or exact number of characters or character groups can be determined. The asterisk <em>*</em> indicates that an expression cannot occur once or as often as desired. The plus <em>+</em> indicates that an expression can occur at least once up to any number of times. The question mark <em>?</em> indicates that an expression can occur once, but does not have to occur. Curly braces <em>{ }</em> allow the minimum, maximum or exact number of characters or repetitions to be specified.</p>
+		<p>How you can assemble all this to get a meaningful pattern is shown below.</p>
+	</article>
+<h4 id="testit">
+	<span><i class="fa fa-thumbs-up"></i>Test it</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#pruefung"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+	<article class="column2">
+
+		<p>In web forms, the entire input in an input field is always compared with the given pattern. You cannot check parts of the input.  </p>
+		<p>The rules of the form input pattern follow the rules of the RegEx of Javascript but there are differences. The start and end identifiers <em>^ required for programming languages ... $</em> do not need to be used with HTML5 pattern. You often see this <em>^[0-9]{5}$</em>, and it obviously doesn't lead to an error, but as you know, the whole input is always compared. You don't have to worry about that as well. The correct way is simple: <em>[0-9]{5}</em>.</p>
+		<p>Since we only have a single-line input field, we cannot check for line breaks, of course. Also the modifiers for upper and lower case are not used. </p>
+		<p>For the form itself we still need the appropriate input type, otherwise no check takes place.  Input types for a pattern comparison are »text, search, url, tel, email, and password«. For this tutorial I only use the text type. <em>type="text"</em><br>The other types may help a tablet or smartphone to display the customized keyboard (i.e. a numeric keyboard for type ="tel", an additional ".com" for type ="url").</p>
+		<p>For the website builder there is no error message!</p>
+<p>If the pattern itself is incorrect, it is possible that any input will be recognized as valid or even invalid. If you only want to allow numbers and have accidentally entered letters as patterns, how do you test this? <br>You have to check, check, check. <br>syntax errors so violations of the sentence construction rules such as missing parenthesis or so you can of course still run through a test machine. <!--One <a href="test.php">Pattern Tester</a> in beta stage you find in the appendix.--></p>
+</article>
+
+<h4 id="patternmaker">
+	<span><i class="fas fa-pencil-ruler"></i>Patternmaker</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#mustermacher"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+<article class="column2">
+
+		<p>Often you have to decide if you want to force upper case <em>[A-Z] </em> or if you want to convert it later via script.<br>For the IBAN (DE1212345678901234567890) the country code is always in capital letters and has no spaces, but for humans it is easier to enter this long chain in groups, i.e. with spaces. (DE12&nbsp;1234&nbsp;5678&nbsp;9012&nbsp;3456&nbsp;7890). This must then be corrected during further processing. Sometimes there are different rules for machine-machine and man-machine. We have to take this into account in our prototyping work. Ultimately, it is the decision of the pattern maker whether to make concessions to the user when entering the data and then to comply with the regulations using scripting.</p>
+	</article>
+
+	<div style="margin-top:8px;min-height:50px;background-color:#99FFFF">
+		<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+			<!-- inputpattern -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2625749771785663" data-ad-slot="4706123587" data-ad-format="auto" data-full-width-responsive="true">
+	     	<iframe id="aswift_0" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./input]Pattern tutorial_files/saved_resource.html"><iframe id="google_ads_frame0" src="./input]Pattern tutorial_files/saved_resource(1).html"></iframe></iframe></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<h3><i class="fab fa-wpforms"></i>Create a pattern</h3>
+
+<h4 id="SimplePattern">
+	<span><i class="fa fa-square"></i>SimplePattern</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#einfachmuster"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+	<article class="column2">
+
+			<p>Simple patterns are constructed from characters for which you want to find a direct match. Letters, numbers or special characters. Only if the input matches the pattern is the input accepted by the browser. A simple word or sequence of numbers is also a valid pattern. <em>pattern="Hello World"</em>can already be a simple pattern used by the browser as a basis for comparison with the input. Only this letter combination is accepted.<br>special characters <em>'§§15 &amp; 16' </em> and numbers <em>0815</em> are treated the same way. We just need to add that.</p>
+		</article>
+		<div class="code">
+			<p>Here only the capital letter 'A' is accepted as correct input.<br>
+			<input required="" type="text" pattern="A" placeholder="#">
+
+			<code>&lt;input type="text" pattern="A"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>A<br><br></td>
+			<td>AA<br>a<br>5</td>
+			</tr></tbody></table>
+			<p>Here only 'hello world' is accepted as correct input.<br>
+			<input required="" type="text" pattern="Hallo Welt" placeholder="Hello World">
+
+			<code>&lt;input type="text" pattern="Hallo Welt"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Hallo Welt</td>
+			<td>Hello World<br>HalloWelt</td>
+			</tr></tbody></table>
+			<p>Here only '0815' is accepted as correct input.<br>
+			<input required="" type="text" pattern="0815" placeholder="nnnn"><code>&lt;input type="text" pattern="0815"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>0815</td>
+			<td>0816<br>abc</td>
+			</tr></tbody></table>
+		</div>
+
+<h4 id="characterselection">
+	<span><i class="fa fa-square"></i>character selection</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#ZeichenAuswahl"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+	<article class="column2">
+<p>With the square parenthesis <em>[&nbsp;]</em> you can specify a list of characters as a pattern. However, the parenthesis only stands for <b>one</b> characters from the selection. <em>[ABCD]</em> So only A or B or C or D would be valid here. Since the letters in this example are continuous, you can also write the expression with the hyphen. <em>[A-D]</em>.<br> All upper case letters <em>[A-Z]</em>, all lower case letters <em>[a-z]</em>and all numbers. <em>[0-9]</em>.</p>
+<p>Country-specific letters, in Germany these are the umlauts and the eszettas, are not included in this list. We simply add these characters to the list. So, to sample all German letters, the expression <em>[A-Za-zÄäÖÖÜüß]</em>is valid as pattern.</p>
+</article>
+		<div class="code">
+			<p>Only a capital letter from the selection A-D is accepted as correct input here.<br>
+			<input required="" type="text" pattern="[ABCD]" placeholder="#">
+
+			<code>&lt;input type="text" pattern="[ABCD]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>A<br>B<br>C<br>D</td>
+			<td>E<br>H<br>U<br>Z</td>
+			</tr></tbody></table>
+			<p>Letters, also umlauts (ÄÖÜäöü), no special characters <br>
+			<input required="" type="text" pattern="[A-zÄÖÜäöüß]" placeholder="#">
+
+			<code>&lt;input type="text" pattern="[A-zÄÖÜäöüß]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>A<br>k<br>ö<br>ß</td>
+			<td>1<br>6<br>&amp;<br>#</td>
+			</tr></tbody></table>
+			<p>a number<br>
+			<input required="" type="text" pattern="[0-247-9]" placeholder="n">
+
+			<code>&lt;input type="text" pattern="[0-247-9]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>0<br>1<br>7</td>
+			<td>3<br>5<br>6</td>
+			</tr></tbody></table>
+			</div>
+
+	<h4 id="Unicodetable">
+	<span><i class="fa fa-square"></i>Unicode table</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Unicodetable"><i class="fa fa-globe" title="switch to english"></i>DE</a></span>
+
+	</h4>
+ <article class="column2">
+
+			<p>Of course we often need all upper and lower case letters <em>[A-Za-z]</em>, you could also write them down as <em>[A-z]</em>. But then the characters <em>[\]^_`</em>are still there. Why? <br>
+			Well, the Unicode character table is used. In this table there are 16 levels with 65536 characters each. <br>For example, besides the expected Latin characters we also find syllable sounds of Canadian natives or the characters of the Cherokee. For almost every language the characters, many symbols and some control characters. The table "latin-basic" contains e.g. - who would have thought it - the latin letters, numbers and some special characters that you can also find on a normal western PC keyboard.</p>
+			<p>Now comes what we are interested in: The order of the characters we note with <em>[from - to]</em>as a pattern is determined by their position in the Unicode table.<br>Simplifiedly said, first comes the A, then the B, then the C, then... so we can write <em>[A-Z]</em>or <em>[0-9]</em> if all the characters in between are meant.<br> But in the table the upper and lower case letters are not directly behind each other. The order is ..XYZ[\]^_`abc. Thus <em>[A-z]</em> also contains the intermediate characters <em>[\]^_`</em>. </p>
+		<p> We find the characters Ä, Ö, Ü in the table Latin Supplement 1. When we search for the characters we find several characters in between. So <em>[Ä-Ü]</em>would also include many other characters <em>ÄÅÆÇÈ**ÉÊËÌÍÎÏÐÑÒ**ÓÔÕÖ×ØÙÚÛÜ</em>. </p>
+</article>
+			<article style="background-color:#F9E9CD">
+			<p>The usable characters in the Latin-basic table: U+0000 bis U+007F<br>
+			<em style="font-size:1rem;">
+			 !"#$%&amp;'(<wbr>)*+,-./012<wbr>3456789:;&lt;<wbr>=&gt;?@ABCDEF<wbr>GHIJKLMNOP<wbr>QRSTUVWXYZ<wbr>[\]^_`abcd<wbr>efghijklmn<wbr>opqrstuvwx<wbr>yz{|}~</em></p>
+
+			<p>The usable characters in the table Latin Supplement 1: U+0080 bis U+00FF<br><em style="font-size:1rem;">
+			¡¢£¤¥¦§¨©ª<wbr>«¬­®¯°±²³´<wbr>µ¶·¸¹º»¼½¾<wbr>¿ÀÁÂÃÄÅÆÇÈ<wbr>ÉÊËÌÍÎÏÐÑÒ<wbr>ÓÔÕÖ×ØÙÚÛÜ<wbr>ÝÞßàáâãäåæ<wbr>çèéêëìíîïð<wbr>ñòóôõö÷øùú<wbr>ûüýþÿ			</em></p>
+			<p>The usable characters in the table Latin extension A: U+0100 bis U+017F<br><em style="font-size:1rem;">
+			ĀāĂăĄ<wbr>ąĆćĈĉĊċČčĎ<wbr>ďĐđĒēĔĕĖėĘ<wbr>ęĚěĜĝĞğĠġĢ<wbr>ģĤĥĦħĨĩĪīĬ<wbr>ĭĮįİıĲĳĴĵĶ<wbr>ķĸĹĺĻļĽľĿŀ<wbr>ŁłŃńŅņŇňŉŊ<wbr>ŋŌōŎŏŐőŒœŔ<wbr>ŕŖŗŘřŚśŜŝŞ<wbr>şŠšŢţŤťŦŧŨ<wbr>ũŪūŬŭŮůŰűŲ<wbr>ųŴŵŶŷŸŹźŻż<wbr>Žžſ			</em></p>
+			<p>The usable characters in the table Latin extension B: U+0180 bis U+024F<br><em style="font-size:1rem;">
+			ƀƁƂƃƄƅƆ<wbr>ƇƈƉƊƋƌƍƎƏƐ<wbr>ƑƒƓƔƕƖƗƘƙƚ<wbr>ƛƜƝƞƟƠơƢƣƤ<wbr>ƥƦƧƨƩƪƫƬƭƮ<wbr>ƯưƱƲƳƴƵƶƷƸ<wbr>ƹƺƻƼƽƾƿǀǁǂ<wbr>ǃǄǅǆǇǈǉǊǋǌ<wbr>ǍǎǏǐǑǒǓǔǕǖ<wbr>ǗǘǙǚǛǜǝǞǟǠ<wbr>ǡǢǣǤǥǦǧǨǩǪ<wbr>ǫǬǭǮǯǰǱǲǳǴ<wbr>ǵǶǷǸǹǺǻǼǽǾ<wbr>ǿȀȁȂȃȄȅȆȇȈ<wbr>ȉȊȋȌȍȎȏȐȑȒ<wbr>ȓȔȕȖȗȘșȚțȜ<wbr>ȝȞȟȠȡȢȣȤȥȦ<wbr>ȧȨȩȪȫȬȭȮȯȰ<wbr>ȱȲȳȴȵȶȷȸȹȺ<wbr>ȻȼȽȾȿɀɁɂɃɄ<wbr>ɅɆɇɈɉɊɋɌɍɎ<wbr>ɏ			</em></p>
+
+			<p>The usable characters in the table Greek, Coptic: U+0370 to U+03FF<br><em style="font-size:1rem;">
+			ʹ͵ͺ<wbr>ͻͼͽ;΄<wbr>΅Ά·ΈΉΊΌΎ<wbr>ΏΐΑΒΓΔΕΖΗΘ<wbr>ΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫά<wbr>έήίΰαβγδεζ<wbr>ηθικλμνξοπ<wbr>ρςστυφχψωϊ<wbr>ϋόύώϐϑϒϓϔ<wbr>ϕϖϗϘϙϚϛϜϝϞ<wbr>ϟϠϡϢϣϤϥϦϧϨ<wbr>ϩϪϫϬϭϮϯϰϱϲ<wbr>ϳϴϵ϶ϷϸϹϺϻϼ<wbr>ϽϾϿ			</em></p>
+			<p>The usable characters in the table Latin-Extended Addition:U+1E00 to U+1EF9<br><em style="font-size:1rem;">
+			Ḁ<wbr>ḁḂḃḄḅḆḇḈḉḊ<wbr>ḋḌḍḎḏḐḑḒḓḔ<wbr>ḕḖḗḘḙḚḛḜḝḞ<wbr>ḟḠḡḢḣḤḥḦḧḨ<wbr>ḩḪḫḬḭḮḯḰḱḲ<wbr>ḳḴḵḶḷḸḹḺḻḼ<wbr>ḽḾḿṀṁṂṃṄṅṆ<wbr>ṇṈṉṊṋṌṍṎṏṐ<wbr>ṑṒṓṔṕṖṗṘṙṚ<wbr>ṛṜṝṞṟṠṡṢṣṤ<wbr>ṥṦṧṨṩṪṫṬṭṮ<wbr>ṯṰṱṲṳṴṵṶṷṸ<wbr>ṹṺṻṼṽṾṿẀẁẂ<wbr>ẃẄẅẆẇẈẉẊẋẌ<wbr>ẍẎẏẐẑẒẓẔẕẖ<wbr>ẗẘẙẚẛẞẠ<wbr>ạẢảẤấẦầẨẩẪ<wbr>ẫẬậẮắẰằẲẳẴ<wbr>ẵẶặẸẹẺẻẼẽẾ<wbr>ếỀềỂểỄễỆệỈ<wbr>ỉỊịỌọỎỏỐốỒ<wbr>ồỔổỖỗỘộỚớỜ<wbr>ờỞởỠỡỢợỤụỦ<wbr>ủỨứỪừỬửỮữỰ<wbr>ựỲỳỴỵỶỷỸỹ			</em></p>
+</article>
+<article>
+			<p>Data can be entered beyond the limits of the tables. <em>[[z-À]]</em> also includes the '~'. It is interesting that the Greek table comes in the order before the Latin extension. This should be considered. if you want to combine Ḁ and Σ.</p>
+		</article>
+		<div class="code muell">
+<p>Setting the area backwards doesn't work by the way. <em>[Z-A]</em>or <em>[9-0]</em>are invalid, the pattern is ignored, so any input is valid. And that's not what we want.</p>
+			<input required="" type="text" pattern="[9-0]">
+			<code>&lt;input type="text" pattern="[9-0]"&gt;</code><p></p>
+			<table class="match"><tbody><tr>
+			<td>A<br>b<br>X<br>#</td>
+			<td><br><br><br></td>
+			</tr></tbody></table>
+
+			</div><br>
+
+
+	<div style="margin-top:8px;min-height:50px;background-color:#99FFFF">
+		<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+			<!-- inputpattern -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2625749771785663" data-ad-slot="4706123587" data-ad-format="auto" data-full-width-responsive="true">
+	     	<iframe id="aswift_1" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./input]Pattern tutorial_files/saved_resource(2).html"><iframe id="google_ads_frame1" src="./input]Pattern tutorial_files/saved_resource(3).html"></iframe></iframe></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+<h4 id="Excludecharacters">
+	<span><i class="fa fa-square"></i>Exclude characters</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Zeichenausschliesen"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+<article class="column2">
+<p>As the list in the square parenthesis stands for only one element, you can exclude characters by skilful selection. The patterns <em>[0-247-9]</em>or <em>[01247-9]</em>allow only the numbers 0 to 2, the 4 and the numbers 7 to 9. <em>[A-HK-TZ]</em>only the letters A-H, K-T and Z. All others are not accepted.<br>
+If you make a space or a comma between the areas, these are also part of the pattern!</p>
+<p>With the Circumflex <em>^ </em>we can exclude the characters we don't want.<em>[^Ad5]</em>therefore, all conceivable characters do not allow the selection in parenthesis, i.e. the A, the d or the 5th character. The expression, which stands for all special characters, could look like this: <em>[^A-zÄÖÜäöüß0-9]</em> But then, of course, all Greek, Chinese, and ... characters allowed.</p>
+<p>The application is not quite easy in practice. I mean, the enumeration of what is allowed is often simpler than the enumeration of what is forbidden, especially if you need it nested, which is very likely to be the case very often. </p>
+
+		</article>
+		<div class="code">
+			<p>Exclude character <span class="format">Format: $ or X or n</span><br>
+			<input required="" type="text" pattern="[^Ad5]" placeholder="*">
+			<code>&lt;input type="text" pattern="[^Ad5]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>B<br>e<br>3</td>
+			<td>A<br>d<br>5</td>
+			</tr></tbody></table>
+
+
+			</div>
+
+<h4 id="Multiplecharacters">
+	<span><i class="fa fa-square"></i>Multiple characters with character selection</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#MultiZeichenauswahl"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+   <article class="column2">
+<p>Of course you often have to create a pattern for a larger number of characters, because the input will seldom contain only a single character.  Several rectangular parenthesis could form the pattern for this. <br>The pattern <em>[a-z][a-z][a-z][a-z]</em>stands for 4 letters from a list of a-z each. This pattern: <em>[A-Z][1-9][a-z][§&amp;!]</em>has different lists. <br><em>[A-Z][a-z][a-z][a-z][a-z]</em> stands for a character with uppercase letters, followed by 4 characters with lowercase letters. The complete input is always compared with your sample expression. If more or less letters or even numbers or special characters are entered, the browser will prevent further processing of the form.</p>
+		</article>
+		<div class="code">
+			<p>noun with 5 letters <span class="format">Format: Xxxxx</span><br>
+    		<input required="" type="text" pattern="[A-Z][a-z][a-z][a-z][a-z]" placeholder="Abcde">
+			<code>&lt;input type="text" pattern="[A-Z][a-z][a-z][a-z][a-z]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Bauer<br>Ahorn<br>Mocca<br>Halle</td>
+			<td>haben<br>Kind<br>Kissen<br>Die 3</td>
+			</tr></tbody></table><p>
+			Number with 5 digits <span class="format">Format: nnnnn</span><br>
+			<input required="" type="text" pattern="[0-9][0-9][0-9][0-9][0-9]" placeholder="nnnnn">
+			<code>&lt;input type="text" pattern="[0-9][0-9][0-9][0-9][0-9]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>12345<br>98765<br>85219<br>01022</td>
+			<td>123456<br>1234<br>Kissen<br>Die 3</td>
+			</tr></tbody></table>
+			<p>
+			DE - Vehicle registration number <span class="format">Format: XX-Xnnn</span><br>
+			<input required="" type="text" pattern="[A-Z][A-Z]-[A-Z][0-9][0-9][0-9]" placeholder="##-##nnnn">
+			<code>&lt;input type="text" pattern="[A-Z][A-Z]-[A-Z][0-9][0-9][0-9]"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>AB-C123<br>DE-R568<br>ZU-M852<br>UL-M800</td>
+			<td>AB-c123<br>AB-CD12<br>A-C123<br>AB-CD1234</td>
+			</tr></tbody></table>
+	</div>
+
+<h4 id="Characterselection">
+	<span><i class="fa fa-square"></i>Character selection with repetitions</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#ZeichenauswahlmehrElement"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+  <article class="column2">
+
+			<p>Now it is of course nonsensical to put an endless number of characters in square parenthesis behind each other. For similar characters we use the quantfier. In curly parenthesis <em>{&nbsp;}</em> you can specify the number of repetitions. You simply write it directly after your character selection. <em>[A-Z]{20}</em><br> For a 10-digit order number of a mail order company you could instead of <em>[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]</em> so <em>[0-9]{10}</em> write as a sample</p>
+		</article>
+		<div class="code">
+			<p>
+			DE- Postcode 5 digits: <span class="format">Format: nnnnn</span><br>
+			<input required="" type="text" pattern="[0-9]{5}" placeholder="Postleitzahl">
+			<code>&lt;input type="text" pattern="[0-9]{5}"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>12345<br>98765<br>85219<br>01022</td>
+			<td>123456<br>1234<br>Kissen<br>Die 3</td>
+			</tr></tbody></table>
+			<p>
+			German IBAN<span class="format">Format: DEnnnnnnnnnnnnnnnnnnnn</span><br>
+			<input style="width:15rem;" required="" type="text" pattern="DE[0-9]{20}" placeholder="IBAN">
+			<input type="submit" value="Test">
+			<code>&lt;input type="text" pattern="DE[0-9]{20}"&gt;</code>
+			</p><table class="match"><tbody><tr>
+			<td>DE98123412341234123412<br>DE12345678901234567890</td>
+			<td>De98123412341234123412<br>DE123456789O1234567890</td>
+			</tr></tbody></table>
+		</div>
+
+	<div style="margin-top:8px;min-height:50px;background-color:#99FFFF">
+		<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+			<!-- inputpattern -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2625749771785663" data-ad-slot="4706123587" data-ad-format="auto" data-full-width-responsive="true">
+	     	<iframe id="aswift_2" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./input]Pattern tutorial_files/saved_resource(4).html"><iframe id="google_ads_frame2" src="./input]Pattern tutorial_files/saved_resource(5).html"></iframe></iframe></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<h4 id="quantifier">
+	<span><i class="fa fa-square"></i>Character selection with minimum and maximum length</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#quantifier"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+
+ <article class="column2">
+			<p>The curly parenthesis <em>{nbsp;}</em> are also used for your pattern here. It applies <em>{min, max}</em>. For example, if you want to allow at least five, but no more than 10 characters, you would write <em>[A-Za-z0-9]{5,10}</em></p>
+			<p>If you only want to specify a minimum number of characters, you can omit the max parameter <em>{2,&nbsp;}</em>, but you must specify the comma, otherwise the number in parenthesis would be the fixed number of characters. If you only want to specify a maximum number of characters, the minimum number must be specified anyway. <em>{0,4}</em></p>
+			<p>Another possibility is to use the plus sign, the asterisk or the question mark. <br>The plus sign stands for at least one occurrence of the expression <em>[0-9]+ </em>. <br>The asterisk <em>[0-9]* </em> stands for none or any number of occurrences. <br>The question mark <em>[0-9]? </em>stands for once or no time.</p>
+			<p><i class="fas fa-exclamation-triangle" style="color:red;"></i> In connection with the attribute <code>required</code>, which marks the form input field as mandatory, the browser will not process the form if the field may be empty according to the pattern <em>x{0,8}</em>, <em>x*</em>or <em>x?</em>. Finally, he expects something to be entered in the field.</p>
+			<p><i class="fab fa-html5"></i> HTML: For input fields the attribute <code>maxlength="n"</code> exists, which determines the maximum number of all characters. The browser does not allow you to enter more characters at all. For example, if you only want to allow a maximum of four characters, you write: <em>&lt;input maxlength="4"&gt;</em>. <br><i class="fas fa-exclamation-triangle" style="color:red;"></i> But if you have noted a number of at least 5 characters in the pattern <em style="background-color:#FFE4E1; border-color:#FFE4E1">&lt;input maxlength="4" pattern="x{5,8}"&gt;</em> it won't work.<br> The same applies to the minimum length valid since HTML5<br><em>minlength="n"</em>.</p>
+		</article>
+		<div class="code">
+			<p>
+			<input required="" type="text" pattern="[A-z]{1,3}" placeholder="Nickname">
+
+			<code>&lt;input type="text" pattern="[A-z]{1,3}"&gt;</code><br>
+			<input required="" type="text" pattern="[A-Z][a-z]{0,12}" placeholder="Vorname">
+
+			<code>&lt;input type="text" pattern="[A-Z][a-z]{0,12}"&gt;</code><br>
+			<input required="" type="text" pattern="[A-Z][a-z]{2,}" placeholder="Nachname">
+
+			<code>&lt;input type="text" pattern="[A-Z][a-z]{2,}"&gt;</code><br>
+			</p><p>
+			<input required="" type="text" pattern="[A-Z][a-z]?" placeholder="Nickname">
+
+			<code>&lt;input type="text" pattern="[A-Z][a-z]?"&gt;</code><br>
+			<input required="" type="text" pattern="[A-Z][a-z]+" placeholder="Nachname">
+
+			<code>&lt;input type="text" pattern="[A-Z][a-z]+"&gt;</code><br>
+			<input required="" type="text" pattern="[A-Z][a-z]*" placeholder="Vorname">
+
+			<code>&lt;input type="text" pattern="[A-Z][a-z]*"&gt;</code><br>
+		</p></div>
+		<div class="code muell">
+			<h5><i class="fa fa-exclamation-triangle fa-2x"></i>Problems with Input-pattern max specifications and HTLM length specifications or the specification: required:  </h5>
+			<p>Mandatory input (required) - according to pattern but also valid without input {0,}!<br>
+			<input required="" type="text" pattern="[0-9]{0,}" placeholder="max 3">
+
+			<code class="falsch">&lt;input required type="text" pattern="[0-9]{0,}"&gt;</code><br>
+			Mindestlänge muß angegeben werden!</p>
+			<input required="" type="text" pattern="[0-9]{,3}" placeholder="max 3">
+
+			<code class="falsch">&lt;input type="text" pattern="[0-9]{,3}"&gt;</code><br>
+			The field has a maximum of 4 digits, but the pattern requires at least 5 digits.<br>
+			<input required="" type="text" pattern="[0-9]{5,}" maxlength="4" placeholder="Länge?">
+
+			<code class="falsch">&lt;input type="text" pattern="[0-9]{5,}" maxlength="4"&gt;</code><br>
+
+	</div>
+
+<h4 id="Alternativ">
+	<span><i class="fa fa-square"></i>Character selection with alternatives</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Alternativ"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+
+ <article class="column2">
+
+<p>If you want to offer alternatives, so coffee or tea is the pipe sign <em>|</em> the appropriate means, it separates the alternatives. We would label coffee or tea or juice as follows:<em>coffee|tea|juice</em>.</p>
+		</article>
+		<div class="code">
+  			<p>
+			<input required="" type="text" pattern="Kaffee|Tee|Saft" placeholder="Heißgetränk">
+
+			<code>&lt;input type="text" pattern="Kaffee|Tee|Saft"&gt;</code>
+			</p><table class="match"><tbody><tr>
+			<td>Kaffee<br>Tee<br>Saft</td>
+			<td>Expresso<br>Punsch<br>Glühbier</td>
+			</tr></tbody></table>
+			<p></p><p>
+			<input required="" type="text" pattern="Weißwein|Rotwein|Rosé|Sekt" placeholder="Wein">
+
+			<code>&lt;input type="text" pattern="Weißwein|Rotwein|Rosé|Sekt"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Weißwein<br>Rotwein<br>Rosé<br>Sekt</td>
+			<td>Wein<br>Perlwein<br>Roséwein<br>Bier</td>
+			</tr></tbody></table>
+			<p>
+		</p></div>
+
+
+<h4 id="special">
+	<span><i class="fa fa-square"></i>characters with special meaning</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#spezial"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+ <article class="column2">
+
+			<p>Meta characters are characters that have a function in addition to their existence as characters. If you want to use them as characters and not as functions, they have to be masked. That is, you put a backslash <em>\</em> in front of it. There are some of these metacharacters. You've already met a few of them. The parenthesis, round, square or curved or the question mark, the plus and the asterisk. <em>( ) { } [ ] ? - * ^ $</em>. The dot <em>.</em> stands for any character on the one hand, but if you want to check on the dot, you put the backslash before it<em>\.</em>. The question mark indicates that 'can but does not have to'. If you want it as part of the pattern, it must be masked<em>\?</em>. If the character in square parenthesis is at the very front or at the very back, you can save yourself the masking, but not at the dot, which then stands for all characters. In the example <em>water?</em> the "?" stands for the quanifier once or not. With the backslash it stands for the question mark.</p>
+		</article>
+		<div class="code">
+			<p>
+		  What would you like to drink?.<br>
+			<input required="" type="text" pattern="(Wasser)?" placeholder="Wasser?">
+			<code>&lt;input type="text" pattern="(Wasser)?"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Wasser</td>
+			<td>Wasser?</td>
+			</tr></tbody></table>
+			<p><input required="" type="text" pattern="(Wasser)\?" placeholder="Wasser?">
+			<code>&lt;input type="text" pattern="(Wasser)\?"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Wasser?</td>
+			<td>Wasser</td>
+			</tr></tbody></table>
+					</div>
+
+<h4 id="specialmeta">
+	<span><i class="fa fa-square"></i>Predefined (meta)characters</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Vordefinierte_Zeichen"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+
+ <article class="column2">
+
+	<p>To abbreviate letters and number selection, there are predefined characters. They are also preceded by a backslash to distinguish them from a normal character. <br>
+
+			<em>\d</em> eine Ziffer, also [0-9]<br>
+			<em>\D</em> ein Zeichen das keine Ziffer ist, also [^0-9] oder [^\d].<br>
+			<em>\w</em> ein Buchstabe, eine Ziffer oder der Unterstrich, also [a-zA-Z_0-9] <br>
+			<em>\W</em> ein Zeichen, das kein Buchstabe, keine Ziffer oder kein Unterstrich ist, also [^a-zA-Z_0-9] = §$%&amp;!:#...<br>
+			<em>\s</em> das Leerraum (whitespace) Leerzeichen, Tab..<br>
+			<em>\S</em> ein Zeichen, das kein Leerzeichen ist, also [^ ] oder [^\s]<br>
+			<em>\t</em> ein Tab (ist nur durch copy + paste in ein input-feld zu bekommen.<br>
+			</p>
+		</article>
+		<div class="code">&nbsp;
+			<p><input required="" type="text" placeholder="PLZ" pattern="[\d]{5}">
+
+			<code>&lt;input type="text" pattern="[\d]{5}"&gt;</code><br>
+			</p><table class="match"><tbody><tr>
+			<td>12345<br>98765<br>85219<br>01022</td>
+			<td>123456<br>1234<br>Kissen<br>Die 3</td>
+			</tr></tbody></table><p>
+			<input required="" type="text" placeholder="NoNum" pattern="\D+">
+
+			<code>&lt;input type="text" pattern="\D+"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Bauer<br>Ahorn<br>Mocca<br>Halle</td>
+			<td>3sel<br>123456<br>5alz<br>Die 3</td>
+			</tr></tbody></table>
+			</div>
+
+
+<h4 id="group">
+	<span><i class="fa fa-square"></i>Group characters</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Zeichen_gruppieren"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+ <article class="column2">
+			<p>The round bracket <em>( )</em>is used to mark longer related expressions. <em>(pa){2}</em><em>(ma){2}</em> The quantfier here refers to the last expression, i.e. the contents of the round bracket. Without the round parenthesis we would only have a doubling of the last character.</p>
+			<p> Round parenthesis may also be nested.<br><em>(A(BC){2}){2}</em> means:(A(BC)(BC)A(BC)(BC) therefore: One A 2xBC and the whole again twice =ABCBCABCBC</p>
+
+		</article>
+		<div class="code">
+			<p>
+			<input required="" type="text" pattern="(ma){2}" placeholder="Mutter">
+
+			<code>&lt;input type="text" pattern="(ma){2}"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>couscous</td>
+			<td>cous cous</td>
+			</tr></tbody></table>
+			<p>			<input required="" type="text" pattern="(Weiß|Rot)wein|Ros(é|e)|Sekt" placeholder="Prost">
+
+			<code>&lt;input type="text" pattern="(Weiß|Rot)wein|Ros(é|e)|Sekt"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Weißwein<br>Rotwein<br>Rosé<br>Rose<br>Sekt</td>
+			<td>Wein<br>Perlwein<br>Roséwein<br>Glühwein<br>Bier</td>
+			</tr></tbody></table>
+
+
+			<p>Which tea may I pour for you?<br>
+			<input required="" type="text" pattern="((Roi|Rooi)bos|Roibush|(Rot|Roi)busch|Massai)tee" placeholder="Getränk mit &#39;T&#39;">
+
+			<code>&lt;input type="text" pattern="((Roi|Rooi)bos|Roibush|(Rot|Roi)busch|Massai)tee"&gt;</code><br>
+			</p><table class="match"><tbody><tr>
+			<td>Roibostee<br>Roibushtee<br>Rotbuschtee<br>Massaitee</td>
+			<td>Rooibushtee<br>Rooibuschtee<br>Grüner Tee<br>Masaitee</td>
+			</tr></tbody></table>
+
+  	</div>
+
+
+	<div style="margin-top:8px;min-height:50px;background-color:#99FFFF">
+		<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+			<!-- inputpattern -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2625749771785663" data-ad-slot="4706123587" data-ad-format="auto" data-full-width-responsive="true">
+	     	<iframe id="aswift_3" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./input]Pattern tutorial_files/saved_resource(6).html"><iframe id="google_ads_frame3" src="./input]Pattern tutorial_files/saved_resource(7).html"></iframe></iframe></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<h4 id="references">
+	<span><i class="fa fa-square"></i>references </span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Verweise"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span></h4>
+
+ <article class="column2" id="Verweis">
+
+<p>Another function of the round parenthesis is that we can access our groups with masked numbers <em>/1</em><em>/2</em><em>/3</em>etc. The number refers to the parenthesis in exactly the order you created it.</p>
+<p>The pattern <em>([A-z])\1</em> expects 2 characters, one from the list [A-z] and one identical to the first one. So for example 'AA'. </p>
+<p>Children first speak a simple language, which usually consists of duplicating syllables. (mama, papa, popo, pipi, lala). <em>([a-z])([a-z])\1\2</em> is the pattern. The masked one <em>\1</em> refers to the pattern of the first parenthesis, <em>\2</em> refers to the pattern of the second parenthesis. So the input of the third letter must be the same as the input of the first letter, the input of the 4th letter must be the same as the input of the 2nd letter.(mama) </p>
+<p>One from real life?<br>Stock management, you have a 9-digit part number of something. The system pretends that users can enter the number with separators (period, comma, space, dash) in blocks of 3 123.456.789, but does not have to. The separators must not be used mixed in any case! So only dots or only commas or (..). The reference to the repeated content could regulate this. <br><em>[0-9]([. ,-]?)[0-9]{3}\1[0-9]{3}</em>. <br>The second isolator must therefore be entered identically to the first one. </p>
+<p><i class="fas fa-info-circle"></i> The minus sign is not masked because it is not interpreted as 'from-to' at the beginning or end of the list. If instead of the list the pipe is used you would have to mask the dot.</p>
+	</article>
+<div class="code">
+			<p>doubles <br>
+			<input required="" type="text" placeholder="doubles" pattern="([A-z])\1">
+			<code>&lt;input type="text" pattern="([A-z])\1"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>aa<br>55<br>xx</td>
+			<td>ab<br>85<br>L54</td>
+			</tr></tbody></table>
+			<p>Doppelung <br>
+			<input required="" type="text" placeholder="duplication" pattern="([a-z])([a-z])\1\2">
+			<code>&lt;input type="text" pattern="([a-z])([a-z])\1\2"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>mama<br>papa<br>lala</td>
+			<td>mami<br>para<br>lali</td>
+			</tr></tbody></table>
+<p>
+		  9-digit TypePartsNumber <span class="format">Format: nnnnnnnnn oder nnn nnn nnn oder  nnn.nnn.nnn oder  nnn-nnn-nnn</span><br>
+			<input required="" type="text" placeholder="TTNR" pattern="[0-9]{3}([., -]?)[0-9]{3}\1[0-9]{3}">
+
+
+			<code>&lt;input type="text" pattern="[0-9]{3}([., -]?)[0-9]{3}\1[0-9]{3}"&gt;</code></p>
+
+			<table class="match"><tbody><tr>
+			<td>123123123<br>123 123 123<br>123.123.123<br>123-123-123</td>
+			<td>1231 23123<br>123.123,123<br>123 123.123<br>123-123 123</td>
+			</tr></tbody></table>
+
+
+
+
+		</div>
+
+
+
+<h4 id="Exclude_clamp">
+	<span><i class="fa fa-square"></i>Exclude clamp</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Klammer_ausschlie%C3%9Fen"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+ <article class="column2">
+
+<p>And it gets even better: If you now want to exclude a parenthesis from these links, you can simply do that with <em>?:</em>.<br>
+Example: <em>(\w)(?:\w)(\w)(\w))\2</em>. 5 characters are expected. The masked /2 refers to the second parenthesis, but since it is not released, the next parenthesis is the reference target. In this case the parenthesis three. This means that the browser will only accept the input if the 3rd and 5th characters are identical.</p>
+</article>
+		<div class="code">
+			<p>Exclude the 2nd parenthesis, so the third parenthesis is the second<br>
+			<input required="" type="text" placeholder="abCnC" pattern="(\w)(?:\w)(\w)([\w])\2">
+
+			<code>&lt;input type="text" pattern="(\w)(?:\w)(\w)(\w)\2"&gt;</code></p>
+			<table class="match"><tbody><tr>
+			<td>Na2O2<br>22222</td>
+			<td>Na2O3<br>22322</td>
+			</tr></tbody></table>
+		</div>
+
+
+
+
+
+
+<h4 id="positive">
+	<span><i class="fa fa-square"></i>Positive predictions  </span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Positive_Vorhersage"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+	<article class="column2" id="positive Voraussage">
+
+
+<p>A positive predictive statement <em>(?=x)</em>(look-ahead) sets parameters for the following pattern. It is written in parentheses with question marks and equal signs.<br>
+         The prediction together with the pattern <em>(?=.{5}$)[A-Z]*</em> indicates that the input must be 5 capital letters long. The "$" stands for the end of the input, i.e. a total of 5 characters, without this character the prediction would be interpreted as at least 5 characters. This example is too simplified to better understand the meaning please read <a href="https://input-pattern.com/en/pattern-training.php#isbn">Training ISBN</a>. <br> For example, the pattern <em>(?=.* apple .*).*</em> could mean that the word "apple" must appear in a word or sentence.<br>
+			The expression <em>(?=.*[A-Z]).*</em> specifies that the expression must contain uppercase letters. If now upper and lower case letters must be contained and a certain length is to be kept, then you build the pattern from a combination of the parameters. <em>(?=.{5,})(?=.*[A-Z])(?=.*[a-z])[A-z]*</em>
+
+
+</p>
+		</article>
+		<div class="code">
+  		<p>a total of 5 characters long, the dot somewhere in the middle <span class="format">Format: n.nnn oder nn.nn oder nnn.n</span><br>
+			<input required="" type="text" placeholder="" pattern="(?=.{5}$)\d+\.\d+">
+
+			<code>&lt;input type="text" pattern="(?=.{5}$)\d+\.\d+"&gt;</code><br>
+			</p><table class="match"><tbody><tr>
+			<td>1.234<br>12.34<br>123.4</td>
+			<td>1234<br>.1234<br>1234.</td>
+			</tr></tbody></table><p>
+			The string 'tan' must appear in the response.<br>
+			<input required="" type="text" placeholder="good code?" pattern="(?=.*[Tt]an.*).*"><!--  \w{2}(?!tz)\w{2,}-->
+
+			<code>&lt;input type="text" pattern="(?=.*[Tt]an.*).*"&gt;</code><br>
+			</p><table class="match"><tbody><tr>
+			<td>Zustand<br>Tanz<br>Wutanfall</td>
+			<td>Berlin<br>Natur<br>Wutach</td>
+			</tr></tbody></table><p>
+			Password must be at least 8 characters long and must contain upper case letters, lower case letters, numbers and special characters!<br>
+			<input required="" type="text" placeholder="" pattern="(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).*">
+
+			<code>&lt;input type="text" pattern="(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).*"&gt;</code><br>
+
+</p>
+		</div>
+
+
+
+
+
+<h4 id="negative">
+	<span><i class="fa fa-square"></i>Negative Predictions</span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#Negative_Vorhersagen"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+	<article class="column2" id="negative Voraussage">
+
+			<p>The negative predictive statement <em>(?!x)</em>(look-ahead) specifies that an expression is not followed by anything. For example, the pattern <em>(?!02)(0[1-9])</em> claims that subsequent input 00 to 09 is possible, but not 02! <br>An example: In your favorite descent there is no room number 13 on any floor. You know that.  Why? Because the pattern maker does that? Because the pattern maker took the room out of the form! <em>(?!13)\d{2}</em>Was obvious.</p>
+		</article>
+		<div class="code">
+  		<p>	Hotel - Roomnumber 001 - 299 but no x13<br>
+			<input required="" type="text" placeholder="Zi-Nr." pattern="[012](?!13)\d{2}">
+
+			<code>&lt;input type="text" pattern="[012](?!13)\d{2}"&gt;</code>
+			</p><table class="match"><tbody><tr>
+			<td>025<br>133<br>237</td>
+			<td>013<br>113<br>213</td>
+			</tr></tbody></table>
+			<p></p>
+			<p>
+			The string 'no' must never exist.<br>
+			<input required="" type="text" placeholder="good coder?" pattern="(?!.*no.*).*">
+
+			<code>&lt;input type="text" pattern="(?!.*no.*).*"&gt;</code><br>
+			</p><table class="match"><tbody><tr>
+			<td>yes<br>zahlen<br>Bariton</td>
+			<td>no<br>noten<br>Tenor</td>
+			</tr></tbody></table>
+			<p></p>
+			<p>
+			Three in a row.<br>
+			<input required="" type="text" placeholder="- 3x" pattern="(?=.*(.)\1\1.*)\w*">
+
+			<code>&lt;input type="text" pattern="(?=.*(.)\1\1.*)\w*"&gt;</code>
+			</p><table class="match"><tbody><tr>
+			<td>Betttuch<br>1000<br>Schifffahrt<br>Brennnessel </td>
+			<td>Bettuch<br>1001<br>Schiffahrt<br>Brennessel </td>
+			</tr></tbody></table>
+			<p></p>
+			<p>noneThree in a row. <br>
+			<input required="" type="text" placeholder="- 3x" pattern="(?!.*(.)\1\1.*)\w*">
+
+			<code>&lt;input type="text" pattern="(?!.*(.)\1\1.*)\w*"&gt;</code>
+			</p><table class="match"><tbody><tr>
+			<td>zoologisch</td>
+			<td>zooologisch</td>
+			</tr></tbody></table>
+		</div>
+
+	<h3><i class="fas fa-exclamation-triangle"></i>Frequent errors  </h3>
+
+
+
+<h4 id="errors">
+	<span><i class="fas fa-exclamation-triangle"></i>not tested, only copied </span>
+	<span><a href="https://input-pattern.com/en/tutorial.php#top"><i class="fas fa-bars"></i>TOP</a>&nbsp;<a href="https://input-pattern.com/de/anleitung.php#errors"><i class="fa fa-globe" title="zur deutschen Sprache wechseln"></i>DE</a></span>
+</h4>
+
+
+
+
+			<article class="column2">
+
+		<p>Retrospective statements (look-behind) used in different programming languages do not exist for input patterns. As you know the patterns are based on the rules of Javascript RegExp. There is no such thing.<br>There is no carriage return or tab either! If you copy/paste it from somewhere into the input field, it will be tested like a <em>space</em>. The same is true for newline.</p>
+	<p>I've found many, many patterns that aren't running at all. Either they are totally broken or they don't do what they are supposed to. As webworkers, we have to make sure that the pattern we provide for comparison is correct. Did I mention that you should test your patterns before you feed them to the www world?</p>
+<p>There are comparison pattern rules for many programming languages. (Regular Expresions, RegEx, RegExp, ...) They differ in one way or another. The regular expressions of the input pattern follow the rules of JavaScript according to the will of the 3W and not those of Perl or any other language! It doesn't make sense to simply copy a pattern you have found in C, C++, Java, Python, Ruby or PHP on the net, it probably won't do what you want it to do. Maybe it looks similar, but needs to be adapted to our form input pattern. However, there are also some rules that differ from JS, see above. </p>
+<p>Levely sorry I also found some popular pattern collection and tips that shine with a lot of bad examples. If you copy something from there (this is of course also true for this page!), you should check well.</p>
+<p> Surely my examples are not error free, because of the huge amount of patterns it is impossible to check all of them completely for positive or negative input.</p>
+		</article>
+
+
+	<h3><i class="fa fa-th"></i>Summary</h3>
+
+	<article>
+
+<table id="übersicht">
+	<tbody>
+		<tr><th>Selection (list)</th><th></th><th></th><th></th></tr>
+		<tr><td>[&nbsp;&nbsp; ]</td><td><a href="https://input-pattern.com/en/tutorial.php#characterselection">selection of the character<i class="fas fa-location-arrow"></i></a></td><td>[abc]</td><td><input required="" type="text" pattern="[abc]" value="a"></td></tr>
+		<tr><td>[^&nbsp;&nbsp;]</td><td>none of the characters within the brackets</td><td>[^abc]</td><td><input required="" type="text" pattern="[^abc]" value="d"></td></tr>
+		<tr><td>[A-Z]</td><td>one letter capital</td><td>[A-Z]</td><td><input required="" type="text" pattern="[A-Z]" value="H"></td></tr>
+		<tr><td>[a-z]</td><td>one letter small a-z</td><td>[a-z]</td><td><input required="" type="text" pattern="[a-z]" value="h"></td></tr>
+		<tr><td>[A-z]</td><td>one letter, capital, small, some special characters [\]^_`</td><td>[A-z]</td><td><input required="" type="text" pattern="[A-z]" value="h"></td></tr>
+		<tr><td>[0-9]</td><td>a number 0-9</td><td>[0-9]</td><td><input required="" type="text" pattern="[0-9]" value="5"></td></tr>
+		<tr><th>Groups and References</th><th></th><th></th><th></th></tr>
+		<tr><td>(&nbsp;&nbsp;)</td><td>group of characters</td><td>(abc)</td><td><input required="" type="text" pattern="abc" value="abc"></td></tr>
+		<tr><td>\1</td> <td>reference (input is identical to the input of bracket 1)</td><td>(\D)(\d)\1</td><td><input required="" type="text" pattern="(\D)(\d)\1" value="a1a"></td></tr>
+		<tr><td>\2</td> <td>reference (input is identical to the input of bracket 2)</td><td>(\D)(\d)\2</td><td><input required="" type="text" pattern="(\D)(\d)\2" value="a11"></td></tr>
+		<tr><td>?:</td> <td> exclude from reference<br> (First bracket excluded, so the second is the first)</td><td>(?:[abc])(\d)\1</td><td><input required="" type="text" pattern="(?:[abc])(\d)\1" value="b22"></td></tr>
+		<tr><th>Meta</th><th></th><th></th><th></th></tr>
+		<tr><td>\</td><td>metacharacter: mask a metacharacter </td> <td>\d</td> <td> </td> </tr>
+		<tr><td>.</td>		<td>(dot) any character</td><td>1.2</td><td><input required="" type="text" pattern="1.2" value="1X2"></td></tr>
+		<tr><td>\.</td>	<td>(mask dot) = the dot.</td><td>1\.2</td><td><input required="" type="text" pattern="1\.2" value="1.2"></td></tr>
+		<tr><td>/</td> <td>normal special character </td><td> </td><td> </td></tr>
+		<tr><td>|</td> <td>metacharacters: or</td><td>ab|cd</td><td><input required="" type="text" pattern="ab|cd" value="ab"></td></tr>
+		<tr><td>-</td><td>metacharacter: selection range from-to within  </td><td>[0-5]</td><td><input required="" type="text" pattern="[0-5]" value="2"></td></tr>
+		<tr><td>\d</td><td>(digit) a number [0-9] </td><td>\d</td><td><input required="" type="text" pattern="\d" value="5"></td></tr>
+		<tr><td>\D</td><td>alles außer einer Zahl </td><td>\D</td><td><input required="" type="text" pattern="\D" value="A"></td></tr>
+		<tr><td>\s</td><td>(Leerzeichen) Leerzeichen (ein Leerzeichen, ein Tab (per C&amp;P))</td><td>\s</td><td><input required="" type="text" pattern="\s" value=" "></td></tr>
+		<tr><td>\S</td><td>everything but a space (no space, no tab) </td><td>\S</td><td><input required="" type="text" pattern="\S" value="B"></td></tr>
+		<tr><td>\t</td><td>(tab) one tab (input only by copy/paste)</td><td></td><td></td></tr>
+		<tr><td>\T</td><td>no tab (input only by copy/paste)</td><td></td><td></td></tr>
+		<tr><td>\w</td><td>(word) one letter, one digit or underscore</td><td>\w</td><td><input required="" type="text" pattern="\w" value="A"></td></tr>
+		<tr><td>\W</td><td>No letter, no digit, no underscore</td><td>\W</td><td><input required="" type="text" pattern="\W" value="#"></td></tr>
+		<tr><td>^</td> <td></td><td></td><td></td></tr>
+		<tr><td>$</td><td> end marker (actually only used for predictions.</td><td>(?=\d{3}$).*</td><td></td></tr>
+		<tr><th>Quanifier</th><th></th><th></th><th></th></tr>
+		<tr><td>?</td> <td>metacharacter: once or not once</td><td>[a-z]\d?</td><td><input required="" type="text" pattern="[a-z]\d?" value="a"></td></tr>
+		<tr><td>+</td> <td>metacharacter: once or several times</td><td>[a-z]\d+</td><td><input required="" type="text" pattern="[a-z]\d+" value="a2"></td></tr>
+		<tr><td>*</td> <td>metacharacter: once or several times</td><td>[a-z]\d*</td><td><input required="" type="text" pattern="[a-z]\d*" value="a"></td></tr>
+		<tr><td>[ ] { } ( ) * + </td><td>metacharacter</td><td></td><td></td></tr>
+		<tr><td>{n}</td> <td>Quantity</td><td>x{5}</td><td><input required="" type="text" pattern="\w{5}" value="12345"></td></tr>
+		<tr><td>{n,}</td> <td>Number at least</td><td>x{5,}</td><td><input required="" type="text" pattern="\w{5,}" value="abcdefgh"></td></tr>
+		<tr><td>{0,m}</td><td>Number Maximum</td><td>x{0,5}</td><td><input required="" type="text" pattern="\w{0,5}" value="xyz"></td></tr>
+		<tr><td>{n,m}</td><td>Minimum, maximum number</td><td>x{5,8}</td><td><input required="" type="text" pattern="\w{5,8}" value="ab123yz"></td></tr>
+		<tr><th>Forecasts</th><th></th><th></th><th></th></tr>
+		<tr><td>?=</td> <td> positive prediction (input contains one digit)</td><td>(?=\d).</td><td><input required="" type="text" pattern="(?=\d)." value="8"></td></tr>
+		<tr><td>...</td>	<td>.. (Input contains three digits in a row at the beginning)</td><td>(?=\d{3}).*</td><td><input required="" type="text" pattern="(?=\d{3}).*" value="888"></td></tr>
+		<tr><td>...</td>	<td>.. (Input contains three digits in a row somewhere)</td><td>(?=.*\d{3}).*</td><td><input required="" type="text" pattern="(?=.*\d{3}).*" value="abc888xyz "></td></tr>
+		<tr><td>...</td>	<td>.. (Input contains three digits in a row at the end)</td><td>(?=.*\d{3}$).*</td><td><input required="" type="text" pattern="(?=.*\d{3}$).*" value="abcxyz888"></td></tr>
+		<tr><td>?!</td>	<td>negative prediction (input contains <u>not</u> a digit)</td><td>(?!\d).</td><td><input required="" type="text" pattern="(?!\d)." value="A"></td></tr>
+		<tr><td>...</td>	<td>.. (Input contains <u>not</u> three digits in a row)</td><td>(?!.*\d{3}).*</td><td><input required="" type="text" pattern="(?!.*\d{3}).*" value="ab12xy"></td></tr>
+	</tbody>
+</table>
+
+
+		</article>
+
+
+
+
+
+	<div style="margin-top:8px;min-height:50px;background-color:#99FFFF">
+		<script async="" src="./input]Pattern tutorial_files/f.txt"></script>
+			<!-- inputpattern -->
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2625749771785663" data-ad-slot="4706123587" data-ad-format="auto" data-full-width-responsive="true">
+	     	<iframe id="aswift_4" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="./input]Pattern tutorial_files/saved_resource(8).html"><iframe id="google_ads_frame4" src="./input]Pattern tutorial_files/saved_resource(9).html"></iframe></iframe></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<a href="https://input-pattern.com/en/legal_notice.php#policy"><article class="grid last">
+	<div class="linkbox" title="pool
+©Thomas Feldes" style=" background-image:url(../img/pool.jpg);background-attachment: inherit;"></div>
+
+
+	<h3><i class="fa fa-user-secret "></i>privacy policy</h3>
+</article></a><a href="https://input-pattern.com/en/legal_notice.php"><article class="grid last">
+	<div class="linkbox" title="fische
+©Thomas Feldes" style=" background-image:url(../img/fische.jpg);background-attachment: inherit;"></div>
+
+
+	<h3><i class="fa fa-gavel "></i>Legal Notice</h3>
+</article></a><nav><ul><li><a href="https://input-pattern.com/en/index.php" title=""><i class="fab fa-wpforms"></i>Introduction</a></li> <li><a style="background-color:blue; color:white;" href="https://input-pattern.com/en/tutorial.php" title="The core of this site, the guide to creating patterns."><i class="fa fa-file-alt"></i>Tutorial</a></li> <li><a href="https://input-pattern.com/en/training.php" title="Some patterns explained step by step in detail"><i class="fab fa-leanpub"></i>Training</a></li> <li><a href="https://input-pattern.com/en/patternbook.php" title="A growing collection of patterns for all sorts of things"><i class="fa fa-book"></i>Patternbook</a></li> <li><a href="https://input-pattern.com/en/question.php" title="What is so asked, and which leaders are made"><i class="fa fa-question"></i>FAQ and Fail</a></li> <li><a href="https://input-pattern.com/en/test.php" title="A tester for your sample"><i class="fa fa-vial"></i>Analyser</a></li> <li><a href="https://input-pattern.com/en/database.php" title="A collection of thousands of patterns"><i class="fa fa-database"></i>Database</a></li> <li><a href="https://input-pattern.com/en/tutorial.php#.php" title="Discussion and information"><i class="fas fa-user-friends"></i>Bulletin</a></li> <li><a href="https://input-pattern.com/en/legal_notice.php" title="All right"><i class="fa fa-gavel"></i>Legal Notice</a></li> <li><a href="https://input-pattern.com/de/anleitung.php" title="zur deutschsprachigen Seite wechseln"><i class="fa fa-globe"></i>Deutsch</a></li> </ul></nav>
+
+</section>
+
+
+</body></html>

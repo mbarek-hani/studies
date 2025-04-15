@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div
+            class="profil"
+            id="carteUtilisateur"
+            style="border: 1px solid #000"
+            data-role="invité"
+        >
+            <h3 id="nom">Nom : Inconnu</h3>
+            <p id="email">Email : Non défini</p>
+        </div>
+
+        <script>
+            const div = document.querySelector("div");
+            console.log(div.getAttribute("data-role"));
+            div.setAttribute("id", "ficheUtilisateur");
+            div.setAttribute("class", "profil Active");
+            div.setAttribute("data-active", "true");
+            div.style.borderColor = "blue";
+            div.removeAttribute("data-role");
+            const divAttrs = div.attributes;
+            for (let attr of divAttrs) {
+                console.log(`'${attr.name}' = '${attr.value}'`);
+            }
+        </script>
+    </body>
+</html>

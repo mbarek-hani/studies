@@ -1,0 +1,158 @@
+Procédure initialiser(Var totalVenteJour, qteVendu1, qteVendu2, qteVendu3: Réel)
+    Début
+        totalVenteJour := 0
+        qteVendu1 := 0
+        qteVendu2 := 0
+        qteVendu3 := 0
+    Fin
+
+
+Procédure lireCategorie(Var categorie: chaine)
+    Début
+        Répéter
+            Ecrire("La catégorie (alimentation/electronique/vetements) ? ")
+            Lire(categorie)
+        jusqu'à categorie = "alimentation" ou categorie = "electronique" ou categorie = "vetements"
+    Fin
+
+
+Procédure lireQuantiteVendue(Var qteVendu: Réel)
+    Début
+        Répéter
+            Ecrire("Quantité vendu ? ")
+            Lire(qteVendu)
+        jusqu'à qteVendu >= 0
+    Fin
+
+
+Procédure lirePrixUnitaire(Var prixUnitaire: Réel)
+    Début
+        Répéter
+            Ecrire("Prix unitaire en DH? ")
+            Lire(prixUnitaire)
+        jusqu'à prixUnitaire > 0
+    Fin
+
+
+Fonction lireQuantiteStock(): Réel
+    Var qteStock: Réel
+    Début
+        Répéter
+            Ecrire("Quantité en stock ? ")
+            Lire(qteStock)
+        jusqu'à qteStock >= 0
+        retourner qteStock
+    Fin
+
+
+Procédure miseAJourMeilleursVendeurs(i: Entier, 
+                                     nomArticle: chaine, 
+                                     qteVendu: Réel ; 
+                                     Var article1, article2, article3: Chaine,
+                                     Var qteVendu1, qteVendu2, qteVendu3: Réel)
+    Début
+        Si i = 1 alors
+            article1 := nomArticle
+            qteVendu1 := qteVendu
+        Sinon Si qteVendu > qteVendu1 alors
+            qteVendu3 := qteVendu2
+            article3 := article2
+            qteVendu2 := qteVendu1
+            article2 := article1
+            qteVendu1 := qteVendu
+            article1 := nomArticle
+        Sinon Si qteVendu > qteVendu2 alors
+            qteVendu3 := qteVendu2
+            article3 := article2
+            qteVendu2 := qteVendu
+            article2 := nomArticle
+        Sinon Si qteVendu > qteVendu3 alors
+            qteVendu3 := qteVendu
+            article3 := nomArticle
+        FinSi
+    Fin
+
+
+Procédure calculerMoyenneCategorie(articles: tableau de Réel, nomCategorie: Chaine)
+    Var totalVenteCateg: Réel
+    Début
+        Si len(articles) != 0 alors
+            totalVenteCateg := 0
+            Pour i de 1 à len(articles) faire
+                totalVenteCateg := totalVenteCateg + articles[i]
+            FinPour
+            Ecrire("La moyenne des ventes pour la catégorie ", nomCategorie, " est : ", 
+                   totalVenteCateg / len(articles))
+        FinSi
+    Fin
+
+
+
+Algorithme rapport_quotidien
+
+    Var
+        nbrArticles, i : Entier
+        nomArticle, categorie : Chaine
+        qteVendu, prixUnitaire : Réel
+        qteStock : Réel
+        totalVente, totalVenteJour : Réel
+        moyenneVenteCteg : Réel
+
+        articlesAlim : tableau de Réel
+        articlesElec : tableau de Réel
+        articlesVetm : tableau de Réel
+
+        articleStockCritique : tableau de chaine
+
+        article1, article2, article3 : chaine
+        qteVendu1, qteVendu2, qteVendu3: Réel
+
+    Début
+        initialiser()
+        
+        Ecrire("Entrer le nombre des articles :")
+        Lire(nbrArticles)
+        
+        Pour i de 1 à nbrArticles faire
+            Ecrire("Nom de l'article ", i, " : ")
+            Lire(nomArticle)
+            
+            lireCategorie(categorie)
+            lireQuantiteVendue(qteVendu)
+            lirePrixUnitaire(prixUnitaire)
+            qteStock := lireQuantiteStock()
+            
+            totalVente := qteVendu * prixUnitaire
+            totalVenteJour := totalVenteJour + totalVente
+            
+            Si qteStock < 10 alors
+                articleStockCritique.append(nomArticle)
+            FinSi
+            
+            Cas categorie de
+                "alimentation": articlesAlim.append(totalVente)
+                "electronique": articlesElec.append(totalVente)
+                "vetements": articlesVetm.append(totalVente)
+            FinCas
+            
+            miseAJourMeilleursVendeurs(i,nomArticle, qteVendu, article1, article2, article3, qteVendu1, qteVendu2, qteVendu3)
+        FinPour
+        
+        calculerMoyenneCategorie(articlesAlim, "alimentation")
+        calculerMoyenneCategorie(articlesElec, "electronique")
+        calculerMoyenneCategorie(articlesVetm, "vetements")
+        
+        Ecrire("####### Rapport quotidien #######")
+        Ecrire("Les trois articles les plus vendus :")
+        Ecrire(" 1. ", article1, " (", qteVendu1, "DH)")
+        Ecrire(" 2. ", article2, " (", qteVendu2, "DH)")
+        Ecrire(" 3. ", article3, " (", qteVendu3, "DH)")
+        Ecrire("Total des ventes de la journée : ", totalVenteJour, "DH")
+        
+        Si len(articleStockCritique) > 0 alors
+            Ecrire("Les articles qui sont avec stock critique sont : ")
+            Pour i de 1 à len(articleStockCritique) faire
+                Ecrire("    -", articleStockCritique[i])
+            FinPour
+        FinSi
+    Fin

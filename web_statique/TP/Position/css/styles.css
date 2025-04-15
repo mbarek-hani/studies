@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Amadeus;
+    src: url("../font/Amadeus.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f0807f;
+}
+
+.header,
+.navbar,
+.content,
+.left,
+.right
+{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.header {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    position: relative;
+}
+
+.header > h1 {
+    position: absolute;
+    bottom: -10px;
+    left: 120px;
+}
+
+.header > .navbar {
+    background-color: rgba(50, 50, 50, 0.4);
+    text-align: center;
+    padding: 10px auto;
+    position: absolute;
+    bottom: -45px;
+    left: 10px;
+    right: 10px;
+}
+
+.navbar > ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    background-color: rgb(221, 141, 22);
+    margin: 5px 4px;
+    padding: 0 12px;
+    border: 2px solid black;
+}
+
+li > a {
+    text-decoration: none;
+    color: green;
+}
+
+.left,
+.right {
+    float: left;
+}
+
+.left {
+    width: 62.66%;
+}
+
+.right {
+    width: 33.33%;
+    overflow: auto;
+    height: 429px;
+    margin-left: 20px;
+    background-color: rgb(201, 196, 196);
+    position: relative;
+    z-index: -1;
+}
+
+.left > h2 {
+    margin: 25px 20px;
+    margin-top: 30px;
+}
+
+.right > h2 {
+    font-family: Amadeus, sans-serif;
+    color: red;
+    margin: 40px 10px 50px 0;
+    margin-bottom: 70px;
+}
+
+.left > p {
+    line-height: 3;
+    text-align: justify;
+}
+
+.right > p > span {
+    float: left;
+    font-size: 50px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 10px;
+    margin: 8px 20px;
+    overflow: hidden
+}
+
+.footer {
+    clear: left;
+    border: 2px solid black;
+    border-radius: 10px;
+    position:relative;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: -5px;
+}
+
+.footer > img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.right > img {
+    position: absolute;
+    left: 0;
+    top: 300px
+}

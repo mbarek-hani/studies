@@ -1,0 +1,10 @@
+# Activate your virtual environment first
+source .venv/bin/activate  # On Unix/Mac
+# OR
+.\.venv\Scripts\activate  # On Windows
+
+# Then install ipykernel in your virtual environment
+pip install ipykernel
+
+# Register your virtual environment as a Jupyter kernel
+python -m ipykernel install --user --name=.venv

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="./assets/css/custom.css" /> -->
+        <style>
+            .box {
+                border: 2px solid black;
+                background-color: #98fb98;
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 4px;
+            }
+            .container {
+                max-width: 1200px;
+                padding: 20px;
+            }
+            .gutter {
+                margin: 0 10px;
+            }
+            .row {
+                margin: 0 -10px;
+            }
+            .col-spacing {
+                padding: 0 10px;
+            }
+        </style>
+    </head>
+    <body class="text-center">
+        <div class="container">
+            <!-- Premier niveau -->
+            <div class="box">Premier niveau avec 12 colonnes</div>
+
+            <div class="row">
+                <!-- Left side (8 columns) -->
+                <div class="col-8 col-spacing">
+                    <div class="box">
+                        Second niveau avec 8 colonnes
+
+                        <div class="row">
+                            <div class="col-4 col-spacing">
+                                <div class="box">
+                                    Troisième niveau avec 4 colonnes
+                                </div>
+                            </div>
+                            <div class="col-6 col-spacing offset-2">
+                                <div class="box">
+                                    Troisième niveau avec 6 colonnes
+                                </div>
+                                <div class="row">
+                                    <div class="col-5 col-spacing">
+                                        <div class="box">
+                                            Quatrième niveau<br />avec 3
+                                            colonnes
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-spacing">
+                                        <div class="box">
+                                            Quatrième niveau<br />avec 5
+                                            colonnes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side (4 columns) -->
+                <div class="col-4 col-spacing">
+                    <div class="box">Second niveau avec 4 colonnes</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

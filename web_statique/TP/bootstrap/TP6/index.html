@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bonjour tout le monde! - Brave</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background-color: #f8f9fa;
+                padding: 2rem;
+            }
+            .email-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+            .message-header {
+                background-color: #e3f2fd;
+                padding: 1rem;
+                border-bottom: 1px solid #dee2e6;
+            }
+            .close-button {
+                font-size: 1.5rem;
+                color: #6c757d;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0.25rem 0.5rem;
+            }
+            .inbox-title {
+                background-color: #212529;
+                color: #ffc107;
+                padding: 1rem;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            .inbox-buttons {
+                padding: 1.5rem;
+            }
+            .btn-inbox {
+                position: relative;
+                padding: 0.5rem 1.5rem;
+                margin: 0.5rem;
+                min-width: 200px;
+            }
+            .notification-badge {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: #dc3545;
+                color: white;
+                box-sizing: border-box;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 0.75rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="email-container">
+            <div
+                class="message-header d-flex justify-content-between align-items-center m-2"
+            >
+                <div>Bonjour TOM! Vous avez un nouveau message.</div>
+                <button class="close-button">&times;</button>
+            </div>
+
+            <div class="inbox-title">BOITE DE MESSAGERIE</div>
+
+            <div class="inbox-buttons d-flex flex-wrap justify-content-center">
+                <button class="btn btn-primary btn-inbox">
+                    Boîte de réception
+                    <span class="notification-badge">1</span>
+                </button>
+                <button class="btn btn-primary btn-inbox">
+                    Boîte d'envoie
+                </button>
+                <button class="btn btn-primary btn-inbox">
+                    Spam
+                    <span class="notification-badge"></span>
+                </button>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

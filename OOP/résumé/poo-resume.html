@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé du Cours POO</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        .subsection {
+            background-color: #f5f9fc;
+            border-left: 3px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .highlight {
+            background-color: #eaf7fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        
+        .example {
+            background-color: #f0fff0;
+            border-left: 3px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background-color: #fff9f0;
+            border-left: 3px solid #e67e22;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .concept {
+            display: inline-block;
+            background-color: #e8f4fc;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin: 3px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 8px 10px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Résumé du Cours de Programmation Orientée Objet</h1>
+    
+    <div class="section">
+        <h2>Introduction à la POO</h2>
+        <p>La Programmation Orientée Objet est un paradigme de programmation basé sur le concept d'objets, qui peuvent contenir des données et du code. Les principes fondamentaux incluent l'encapsulation, l'héritage, et le polymorphisme.</p>
+        
+        <div class="container">
+            <div class="subsection">
+                <h3>Concepts clés</h3>
+                <span class="concept">Objet</span>
+                <span class="concept">Classe</span>
+                <span class="concept">Encapsulation</span>
+                <span class="concept">Héritage</span>
+                <span class="concept">Polymorphisme</span>
+                <span class="concept">Abstraction</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Chapitre 3: Créer un Objet</h2>
+        
+        <div class="subsection">
+            <h3>Définition d'un Objet</h3>
+            <p>Un objet est composé de trois éléments essentiels:</p>
+            <div class="highlight">
+                <strong>OBJET = Référent + État + Comportement</strong>
+            </div>
+            
+            <ul>
+                <li><strong>Référent:</strong> Nom qui identifie l'objet et contient l'adresse mémoire où l'objet est stocké</li>
+                <li><strong>État:</strong> Ensemble d'informations (attributs) décrivant l'objet</li>
+                <li><strong>Comportement:</strong> Ensemble de méthodes qui peuvent modifier l'état de l'objet</li>
+            </ul>
+            
+            <div class="example">
+                <p><strong>Exemple:</strong> Une voiture peut avoir comme attributs <code>couleur="rouge"</code>, <code>marque="Peugeot"</code> et comme comportements <code>démarrer()</code>, <code>accélérer()</code>, etc.</p>
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Adressage Indirect</h3>
+            <p>Plusieurs référents peuvent pointer vers un même objet en mémoire. La modification de l'objet via un référent sera visible via l'autre référent.</p>
+        </div>
+        
+        <div class="subsection">
+            <h3>Objet Composite</h3>
+            <p>Un objet peut contenir d'autres objets comme attributs. Par exemple, une voiture peut contenir un objet moteur.</p>
+        </div>
+        
+        <div class="subsection">
+            <h3>Instanciation</h3>
+            <p>L'instanciation est le processus de création d'un objet à partir d'une classe. Elle comporte deux phases:</p>
+            <ol>
+                <li>Création de l'objet en mémoire (ressort de la classe)</li>
+                <li>Initialisation des attributs (ressort de l'objet)</li>
+            </ol>
+            <p>L'instanciation explicite se fait via un constructeur, appelé automatiquement lors de la création de l'objet.</p>
+        </div>
+        
+        <div class="subsection">
+            <h3>Destruction d'un Objet</h3>
+            <p>La destruction explicite d'un objet s'effectue en appelant le destructeur de la classe. Le destructeur est une méthode particulière qui permet la libération des ressources d'un objet non référencé.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Chapitre 4: L'Encapsulation</h2>
+        
+        <div class="subsection">
+            <h3>Principe de l'encapsulation</h3>
+            <p>L'encapsulation consiste à:</p>
+            <ul>
+                <li>Réunir le code (méthodes) et les données (attributs) dans une même entité</li>
+                <li>Protéger l'information contenue dans un objet</li>
+                <li>Masquer les détails d'implémentation en définissant une interface</li>
+            </ul>
+            
+            <div class="highlight">
+                <p>L'interface est la vue externe d'un objet, définissant les services accessibles (méthodes publiques) aux utilisateurs de l'objet.</p>
+            </div>
+            
+            <div class="example">
+                <p><strong>Exemple:</strong> Dans une classe <code>Compte</code>, les attributs (numéro, solde) sont privés et ne sont accessibles que via des méthodes publiques comme <code>retirer()</code> et <code>déposer()</code>.</p>
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Modificateurs et Accesseurs</h3>
+            <p>Pour interagir avec les attributs privés d'un objet:</p>
+            <ul>
+                <li><strong>Accesseurs (getters):</strong> Méthodes qui retournent la valeur d'un attribut (<code>getCouleur()</code>)</li>
+                <li><strong>Modificateurs (setters):</strong> Méthodes qui modifient la valeur d'un attribut (<code>setCouleur("bleu")</code>)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Chapitre 5: Manipuler les Méthodes</h2>
+        
+        <div class="subsection">
+            <h3>Définition d'une Méthode</h3>
+            <p>Une méthode est composée:</p>
+            <ul>
+                <li>D'une entête: nom, type de retour, paramètres</li>
+                <li>D'un bloc d'instructions (corps de la méthode)</li>
+            </ul>
+            
+            <div class="example">
+                <code>
+                    Entier CalculSomme(x: entier, y: entier)<br>
+                    {<br>
+                    &nbsp;&nbsp;z: entier<br>
+                    &nbsp;&nbsp;z = x + y<br>
+                    &nbsp;&nbsp;retourner z<br>
+                    }
+                </code>
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Visibilité d'une Méthode</h3>
+            <table>
+                <tr>
+                    <th>Visibilité</th>
+                    <th>Symbole</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Publique</td>
+                    <td>+</td>
+                    <td>Accessible par toutes les classes</td>
+                </tr>
+                <tr>
+                    <td>Protégée</td>
+                    <td>#</td>
+                    <td>Accessible par la classe elle-même et ses classes héritières</td>
+                </tr>
+                <tr>
+                    <td>Privée</td>
+                    <td>-</td>
+                    <td>Accessible uniquement par la classe elle-même</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="subsection">
+            <h3>Appel d'une Méthode</h3>
+            <p>L'appel d'une méthode d'instance se fait en nommant l'objet suivi d'un point et du nom de la méthode:</p>
+            <code>nomObjet.nomMethode(arg1, arg2,...)</code>
+            <div class="example">
+                <p><strong>Exemple:</strong> <code>voiture.demarrer()</code></p>
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Méthodes de Classe</h3>
+            <p>Une méthode de classe est liée à la classe et non à ses instances. Son exécution ne dépend pas des objets.</p>
+            <p>Appel d'une méthode de classe: <code>nomClasse.nomMethode(arg1, arg2,...)</code></p>
+            
+            <div class="warning">
+                <p><strong>Important:</strong> Les méthodes de classe ne peuvent pas accéder aux attributs d'instance.</p>
+                <ul>
+                    <li>Méthodes d'instance → peuvent accéder aux attributs d'instance, méthodes d'instance, attributs de classe, méthodes de classe</li>
+                    <li>Méthodes de classe → peuvent accéder aux attributs de classe et méthodes de classe uniquement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Chapitre 1 (Partie 2): L'Héritage</h2>
+        
+        <div class="subsection">
+            <h3>Principe de l'Héritage</h3>
+            <p>L'héritage définit une relation de spécialisation ou de généralisation entre différentes classes.</p>
+            <div class="highlight">
+                <p>Quand une classe A hérite d'une classe B:</p>
+                <ul>
+                    <li>A acquiert toutes les propriétés de B, plus ses propres propriétés</li>
+                    <li>A est une spécialisation de B; B est une généralisation de A</li>
+                    <li>A est la classe fille (dérivée); B est la classe mère (super-classe)</li>
+                    <li>Toute instance de A peut être considérée comme un objet de B</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <p><strong>Exemple:</strong> La classe <code>Etudiant</code> hérite de la classe <code>Personne</code>, ajoutant des attributs spécifiques comme <code>note1</code> et <code>note2</code>.</p>
+            </div>
+            
+            <p>L'héritage permet de:</p>
+            <ul>
+                <li>Factoriser le code en regroupant les caractéristiques communes</li>
+                <li>Faciliter la création de nouvelles classes grâce à une hiérarchie bien définie</li>
+            </ul>
+        </div>
+        
+        <div class="subsection">
+            <h3>Types d'Héritage</h3>
+            <ul>
+                <li><strong>Héritage multiple:</strong> Une classe peut hériter de plusieurs classes (ex: <code>Etudiant</code> hérite de <code>Personne</code> et <code>EtreVivant</code>)</li>
+                <li><strong>Héritage en cascade:</strong> Une sous-classe peut être elle-même une super-classe (ex: <code>EtudiantDeuxiemeCycle</code> hérite de <code>Etudiant</code> qui hérite de <code>Personne</code>)</li>
+            </ul>
+        </div>
+        
+        <div class="subsection">
+            <h3>Surcharge des Constructeurs et Chaînage</h3>
+            <ul>
+                <li><strong>Surcharge du constructeur:</strong> Plusieurs constructeurs dans une même classe avec différentes signatures (nombre/types de paramètres)</li>
+                <li><strong>Chaînage des constructeurs:</strong> Appel d'un constructeur de la classe mère depuis un constructeur de la classe fille pour éviter la duplication de code</li>
+            </ul>
+            
+            <div class="example">
+                <p><strong>Exemple de chaînage:</strong></p>
+                <code>
+                    CréerEtudiant(nom: chaine, CIN: entier, dateNaiss: entier, note1: réel, note2: réel)<br>
+                    {<br>
+                    &nbsp;&nbsp;CréerPersonne(nom, CIN, dateNaiss); // Appel du constructeur de la classe mère<br>
+                    &nbsp;&nbsp;this.note1 = note1;<br>
+                    &nbsp;&nbsp;this.note2 = note2;<br>
+                    }
+                </code>
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Visibilité des Membres dans l'Héritage</h3>
+            <ul>
+                <li>Les membres privés (-) de la classe mère ne sont pas accessibles par les classes filles</li>
+                <li>Les membres protégés (#) sont accessibles par les classes filles</li>
+                <li>Les membres publics (+) sont accessibles par toutes les classes</li>
+            </ul>
+            
+            <div class="warning">
+                <p>Pour permettre à une classe fille d'accéder à un attribut de la classe mère, celui-ci doit être déclaré comme protégé (#) et non privé (-).</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>La Programmation Orientée Objet offre une approche structurée pour organiser le code en entités réutilisables (objets) qui encapsulent données et comportements. Les concepts d'encapsulation, d'héritage et de polymorphisme permettent de créer des architectures de code flexibles et maintenables.</p>
+    </div>
+</body>
+</html>

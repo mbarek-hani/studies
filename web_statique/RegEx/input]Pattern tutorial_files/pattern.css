@@ -1,0 +1,208 @@
+/* ---------------------------------------------- */
+/* css für input-pattern.com  08.2018             */
+/* Thomas Feldes - Der Webseitenbauer - tfcpc.de  */
+/* ---------------------------------------------- */
+
+html    					{-webkit-transform-style: border-box;   -moz-box-sizing: border-box;   box-sizing: border-box;font-family: Arial, Helvetica, sans-serif; }
+body        			{ animation:fadein 1s;-moz-animation:fadein 1.2s;-webkit-animation:fadein 1s;max-width:1400px; margin:auto auto; border:8px solid transparent;}
+
+*, *:before, *:after {-webkit-box-sizing: inherit;	-moz-box-sizing: inherit;	box-sizing: inherit;	}
+
+img#logo				{ width:100%; }
+div.header 			{width: 100%; font-size:150%; font-weight:bolder; margin:10px auto; }
+div.header h1		{font-family:Arial, Helvetica, sans-serif;  color:red; font-weight:normal; margin:0; padding:0px;  text-align:center;
+						/*vertical Zentrierung*/ display: -webkit-flex;display: flex;-webkit-align-items: center;align-items: center;}
+div.header h1 span{ 	color:black;  font-size:80%;	  background-color:#E6E6E6;	border-radius:7px; border-top-left-radius: 0;border-bottom-left-radius: 0;
+						padding-right:.5rem;	padding-left:25%; margin-left:0;	border:6px solid #00FF00; border-left:none; padding:top:0; }
+/*navi*/
+ul						{background-color : rgb(192, 192, 192); padding : 0.3rem;border-radius: .4em;  list-style-type: none; margin:0; }
+ul:first-child		{}
+ul a					{text-decoration:none; background-color:#87CEEB; padding:0 1rem 0 0; box-shadow: 2px 2px 5px 0 #808080;}
+ul a:last-child	{}
+ul a:hover			{box-shadow: 2px 2px 5px 0 blue;}
+ul li 				{display:inline-block; margin-bottom:0; margin-top:5px; width:49%;}
+ul li i				{margin:0 .5rem;}
+ul li:last-child	{}
+ul li:last-child a i{color:#FF33FF;}
+
+a  					{text-decoration:none; color:black;}
+/*a[href^="#"] 		{color:#CCCCCC;}*/
+p						{-webkit-hyphens: auto;		-moz-hyphens: auto;		-ms-hyphens: auto;		hyphens: auto; }
+p:first-child		{ margin-top:0; }
+p a					{border-bottom:1px dotted blue; border-top:1px dotted transparent;}
+p a:hover			{color:green; border-top:1px dotted green;border-bottom:1px solid green;}
+
+section 				{margin: 6px;}
+h2 					{background-color : rgb(192, 192, 192);padding : 0.3rem;border-radius: .4em; font-size:2em; margin:0;}
+
+h3						{background-color : rgb(192, 192, 192);padding : 0.3rem;border-radius: .4em; }
+h3:first-child		{margin-top:0;  }
+h3 a					{text-decoration:none; background-color:#87CEEB;border-radius: 1em; padding:0 1rem 0 0;box-shadow: 2px 2px 5px 0 #808080;}
+
+h3 span 				{display:inline-block; }
+h3 span:last-child{float:right;}
+
+
+
+h2 i	 				{margin-right:1rem;margin-left:1rem;}
+h3	i					{margin-right:1rem;margin-left:1rem;}
+article 				{padding:6px; clear:all;}
+article.grid		{border-right:1px dotted silver;border-bottom:1px dotted silver;border-radius: 1em;vertical-align:top; width:100%; }
+
+em, span.muster 	{background-color : #B4F3FB;font-size : 0.9rem;font-style : normal;font-weight : bold;font-family : courier;text-decoration : none;
+padding-left : 7px;padding-right : 7px;  border-top: 1px solid silver; border-bottom: 1px solid silver;border-left: 1px solid black; border-right: 1px solid black;margin-left:1em;margin-right:1em; }
+
+em span.rot 	{color:red;}
+em span.gruen	{color:green;}
+em span.braun	{color:brown;}
+em span.blau	{color:blue;}
+
+
+div.code {color : green;font-size : 0.9rem;background-color : #FFFABC;border : yellow solid 1px;border-radius : 1em;border-left : 4px solid green;
+border-right : 4px solid green;padding : 2px 10px;margin : 8px 3%;word-wrap:break-word;}
+
+div.code h5 {color : blue;margin : 0;}
+div.code h5 i {color : red;}
+
+div.code input[type="submit"] {border-radius : 7px;}
+.code p {text-indent : 0;color : black;}
+code {text-indent : 0;color : blue;}
+code em {background-color : #FFF98F;}
+article.code {color : green;}
+div.code input 			{background-color : #C0DCF7;font-size : 0.85rem;font-family : courier;color : black;}
+
+input 	{font-family:  "Courier New", Courier, monospace;}
+
+input:required:invalid {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+	background-position:  top right;
+	background-repeat: no-repeat; -moz-box-shadow: none;
+	background-color: #FFD8CA;
+	}
+
+/*
+input:focus{background-color: #99FFFF;}
+input:required:focus{background-color: #99FFFF;}
+*/
+input:required:valid {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+	background-position:  top right;
+	background-repeat: no-repeat; -moz-box-shadow: none;
+	background-color: #CCFF99;
+	}
+
+/*
+input:required:empty { background-color: #B2E5FF; }
+*/
+/*http://www.the-art-of-web.com/html/html5-form-validation/ */
+/*input:required:invalid, */
+
+
+
+
+
+
+
+
+
+input.normal{width:10rem;}
+input.mittel{width:15rem;}
+input.lang{width:25rem;}
+input.long{width:15rem;}
+
+
+table.match {
+font-size : 0.75rem;
+margin-top : -8px;
+}
+table.match tr {
+background-color : transparent;
+vertical-align : top;
+}
+table.match tr td {
+border : 0;
+color : green;
+/*border-right : 1px solid silver;*/
+padding-left : 1em;
+padding-right : 1em;
+white-space : nowrap;
+}
+table.match tr td + td {
+color : red;
+border-right : 0;
+border-left : 1px dotted silver;
+padding-right : 1em;
+padding-left : 1em;
+}
+
+div.muell {
+padding : 0.5rem;
+border-left : 4px solid red;
+border-right : 4px solid red;
+}
+a article			{border:1px dotted white; }
+a article:hover   { border:1px dotted silver; box-shadow: 4px 2px 5px 0 #808080;  }
+div.linkbox			{ background-attachment: fixed; width:100%; height:50px; border-top-left-radius : 7px;border-top-right-radius : 7px;}
+a article h2		{ margin-top:0;border-top-left-radius : 0;border-top-right-radius : 0;}
+article.grid100   { border:1px dotted silver; box-shadow: 4px 2px 5px 0 #808080;   }
+
+
+table#übersicht {width:100%;border-collapse: collapse;}
+table#übersicht tbody tr td {padding-left:1rem; width:20%;}
+table#übersicht tbody tr td+td {padding-left:1rem; width:50%;}
+table#übersicht tbody tr:nth-child(odd) {	background-color: #ccc;}
+/*table#übersicht tbody tr:hover {	background-color: #FFFFE0;}*/
+table#übersicht tbody tr:hover {	background-color: #FFCC66;}
+table a			{ white-space: nowrap;margin-right:.5rem;border-radius : 7px;}
+/*table a:hover	{background-color: #abc;}*/
+table i 			{margin:0 .5rem;}
+
+
+/*-------------------*/
+@media only screen and (min-width:700px) {
+img#logo	{ width:75%; }
+div.header 			{font-size:250%;  }
+div.header h1 span{	padding-right:.5rem;		border-radius:10px; border:9px solid #00FF00; border-left:none;border-top-left-radius: 0;border-bottom-left-radius: 0;}
+ul li 				{width:32%;}
+
+
+
+article.column {-webkit-column-count: 2; -webkit-column-rule: 1px dotted #C0C0C0; -moz-column-count: 2; -moz-column-rule: 1px dotted #C0C0C0; column-count : 2;column-rule: 1px dotted #C0C0C0;}
+article.grid	{display:inline-block; }
+article.last	{width:50%; }
+article.grid50	{width:50%; height:20em;}
+article.grid33	{width:50%; height:20em;}
+article.grid25	{width:50%;height:25rem;}
+}/*-------------------*/
+@media only screen and (min-width:850px) {
+
+ul li 				{width:19%;}
+
+
+}/*-------------------*/
+@media only screen and (min-width:1000px) {
+div.header 			{font-size:300%;  }
+div.header h1 span{	border-radius:15px; border:12px solid #00FF00;border-left:none;border-top-left-radius: 0;border-bottom-left-radius: 0;}
+/*
+ul li 				{margin-top:0; width:auto; }
+ul li:last-child	{margin-top:0; display:inline-block; float:right;}
+*/
+article.column {-webkit-column-count: 3; -moz-column-count: 3; column-count :3;}
+article.column2 {-webkit-column-count: 2; -webkit-column-rule: 1px dotted #C0C0C0; -moz-column-count: 2; -moz-column-rule: 1px dotted #C0C0C0; column-count : 2;column-rule: 1px dotted #C0C0C0;}
+article.grid33	{width:33.3333333333%; height:20em;}
+article.grid25	{width:25%;height:25rem;}
+img#logo			{ width:50%; }
+
+}/*-------------------*/
+@media only screen and (min-width:1250px) {
+ul li 				{margin-top:0; width:auto; }
+ul li:last-child	{margin-top:0; display:inline-block; float:right;}
+}/*-------------------*/
+
+
+						/*Beginn body langsam einblenden animation...*/
+							@keyframes fadein          {from {opacity:0;} to {opacity:1;}}
+							@-moz-keyframes fadein     {from {opacity:0;} to {opacity:1;}}
+							@-webkit-keyframes fadein  {from {opacity:0;} to {opacity:1;}}
+							@-o-keyframes fadein       {from {opacity:0;} to {opacity:1;}}
+						/*Ende body langsam einblenden animation...*/
