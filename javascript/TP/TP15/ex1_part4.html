@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .form-container {
+                border: 1px solid #ccc;
+                padding: 20px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="password"] {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button {
+                padding: 8px 15px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            #message {
+                margin-top: 15px;
+                padding: 10px;
+                display: none;
+            }
+            .success {
+                background-color: #dff0d8;
+                color: #3c763d;
+            }
+            .error {
+                background-color: #f2dede;
+                color: #a94442;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Formulaire de mot de passe</h2>
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="password">Saisir le Mot de passe :</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword"
+                        >Confirmer le Mot de passe :</label
+                    >
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+            <div id="message"></div>
+        </div>
+
+        <script>
+            const passwordInput = document.getElementById("password");
+            const confirmInput = document.getElementById("confirmPassword");
+            const form = document.getElementById("passwordForm");
+            const message = document.getElementById("message");
+
+            passwordInput.addEventListener("focus", function () {
+                this.style.backgroundColor = "yellow";
+            });
+
+            passwordInput.addEventListener("blur", function () {
+                this.style.backgroundColor = "";
+            });
+
+            function checkPasswordMatch() {
+                if (confirmInput.value === "") {
+                    confirmInput.style.border = "1px solid #ccc";
+                    return;
+                }
+
+                if (passwordInput.value === confirmInput.value) {
+                    confirmInput.style.border = "2px solid green";
+                } else {
+                    confirmInput.style.border = "2px solid red";
+                }
+            }
+
+            passwordInput.addEventListener("input", checkPasswordMatch);
+            confirmInput.addEventListener("input", checkPasswordMatch);
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                if (passwordInput.value === confirmInput.value) {
+                    message.textContent = "Mot de passe confirmé avec succès!";
+                    message.className = "success";
+                    message.style.display = "block";
+                } else {
+                    message.textContent =
+                        "Les mots de passe ne correspondent pas.";
+                    message.className = "error";
+                    message.style.display = "block";
+                }
+            });
+        </script>
+    </body>
+</html>

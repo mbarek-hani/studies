@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .form-container {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .input-valid {
+                border: 2px solid green;
+            }
+            .input-invalid {
+                border: 2px solid red;
+            }
+            select,
+            input[type="text"] {
+                padding: 5px;
+                margin: 5px 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px 0;
+            }
+            input[type="submit"] {
+                margin-top: 15px;
+                padding: 8px 15px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <form id="monFormulaire">
+                Je m'appelle : <input type="text" id="nomInput" /><br /><br />
+
+                J'habite à :
+                <select id="villeSelect">
+                    <option value="Pas de sélection">Pas de sélection</option>
+                    <option value="Tiznit">Tiznit</option>
+                    <option value="Agadir">Agadir</option>
+                    <option value="Sidi Ifni">Sidi Ifni</option></select
+                ><br /><br />
+
+                Tu as choisi : <label id="choixLabel"></label><br /><br />
+
+                <input type="submit" value="Envoyer" />
+            </form>
+        </div>
+
+        <script>
+            // Récupération des éléments du DOM
+            const nomInput = document.getElementById("nomInput");
+            const villeSelect = document.getElementById("villeSelect");
+            const choixLabel = document.getElementById("choixLabel");
+            const monFormulaire = document.getElementById("monFormulaire");
+
+            // a) Lorsque le champ input perd le curseur, il devient encadré en rouge
+            // si l'utilisateur n'a rien saisi ou en vert dans le cas contraire
+            nomInput.addEventListener("blur", function () {
+                if (this.value.trim() === "") {
+                    this.className = "input-invalid";
+                } else {
+                    this.className = "input-valid";
+                }
+            });
+
+            // b) À chaque changement sur <select>, la balise <label> affiche l'option sélectionnée
+            villeSelect.addEventListener("change", function () {
+                choixLabel.textContent = this.value;
+            });
+
+            // Initialiser le label avec la valeur par défaut du select
+            choixLabel.textContent = villeSelect.value;
+
+            // c) Annuler l'envoie du formulaire si le champ input est vide
+            // ou la première option de <select> est sélectionnée
+            monFormulaire.addEventListener("submit", function (event) {
+                if (
+                    nomInput.value.trim() === "" ||
+                    villeSelect.value === "Pas de sélection"
+                ) {
+                    event.preventDefault();
+                    alert(
+                        "Veuillez remplir correctement le formulaire avant de l'envoyer."
+                    );
+                }
+            });
+        </script>
+    </body>
+</html>
