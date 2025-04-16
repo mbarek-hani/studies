@@ -75,9 +75,9 @@
             // si l'utilisateur n'a rien saisi ou en vert dans le cas contraire
             nomInput.addEventListener("blur", function () {
                 if (this.value.trim() === "") {
-                    this.className = "input-invalid";
+                    this.style.border = "border: 2px solid red;";
                 } else {
-                    this.className = "input-valid";
+                    this.style.border = "border: 2px solid green;";
                 }
             });
 

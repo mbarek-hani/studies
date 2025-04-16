@@ -113,8 +113,6 @@
             confirmInput.addEventListener("input", checkPasswordMatch);
 
             form.addEventListener("submit", function (e) {
-                e.preventDefault();
-
                 if (passwordInput.value === confirmInput.value) {
                     message.textContent = "Mot de passe confirmé avec succès!";
                     message.className = "success";
@@ -124,6 +122,7 @@
                         "Les mots de passe ne correspondent pas.";
                     message.className = "error";
                     message.style.display = "block";
+                    e.preventDefault();
                 }
             });
         </script>
