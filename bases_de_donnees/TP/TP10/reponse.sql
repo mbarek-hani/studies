@@ -103,15 +103,14 @@ ORDER BY
 
 --Q7
 SELECT 
-    YEAR(s.dateDebut) AS 'Année',
-    MONTH(s.dateDebut) AS 'Mois',
-    SUM(f.prixForm) AS 'Total des prix'
+    YEAR(s.dateDebut) AS `Année`,
+    MONTH(s.dateDebut) AS `Mois`,
+    SUM(f.prixForm) AS `Total des prix`
 FROM
     SESSION s
 JOIN
     Formation f ON s.codeSess = f.SESSION_codeSess
 GROUP BY
-    YEAR(s.dateDebut), MONTH(s.dateDebut)
-ORDER BY
-    YEAR(s.dateDebut), MONTH(s.dateDebut);
+    `Année`, `Mois`;
+
 
