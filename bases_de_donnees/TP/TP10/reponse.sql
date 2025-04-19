@@ -15,7 +15,7 @@ inner join `ETUDIANT` E
 on E.`numCINEtu` = I.`numCINEtu`
 inner join `Formation` F
 on F.`SESSION_codeSess` = S.`codeSess`
-order by F.`titreForm` asc;
+order by F.`titreForm`;
 
 --Q3
 select I.`typeCours`, count(F.`titreForm`) as `nombre_inscription` from `Inscription` I
@@ -27,11 +27,24 @@ where F.`titreForm` = "Soft skills"
 group by I.`typeCours`;
 
 --Q4
-select * from `Inscription` I
-join `SESSION` S
-on S.`codeSess` = I.`codeSess`
-join `Formation` F
-where I.`typeCours` = "Distanciel";
+
+SELECT 
+    f.titreForm,
+    COUNT(numinscription) AS `Nombre inscriptions distantielles`
+FROM 
+    Formation f
+INNER JOIN 
+    SESSION s ON f.SESSION_codeSess = s.codeSess
+INNER JOIN 
+    Inscription i ON s.codeSess = i.codeSess
+WHERE 
+    i.typeCours = 'Distanciel'
+GROUP BY 
+    f.titreForm
+HAVING 
+    `Nombre inscriptions distantielles` >= 3
+ORDER BY 
+    `Nombre inscriptions distantielles`;
 
 
 --Q5
@@ -42,12 +55,63 @@ SELECT
     `f`.`prixForm`
 FROM 
     `SPECIALITE` `sp`
-JOIN 
+INNER JOIN 
     `Catalogue` `c` ON `sp`.`codeSpec` = `c`.`codeSpec`
-JOIN 
+INNER JOIN 
     `Formation` `f` ON `c`.`codeForm` = `f`.`codeForm`
 WHERE 
     `sp`.`active` = 1
 ORDER BY 
     `sp`.`nomSpec` DESC;
+
+--Q6
+(SELECT 
+    f.titreForm,
+    COUNT(numinscription) AS `Nombre inscriptions distantielles`
+FROM 
+    Formation f
+INNER JOIN 
+    SESSION s ON f.SESSION_codeSess = s.codeSess
+INNER JOIN 
+    Inscription i ON s.codeSess = i.codeSess
+WHERE 
+    i.typeCours = 'Distanciel'
+GROUP BY 
+    f.titreForm
+HAVING 
+    `Nombre inscriptions distantielles` >= 3
+ORDER BY 
+    `Nombre inscriptions distantielles`)
+union
+(SELECT 
+    f.titreForm,
+    COUNT(numinscription) AS `Nombre inscriptions présentielles`
+FROM 
+    Formation f
+INNER JOIN 
+    SESSION s ON f.SESSION_codeSess = s.codeSess
+INNER JOIN 
+    Inscription i ON s.codeSess = i.codeSess
+WHERE 
+    i.typeCours = 'Presentiel'
+GROUP BY 
+    f.titreForm
+HAVING 
+    `Nombre inscriptions présentielles` >= 4
+ORDER BY 
+    `Nombre inscriptions présentielles`);
+
+--Q7
+SELECT 
+    YEAR(s.dateDebut) AS 'Année',
+    MONTH(s.dateDebut) AS 'Mois',
+    SUM(f.prixForm) AS 'Total des prix'
+FROM
+    SESSION s
+JOIN
+    Formation f ON s.codeSess = f.SESSION_codeSess
+GROUP BY
+    YEAR(s.dateDebut), MONTH(s.dateDebut)
+ORDER BY
+    YEAR(s.dateDebut), MONTH(s.dateDebut);
 
