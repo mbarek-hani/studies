@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                font-family: "Lucida Sans", "Lucida Sans Regular",
+                    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+                    sans-serif;
+            }
+            .item {
+                cursor: pointer;
+                padding: 8px 15px;
+                color: black;
+            }
+
+            .item:hover {
+                background-color: rgba(19, 62, 253, 1);
+            }
+
+            #menu {
+                width: 200px;
+                margin-top: 8px;
+                margin-left: 10px;
+            }
+            #menuBtn {
+                padding: 8px 15px;
+                background-color: rgba(19, 62, 253, 0.8);
+                border: none;
+                outline: none;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 15px;
+                cursor: pointer;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="menuBtn">Afficher le menu</button>
+        <div id="menu" style="display: none; border: 1px solid black">
+            <div class="item">Option A</div>
+            <div class="item">Option B</div>
+            <div class="item">Option C</div>
+        </div>
+        <p id="selection">Aucune sélection.</p>
+
+        <script>
+            const menuBtn = document.querySelector("#menuBtn");
+            const menu = document.querySelector("#menu");
+            const selection = document.querySelector("#selection");
+
+            menu.addEventListener("click", (e) => {
+                e.stopPropagation();
+            });
+
+            document.addEventListener("click", () => {
+                if (menu.style.display == "block") {
+                    menu.style.display = "none";
+                }
+            });
+
+            menuBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (menu.style.display == "none") {
+                    menu.style.display = "block";
+                    const items = document.querySelectorAll(".item");
+                    items.forEach((item) => {
+                        item.addEventListener("click", () => {
+                            selection.textContent = item.textContent;
+                            menu.style.display = "none";
+                        });
+                    });
+                } else {
+                    menu.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>

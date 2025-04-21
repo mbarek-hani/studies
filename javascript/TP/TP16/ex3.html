@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body onload="checkResultat()">
+        <div class="container">
+            <p>Que vaut le calcul suivant?</p>
+            <input type="text" id="num1" /> x <input type="text" id="num2" /> =
+            <input type="text" id="resultat" />
+            <p>La réponse est : <span id="reponse"></span></p>
+            <button>NOUVEAU CALCUL</button>
+        </div>
+
+        <script>
+            function checkResultat() {
+                const num1Input = document.getElementById("num1");
+                const num2Input = document.getElementById("num2");
+                const resultatInput = document.getElementById("resultat");
+                const reponse = document.getElementById("reponse");
+
+                reponse.textContent = "";
+                resultatInput.value = "";
+
+                num1Input.value = Math.floor(Math.random() * 10 + 1);
+                num2Input.value = Math.floor(Math.random() * 10 + 1);
+
+                resultatInput.addEventListener("blur", () => {
+                    let resultat = num1Input.value * num2Input.value;
+                    if (resultat == resultatInput.value) {
+                        reponse.textContent = "juste!";
+                    } else {
+                        reponse.textContent = "faux!";
+                    }
+                });
+            }
+
+            window.addEventListener("load", checkResultat);
+
+            const button = document.querySelector("button");
+            button.addEventListener("click", checkResultat);
+        </script>
+    </body>
+</html>
