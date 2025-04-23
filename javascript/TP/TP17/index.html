@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Réservation de billets</title>
+    </head>
+    <body>
+        <h1>Formulaire de Réservation de billets</h1>
+        <form id="reservationForm">
+            <fieldset>
+                <legend>IDENTIFICATION</legend>
+                <label for="nomClient">Nom du client:</label>
+                <input
+                    type="text"
+                    id="nomClient"
+                    name="nomClient"
+                /><br /><br />
+
+                <label for="villeArrivee">Ville d'arrivée:</label>
+                <select id="villeArrivee" name="villeArrivee">
+                    <option value="">--Sélectionnez--</option>
+                    <option value="Kenitra">Kenitra</option>
+                    <option value="Rabat">Rabat</option>
+                    <option value="Meknes">Meknès</option>
+                    <option value="Fes">Fès</option>
+                    <option value="Oujda">Oujda</option></select
+                ><br /><br />
+
+                <label for="nombrePersonnes">Nombre de personnes:</label>
+                <input
+                    type="number"
+                    id="nombrePersonnes"
+                    name="nombrePersonnes"
+                /><br /><br />
+
+                <fieldset>
+                    <legend>Classe</legend>
+                    <input
+                        type="radio"
+                        id="classe2"
+                        name="classe"
+                        value="2eme"
+                    />
+                    <label for="classe2">2ème Classe</label><br />
+                    <input
+                        type="radio"
+                        id="classe1"
+                        name="classe"
+                        value="1ere"
+                    />
+                    <label for="classe1">1ère Classe</label>
+                </fieldset>
+                <br />
+
+                <label for="numeroCarte">Carte Bancaire (numéro):</label>
+                <input
+                    type="text"
+                    id="numeroCarte"
+                    name="numeroCarte"
+                /><br /><br />
+
+                <button type="button" id="validBtn">Valider Formulaire</button>
+                <button type="button" onclick="calculer()">Calculer</button>
+                <button type="reset">Annuler</button>
+            </fieldset>
+        </form>
+
+        <div id="resultat"></div>
+
+        <script>
+            function validerForm() {
+                const nomClient = document.getElementById("nomClient").value;
+                const villeArrivee =
+                    document.getElementById("villeArrivee").value;
+                const nombrePersonnes =
+                    document.getElementById("nombrePersonnes").value;
+                const classeConfort = document.querySelector(
+                    'input[name="classe"]:checked'
+                );
+                const numeroCarte =
+                    document.getElementById("numeroCarte").value;
+
+                if (
+                    nomClient === "" ||
+                    villeArrivee === "" ||
+                    nombrePersonnes === "" ||
+                    numeroCarte === ""
+                ) {
+                    alert("Tous les champs sont obligatoires");
+                    return false;
+                }
+
+                if (!classeConfort) {
+                    alert("Veuillez choisir une classe de confort");
+                    return false;
+                }
+
+                if (parseInt(nombrePersonnes) <= 0) {
+                    alert(
+                        "Le nombre de personnes doit être strictement positif"
+                    );
+                    return false;
+                }
+
+                return true;
+            }
+
+            function calculer() {
+                if (!validerForm()) {
+                    return;
+                }
+
+                const villeArrivee =
+                    document.getElementById("villeArrivee").value;
+                const nombrePersonnes = parseInt(
+                    document.getElementById("nombrePersonnes").value
+                );
+                const classeConfort = document.querySelector(
+                    'input[name="classe"]:checked'
+                ).value;
+                let tarif = 0;
+
+                switch (villeArrivee) {
+                    case "Kenitra":
+                        tarif = 30;
+                        break;
+                    case "Rabat":
+                        tarif = 50;
+                        break;
+                    case "Meknes":
+                        tarif = 90;
+                        break;
+                    case "Fes":
+                        tarif = 120;
+                        break;
+                    case "Oujda":
+                        tarif = 180;
+                        break;
+                }
+
+                if (classeConfort === "1ere") {
+                    tarif *= 2;
+                }
+
+                var total = tarif * nombrePersonnes;
+
+                document.getElementById("resultat").innerHTML =
+                    "Total à payer: " + total + " DHS";
+            }
+
+            const validBtn = document.getElementById("validBtn");
+            validBtn.onclick = () => {
+                if (validerForm()) {
+                    alert("Forme est valide!");
+                }
+            };
+        </script>
+    </body>
+</html>
