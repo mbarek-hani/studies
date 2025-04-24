@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Traitement de chaines JSON</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document
+                    .getElementById("afficherBtn")
+                    .addEventListener("click", function () {
+                        var lesContinents = [
+                            {
+                                code: "AF",
+                                nom: "Afrique",
+                                pays: ["maroc", "Egypt"],
+                            },
+                            {
+                                code: "EU",
+                                nom: "Europe",
+                                pays: ["France", "Espagne", "Suisse"],
+                            },
+                            {
+                                code: "AM",
+                                nom: "Amerique",
+                                pays: ["US", "Canada", "Mexique"],
+                            },
+                            {
+                                code: "AS",
+                                nom: "Asie",
+                                pays: ["Japon", "Chine", "Malysie"],
+                            },
+                            {
+                                code: "Aus",
+                                nom: "Australie",
+                                pays: [
+                                    "Australie",
+                                    "Nouvelle-Guinée",
+                                    "New Zealand",
+                                ],
+                            },
+                        ];
+
+                        var htmlOutput = "<ul>";
+
+                        lesContinents.forEach(function (continent) {
+                            htmlOutput +=
+                                "<li><strong>Continent: " +
+                                continent.nom +
+                                " (" +
+                                continent.code +
+                                ")</strong>";
+                            htmlOutput += "<ul>";
+
+                            continent.pays.forEach(function (pays) {
+                                htmlOutput += "<li>" + pays + "</li>";
+                            });
+
+                            htmlOutput += "</ul></li>";
+                        });
+
+                        htmlOutput += "</ul>";
+
+                        document.getElementById("resultat").innerHTML =
+                            htmlOutput;
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Liste des Continents</h1>
+        <button id="afficherBtn">Afficher Continents</button>
+        <div id="resultat"></div>
+    </body>
+</html>
