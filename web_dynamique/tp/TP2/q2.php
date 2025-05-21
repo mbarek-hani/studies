@@ -2,7 +2,10 @@
 
 $heure = (int)date('h');
 
-$message = $heure < 12 ? 'C\'est le matin' : 'C\'est l\'après-midi';
+$message = match (true) {
+    $heure < 12 => 'C\'est le matin', 
+    $heure > 12 =>'C\'est l\'après-midi'
+};
 
 ?>
 <!DOCTYPE html>

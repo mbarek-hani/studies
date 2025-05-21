@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Titre principal</h1>
+        <div>
+            <p class="blue">Paragraphe n°: 1</p>
+            <p id="p2">Paragraphe n°: 2</p>
+            <p>Paragraphe n°: 3</p>
+            <p>Paragraphe sans attribut</p>
+        </div>
+        <p>Paragraphe n°:4</p>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            // Q1
+            $('p:contains("Paragraphe n°:4")').clone().appendTo($("div"));
+
+            // Q2
+            $("#p2").insertAfter($("h1"));
+
+            // Q3
+            $('p:contains("Paragraphe n°: 3")').remove();
+
+            // Q4
+            $('p:contains("Paragraphe sans attribut")').replaceWith(
+                $("p.blue")
+            );
+        </script>
+    </body>
+</html>

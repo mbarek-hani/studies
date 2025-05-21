@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .correct {
+                color: green;
+            }
+            .incorrect {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="mathQuiz">
+            <h3>Que vaut le calcul suivant ?</h3>
+            <input type="text" id="num1" readonly /> x
+            <input type="text" id="num2" readonly /> =
+            <input type="text" id="answer" /><br /><br />
+            <span id="result">la réponse est :</span><br /><br />
+            <button type="button" id="newCalc">NOUVEAU CALCUL</button>
+        </form>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Function to generate new random numbers
+                function generateNewNumbers() {
+                    const num1 = Math.floor(Math.random() * 10) + 1;
+                    const num2 = Math.floor(Math.random() * 10) + 1;
+                    $("#num1").val(num1);
+                    $("#num2").val(num2);
+                    $("#answer").val("");
+                    $("#result")
+                        .text("la réponse est :")
+                        .removeClass("correct incorrect");
+                }
+
+                // Q1
+                generateNewNumbers();
+                $("#newCalc").click(function () {
+                    generateNewNumbers();
+                });
+
+                // Q2
+                $("#answer").blur(function () {
+                    const num1 = parseInt($("#num1").val());
+                    const num2 = parseInt($("#num2").val());
+                    const userAnswer = parseInt($("#answer").val());
+                    const correctAnswer = num1 * num2;
+
+                    if (userAnswer === correctAnswer) {
+                        $("#result")
+                            .text("la réponse est : Correct")
+                            .addClass("correct")
+                            .removeClass("incorrect");
+                    } else {
+                        $("#result")
+                            .text("la réponse est : Faux")
+                            .addClass("incorrect")
+                            .removeClass("correct");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

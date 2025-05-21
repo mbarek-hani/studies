@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centre Sportif - Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-container {
+      flex: 1;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .table-container {
+      flex: 2;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .discipline-group {
+      margin-top: 10px;
+    }
+
+    .action-button {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 8px 15px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .export-button {
+      margin-top: 10px;
+      background-color: #2196f3;
+    }
+
+    .clear-button {
+      margin-top: 10px;
+      background-color: #ff9800;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+
+    .block {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Centre Sportif<br />Gestion des inscriptions</h1>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Formulaire d'inscription</h2>
+      <form id="inscriptionForm">
+        <div class="form-group">
+          <label for="nom" class="block">Nom :</label>
+          <input type="text" id="nom" name="nom" />
+          <div id="nomError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="prenom" class="block">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" />
+          <div id="prenomError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="age" class="block">Age :</label>
+          <input type="number" id="age" name="age" min="5" max="100" />
+          <div id="ageError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="block">Sexe :</label>
+          <div>
+            <input type="radio" id="feminin" name="sexe" value="Féminin" />
+            <label for="feminin">Féminin</label>
+
+            <input type="radio" id="masculin" name="sexe" value="Masculin" />
+            <label for="masculin">Masculin</label>
+          </div>
+          <div id="sexeError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="pays" class="block">Pays :</label>
+          <select id="pays" name="pays">
+            <option value="">Sélectionnez un pays</option>
+            <option value="France">France</option>
+            <option value="Espagne">Espagne</option>
+            <option value="Belgique">Belgique</option>
+          </select>
+          <div id="paysError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Discipline :</label>
+          <div class="discipline-group">
+            <input type="checkbox" id="marathon" name="discipline" value="Marathon" />
+            <label for="marathon">Marathon</label>
+
+            <input type="checkbox" id="natation" name="discipline" value="Natation" />
+            <label for="natation">Natation</label>
+
+            <input type="checkbox" id="sprint" name="discipline" value="Sprint" />
+            <label for="sprint">Sprint</label>
+
+            <input type="checkbox" id="saut" name="discipline" value="Saut" />
+            <label for="saut">Saut</label>
+          </div>
+          <div id="disciplineError" class="error-message"></div>
+        </div>
+
+        <button type="button" id="enregistrerBtn">
+          Enregistrer
+        </button>
+        <input type="hidden" id="editIndex" value="-1" />
+      </form>
+    </div>
+
+    <div class="table-container">
+      <h2>Liste des inscrits</h2>
+      <table id="clientsTable">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+            <th>Sexe</th>
+            <th>Pays</th>
+            <th>Discipline</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="clientsTableBody"></tbody>
+      </table>
+      <button type="button" id="exportBtn" class="export-button">
+        Exporter en JSON
+      </button>
+      <button type="button" id="clearBtn" class="clear-button">
+        Vider la page
+      </button>
+      <div id="jsonOutput" style="margin-top: 20px; white-space: pre-wrap"></div>
+    </div>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script>
+    let clients = [];
+
+    $(document).ready(function () {
+      const form = $("#inscriptionForm");
+      const enregistrerBtn = $("#enregistrerBtn");
+      const clientsTableBody = $("#clientsTableBody");
+      const exportBtn = $("#exportBtn");
+      const clearBtn = $("#clearBtn");
+      const jsonOutput = $("#jsonOutput");
+      const editIndex = $("#editIndex");
+
+      function validerForm() {
+        let isValid = true;
+
+        $(".error-message").text("");
+
+        // valider le nom
+        const nom = $("#nom").val().trim();
+        if (!nom) {
+          $("#nomError").text("Veuillez entrer votre nom");
+          isValid = false;
+        } else if (!/^[a-zA-Z]+$/.test(nom)) {
+          $("#nomError").text("Le nom doit contenir uniquement des lettres");
+          isValid = false;
+        }
+
+        // valider le prénom
+        const prenom = $("#prenom").val().trim();
+        if (!prenom) {
+          $("#prenomError").text("Veuillez entrer votre prénom");
+          isValid = false;
+        } else if (!/^[a-zA-Z]+$/.test(prenom)) {
+          $("#prenomError").text("Le prénom doit contenir uniquement des lettres");
+          isValid = false;
+        }
+
+        // Vérifier l'âge
+        const age = $("#age").val();
+        if (!age) {
+          $("#ageError").text("Veuillez entrer un âge");
+          isValid = false;
+        }
+
+        // Vérifier le sexe
+        const sexe = $('input[name="sexe"]:checked');
+        if (sexe.length === 0) {
+          $("#sexeError").text("Veuillez sélectionner votre sexe");
+          isValid = false;
+        }
+
+        // Vérifier le pays
+        const pays = $("#pays").val();
+        if (!pays) {
+          $("#paysError").text("Veuillez sélectionner un pays");
+          isValid = false;
+        }
+
+        // Vérifier la discipline
+        const disciplines = $('input[name="discipline"]:checked');
+        if (disciplines.length === 0) {
+          $("#disciplineError").text("Veuillez sélectionner au moins une discipline");
+          isValid = false;
+        }
+
+        return isValid;
+      }
+
+      enregistrerBtn.on("click", function () {
+        if (validerForm()) {
+          const nom = $("#nom").val().trim();
+          const prenom = $("#prenom").val().trim();
+          const age = $("#age").val();
+          const sexe = $('input[name="sexe"]:checked').val();
+          const pays = $("#pays").val();
+          let disciplines = [];
+
+          $('input[name="discipline"]:checked').each(function () {
+            disciplines.push($(this).val());
+          });
+
+          const client = {
+            nom: nom,
+            prenom: prenom,
+            age: age,
+            sexe: sexe,
+            pays: pays,
+            disciplines: disciplines.join(", ")
+          };
+
+          // Si on est en mode édition
+          if (editIndex.val() !== "-1") {
+            clients[parseInt(editIndex.val())] = client;
+            editIndex.val("-1");
+            enregistrerBtn.text("Enregistrer");
+          } else {
+            clients.push(client);
+          }
+
+          afficherClients();
+          form[0].reset();
+        }
+      });
+
+      function afficherClients() {
+        clientsTableBody.empty();
+
+        $.each(clients, function (index, client) {
+          const $row = $("<tr></tr>");
+
+          $row.html(`
+                    <td>${client.nom}</td>
+                    <td>${client.prenom}</td>
+                    <td>${client.age}</td>
+                    <td>${client.sexe}</td>
+                    <td>${client.pays}</td>
+                    <td>${client.disciplines}</td>
+                    <td>
+                        <button class="action-button edit-btn" data-index="${index}">Éditer</button>
+                        <button class="action-button delete-btn" data-index="${index}">Supprimer</button>
+                    </td>
+                `);
+
+          $row.hover(
+            function () {$(this).css("color", "red");},
+            function () {$(this).css("color", "");}
+          );
+
+          clientsTableBody.append($row);
+        });
+
+        attachActionListeners();
+      }
+
+      // Fonction pour attacher d'événements aux boutons d'action
+      function attachActionListeners() {
+        $(".edit-btn").on("click", function () {
+          const index = $(this).data("index");
+          const client = clients[index];
+
+          // Remplir le formulaire avec les données du client
+          $("#nom").val(client.nom);
+          $("#prenom").val(client.prenom);
+          $("#age").val(client.age);
+
+          if (client.sexe === "Féminin") {
+            $("#feminin").prop("checked", true);
+          } else {
+            $("#masculin").prop("checked", true);
+          }
+
+          $("#pays").val(client.pays);
+
+          $('input[name="discipline"]').prop("checked", false);
+
+          const disciplinesClient = client.disciplines.split(", ");
+          $.each(disciplinesClient, function (i, disc) {
+            $(`input[value="${disc}"]`).prop("checked", true);
+          });
+
+          editIndex.val(index);
+          enregistrerBtn.text("Mettre à jour");
+        });
+
+        $(".delete-btn").on("click", function () {
+          const index = $(this).data("index");
+
+          if (confirm("Êtes-vous sûr de vouloir supprimer ce client ?")) {
+            clients.splice(index, 1);
+            afficherClients();
+          }
+        });
+      }
+
+      exportBtn.on("click", function () {
+        function exporterJSON() {
+          const jsonData = JSON.stringify(clients, null, 2);
+          jsonOutput.text(jsonData);
+          return jsonData;
+        }
+
+        exporterJSON();
+      });
+
+      clearBtn.on("click", function () {
+        if (confirm("Êtes-vous sûr de vouloir vider la page ?")) {
+          clients = [];
+          form[0].reset();
+          afficherClients();
+          jsonOutput.text("");
+          editIndex.val("-1");
+          enregistrerBtn.text("Enregistrer");
+          $(".error-message").text("");
+        }
+      });
+
+      // Initial display
+      afficherClients();
+    });
+  </script>
+</body>
+
+</html>

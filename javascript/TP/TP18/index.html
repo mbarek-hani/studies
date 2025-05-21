@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Centre Sportif - Inscription</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+            .form-container {
+                flex: 1;
+                background-color: #f5f5f5;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            .table-container {
+                flex: 2;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+            .form-group label {
+                font-weight: bold;
+            }
+            input[type="text"],
+            input[type="number"],
+            select {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            .discipline-group {
+                margin-top: 10px;
+            }
+            .action-button {
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            button {
+                padding: 8px 15px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            .export-button {
+                margin-top: 10px;
+                background-color: #2196f3;
+            }
+            .clear-button {
+                margin-top: 10px;
+                background-color: #ff9800;
+            }
+            .error-message {
+                color: red;
+                font-size: 0.8em;
+                margin-top: 5px;
+            }
+            .block {
+                display: block;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Centre Sportif<br />Gestion des inscriptions</h1>
+
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulaire d'inscription</h2>
+                <form id="inscriptionForm">
+                    <div class="form-group">
+                        <label for="nom" class="block">Nom :</label>
+                        <input type="text" id="nom" name="nom" />
+                        <div id="nomError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom" class="block">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" />
+                        <div id="prenomError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age" class="block">Age :</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="5"
+                            max="100"
+                        />
+                        <div id="ageError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block">Sexe :</label>
+                        <div>
+                            <input
+                                type="radio"
+                                id="feminin"
+                                name="sexe"
+                                value="Féminin"
+                            />
+                            <label for="feminin">Féminin</label>
+
+                            <input
+                                type="radio"
+                                id="masculin"
+                                name="sexe"
+                                value="Masculin"
+                            />
+                            <label for="masculin">Masculin</label>
+                        </div>
+                        <div id="sexeError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pays" class="block">Pays :</label>
+                        <select id="pays" name="pays">
+                            <option value="">Sélectionnez un pays</option>
+                            <option value="France">France</option>
+                            <option value="Espagne">Espagne</option>
+                            <option value="Belgique">Belgique</option>
+                        </select>
+                        <div id="paysError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Discipline :</label>
+                        <div class="discipline-group">
+                            <input
+                                type="checkbox"
+                                id="marathon"
+                                name="discipline"
+                                value="Marathon"
+                            />
+                            <label for="marathon">Marathon</label>
+
+                            <input
+                                type="checkbox"
+                                id="natation"
+                                name="discipline"
+                                value="Natation"
+                            />
+                            <label for="natation">Natation</label>
+
+                            <input
+                                type="checkbox"
+                                id="sprint"
+                                name="discipline"
+                                value="Sprint"
+                            />
+                            <label for="sprint">Sprint</label>
+
+                            <input
+                                type="checkbox"
+                                id="saut"
+                                name="discipline"
+                                value="Saut"
+                            />
+                            <label for="saut">Saut</label>
+                        </div>
+                        <div id="disciplineError" class="error-message"></div>
+                    </div>
+
+                    <button type="button" id="enregistrerBtn">
+                        Enregistrer
+                    </button>
+                    <input type="hidden" id="editIndex" value="-1" />
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Liste des inscrits</h2>
+                <table id="clientsTable">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Age</th>
+                            <th>Sexe</th>
+                            <th>Pays</th>
+                            <th>Discipline</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientsTableBody"></tbody>
+                </table>
+                <button type="button" id="exportBtn" class="export-button">
+                    Exporter en JSON
+                </button>
+                <button type="button" id="clearBtn" class="clear-button">
+                    Vider la page
+                </button>
+                <div
+                    id="jsonOutput"
+                    style="margin-top: 20px; white-space: pre-wrap"
+                ></div>
+            </div>
+        </div>
+
+        <script>
+            let clients = [];
+
+            const form = document.getElementById("inscriptionForm");
+            const enregistrerBtn = document.getElementById("enregistrerBtn");
+            const clientsTableBody =
+                document.getElementById("clientsTableBody");
+            const exportBtn = document.getElementById("exportBtn");
+            const clearBtn = document.getElementById("clearBtn");
+            const jsonOutput = document.getElementById("jsonOutput");
+            const editIndex = document.getElementById("editIndex");
+
+            function validerForm() {
+                let isValid = true;
+
+                document
+                    .querySelectorAll(".error-message")
+                    .forEach((el) => (el.textContent = ""));
+
+                // valider le nom
+                const nom = document.getElementById("nom").value.trim();
+                if (!nom) {
+                    document.getElementById("nomError").textContent =
+                        "Veuillez entrer votre nom";
+                    isValid = false;
+                } else if (!/^[a-zA-Z]+$/.test(nom)) {
+                    document.getElementById("nomError").textContent =
+                        "Le nom doit contenir uniquement des lettres";
+                    isValid = false;
+                }
+
+                // valider le prénom
+                const prenom = document.getElementById("prenom").value.trim();
+                if (!prenom) {
+                    document.getElementById("prenomError").textContent =
+                        "Veuillez entrer votre prénom";
+                    isValid = false;
+                } else if (!/^[a-zA-Z]+$/.test(prenom)) {
+                    document.getElementById("prenomError").textContent =
+                        "Le prénom doit contenir uniquement des lettres";
+                    isValid = false;
+                }
+
+                // Vérifier l'âge
+                const age = document.getElementById("age").value;
+                if (!age) {
+                    document.getElementById("ageError").textContent =
+                        "Veuillez entrer un âge";
+                    isValid = false;
+                }
+
+                // Vérifier le sexe
+                const sexe = document.querySelector(
+                    'input[name="sexe"]:checked'
+                );
+                if (!sexe) {
+                    document.getElementById("sexeError").textContent =
+                        "Veuillez sélectionner votre sexe";
+                    isValid = false;
+                }
+
+                // Vérifier le pays
+                const pays = document.getElementById("pays").value;
+                if (!pays) {
+                    document.getElementById("paysError").textContent =
+                        "Veuillez sélectionner un pays";
+                    isValid = false;
+                }
+
+                // Vérifier la discipline
+                const disciplines = document.querySelectorAll(
+                    'input[name="discipline"]:checked'
+                );
+                if (disciplines.length === 0) {
+                    document.getElementById("disciplineError").textContent =
+                        "Veuillez sélectionner au moins une discipline";
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            enregistrerBtn.addEventListener("click", function () {
+                if (validerForm()) {
+                    const nom = document.getElementById("nom").value.trim();
+                    const prenom = document
+                        .getElementById("prenom")
+                        .value.trim();
+                    const age = document.getElementById("age").value;
+                    const sexe = document.querySelector(
+                        'input[name="sexe"]:checked'
+                    ).value;
+                    const pays = document.getElementById("pays").value;
+                    const disciplinesChecked = document.querySelectorAll(
+                        'input[name="discipline"]:checked'
+                    );
+                    let disciplines = [];
+                    disciplinesChecked.forEach((disc) => {
+                        disciplines.push(disc.value);
+                    });
+
+                    const client = {
+                        nom: nom,
+                        prenom: prenom,
+                        age: age,
+                        sexe: sexe,
+                        pays: pays,
+                        disciplines: disciplines.join(", "),
+                    };
+
+                    // Si on est en mode édition
+                    if (editIndex.value !== "-1") {
+                        clients[parseInt(editIndex.value)] = client;
+                        editIndex.value = "-1";
+                        enregistrerBtn.textContent = "Enregistrer";
+                    } else {
+                        clients.push(client);
+                    }
+
+                    afficherClients();
+
+                    form.reset();
+                }
+            });
+
+            function afficherClients() {
+                clientsTableBody.innerHTML = "";
+
+                clients.forEach((client, index) => {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                    <td>${client.nom}</td>
+                    <td>${client.prenom}</td>
+                    <td>${client.age}</td>
+                    <td>${client.sexe}</td>
+                    <td>${client.pays}</td>
+                    <td>${client.disciplines}</td>
+                    <td>
+                        <button class="action-button edit-btn" data-index="${index}">Éditer</button>
+                        <button class="action-button delete-btn" data-index="${index}">Supprimer</button>
+                    </td>
+                `;
+
+                    row.addEventListener("mouseover", function () {
+                        this.style.color = "red";
+                    });
+
+                    row.addEventListener("mouseout", function () {
+                        this.style.color = "";
+                    });
+
+                    clientsTableBody.appendChild(row);
+                });
+
+                attachActionListeners();
+            }
+
+            // Fonction pour attacher d'événements aux boutons d'action
+            function attachActionListeners() {
+                document.querySelectorAll(".edit-btn").forEach((btn) => {
+                    btn.addEventListener("click", function () {
+                        const index = this.getAttribute("data-index");
+                        const client = clients[index];
+
+                        // Remplir le formulaire avec les données du client
+                        document.getElementById("nom").value = client.nom;
+                        document.getElementById("prenom").value = client.prenom;
+                        document.getElementById("age").value = client.age;
+
+                        if (client.sexe === "Féminin") {
+                            document.getElementById("feminin").checked = true;
+                        } else {
+                            document.getElementById("masculin").checked = true;
+                        }
+
+                        document.getElementById("pays").value = client.pays;
+
+                        document
+                            .querySelectorAll('input[name="discipline"]')
+                            .forEach((cb) => {
+                                cb.checked = false;
+                            });
+
+                        const disciplinesClient =
+                            client.disciplines.split(", ");
+                        disciplinesClient.forEach((disc) => {
+                            const checkbox = document.querySelector(
+                                `input[value="${disc}"]`
+                            );
+                            if (checkbox) {
+                                checkbox.checked = true;
+                            }
+                        });
+
+                        editIndex.value = index;
+                        enregistrerBtn.textContent = "Mettre à jour";
+                    });
+                });
+
+                document.querySelectorAll(".delete-btn").forEach((btn) => {
+                    btn.addEventListener("click", function () {
+                        const index = this.getAttribute("data-index");
+
+                        if (
+                            confirm(
+                                "Êtes-vous sûr de vouloir supprimer ce client ?"
+                            )
+                        ) {
+                            clients.splice(index, 1);
+                            afficherClients();
+                        }
+                    });
+                });
+            }
+
+            exportBtn.addEventListener("click", function () {
+                function exporterJSON() {
+                    const jsonData = JSON.stringify(clients, null, 2);
+                    jsonOutput.textContent = jsonData;
+                    return jsonData;
+                }
+
+                exporterJSON();
+            });
+
+            clearBtn.addEventListener("click", function () {
+                if (confirm("Êtes-vous sûr de vouloir vider la page ?")) {
+                    clients = [];
+                    form.reset();
+                    afficherClients();
+                    jsonOutput.textContent = "";
+                    editIndex.value = "-1";
+                    enregistrerBtn.textContent = "Enregistrer";
+                    document
+                        .querySelectorAll(".error-message")
+                        .forEach((el) => (el.textContent = ""));
+                }
+            });
+
+            afficherClients();
+        </script>
+    </body>
+</html>

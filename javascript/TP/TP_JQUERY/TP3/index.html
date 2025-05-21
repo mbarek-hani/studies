@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="genres">
+            <option value="rock">Rock</option>
+            <option value="blues" selected>Blues</option>
+        </select>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            let selectedValue = $("#genres option:selected").val();
+            let selectedText = $("#genres option:selected").text();
+            console.log("Valeur sélectionnée: " + selectedValue);
+            console.log("Texte sélectionné: " + selectedText);
+
+            // Q2
+            $("<option value='classic'>Classic</option>").insertAfter(
+                "#genres option[value='rock']"
+            );
+
+            // Q3
+            $("#genres option[value='classic']").prop("selected", true);
+        </script>
+    </body>
+</html>

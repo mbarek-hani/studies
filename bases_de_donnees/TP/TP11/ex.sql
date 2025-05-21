@@ -19,11 +19,7 @@ Programmer p
 on r.numRep = p.numRep
 where p.date = "2008-07-25";
 
-select count(*) from Representation r 
-inner join 
-Musicien m 
-on r.numRep = m.numRep 
-where r.numRep = 'n°20';
+select count(*) from Representation where numRep = 'n°20';
 
 select r.numRep, r.titreRep, r.lieu, p.date from Representation r 
 inner join Programmer p 

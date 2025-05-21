@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>On considère le code HTML ci-dessous :</h1>
+
+        <p class="vert">Paragraphe n°: 1</p>
+        <p>Paragraphe n°: 2</p>
+        <p class="vert">Paragraphe n°: 3</p>
+        <p id="p4">Paragraphe n°: 4</p>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            // Q1
+            $("<p>Paragraphe numéro 5</p>").insertAfter(
+                'p:contains("Paragraphe n°: 2")'
+            );
+
+            // Q2
+            $('p:contains("Paragraphe n°: 2")').css({
+                border: "1px solid black",
+                "background-color": "#f0f0f0",
+            });
+
+            // Q3
+            $("p.vert").css("color", "green");
+
+            // Q4
+            $("#p4").addClass("rouge");
+
+            // Q5
+            $("#p4").removeAttr("id");
+        </script>
+    </body>
+</html>
