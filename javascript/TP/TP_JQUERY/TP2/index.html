@@ -6,7 +6,6 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>On considère le code HTML ci-dessous :</h1>
 
         <p class="vert">Paragraphe n°: 1</p>
         <p>Paragraphe n°: 2</p>
@@ -16,24 +15,25 @@
         <script src="jquery.min.js"></script>
         <script>
             // Q1
-            $("<p>Paragraphe numéro 5</p>").insertAfter(
-                'p:contains("Paragraphe n°: 2")'
+            $('<p>Paragraphe numéro 5</p>').insertAfter(
+                $('p:eq(1)')
             );
 
             // Q2
-            $('p:contains("Paragraphe n°: 2")').css({
-                border: "1px solid black",
-                "background-color": "#f0f0f0",
+            $('p:eq(1)').css({
+                border: "1px solid red",
+                "background-color": "gray"
             });
 
-            // Q3
-            $("p.vert").css("color", "green");
+            // // Q3
+            $('p.vert').css("color", "green");
 
-            // Q4
-            $("#p4").addClass("rouge");
+            // // Q4
+            $('#p4').addClass('rouge')
 
-            // Q5
+            // // Q5
             $("#p4").removeAttr("id");
+
         </script>
     </body>
 </html>
