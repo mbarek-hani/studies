@@ -10,10 +10,10 @@ USE gestionstagiaire_v1;
 -- Table: compteadministrateur
 -- ============================================
 CREATE TABLE compteadministrateur (
-    loginAdmin VARCHAR(20) NOT NULL,
-    motPasse VARCHAR(20) NOT NULL,
-    nom VARCHAR(30) NOT NULL,
-    prenom VARCHAR(30) NOT NULL,
+    loginAdmin VARCHAR(10) NOT NULL,
+    motPasse VARCHAR(10) NOT NULL,
+    nom VARCHAR(20) NOT NULL,
+    prenom VARCHAR(20) NOT NULL,
     PRIMARY KEY (loginAdmin)
 );
 
@@ -21,9 +21,9 @@ CREATE TABLE compteadministrateur (
 -- Table: filiere
 -- ============================================
 CREATE TABLE filiere (
-    idFiliere VARCHAR(15) NOT NULL,
-    intitule VARCHAR(30) NOT NULL,
-    nombreGroupe INT NOT NULL,
+    idFiliere VARCHAR(5) NOT NULL,
+    intitule VARCHAR(20) NOT NULL,
+    nombreGroupe INT(11) NOT NULL,
     PRIMARY KEY (idFiliere)
 );
 
@@ -31,12 +31,12 @@ CREATE TABLE filiere (
 -- Table: stagiaire
 -- ============================================
 CREATE TABLE stagiaire (
-    idStagiaire INT NOT NULL AUTO_INCREMENT,
-    nom VARCHAR(30) NOT NULL,
-    prenom VARCHAR(30) NOT NULL,
+    idStagiaire INT(11) NOT NULL AUTO_INCREMENT,
+    nom VARCHAR(20) NOT NULL,
+    prenom VARCHAR(20) NOT NULL,
     dateNaissance DATE NOT NULL,
     photoProfil TEXT,
-    idFiliere VARCHAR(15) NOT NULL,
+    idFiliere VARCHAR(5) NOT NULL,
     PRIMARY KEY (idStagiaire),
     FOREIGN KEY (idFiliere) REFERENCES filiere(idFiliere)
         ON DELETE CASCADE 
