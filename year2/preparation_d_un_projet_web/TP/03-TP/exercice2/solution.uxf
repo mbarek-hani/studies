@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>279</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Rectangle
+--
+-largeur: Double {&gt; 0}
+-hauteur: Double {&gt; 0}
+--
++getRayon(): Double
++setRayon(rayon: Double)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>18</y>
+      <w>252</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>ObjetGraphique
+--
+-idObjet: Long {unique, not null}
+-positionX: Int {&gt;= 0}
+-positionY: Int {&gt;= 0}
+-estSelectionne: Bool {not null}
+--
++getIdObjet(): Long
++getPositionX(): Int
++getPositionY(): Int
++getEstSelectinne(): Bool
++setIdObjet(id: Long)
++setPositionX(x: Int)
++setPositionY(y: Int)
++setEstSelectinne(estSelectionne: Bool)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>36</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Document
+--
+-idDocument: Long {unique, not null}
+-titre: String {not null}
+-dateCreation: Date {not null}
+--
++getIdDocument(): Long
++getTitre(): String
++getDateCreation(): Date
++setIdDocument(id: Long)
++setTitre(titre: String)
++setDateCreation(date: Date)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>243</y>
+      <w>216</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Feuillet
+--
+-idFeuillet: Long {unique, not null}
+-numeroPage: Int {&gt;= 1}
+--
++getIdFeuillet(): Long
++getNumeroPage(): Int
++setIdFeuillet(id: Long)
++setNumeroPage(numero: Int)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>279</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Cercle
+--
+-rayon: Double {&gt; 0}
+--
++getRayon(): Double
++setRayon(rayon: Double)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>216</y>
+      <w>45</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>216</y>
+      <w>117</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>396</y>
+      <w>252</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>Texte
+--
+-idText: Long {unique, not null}
+-positionX: Int {&gt;= 0}
+-positionY: Int {&gt;= 0}
+-contenu: String {not null}
+-police: String
+-taillePolice: Int {&gt; 0}
+--
++getIdText(): Long
++getPositionX(): Int
++getPositionY(): Int
++getContenu(): String
++getPolice(): String
++getTaillePolice(): INt
++setIdText(id: Long)
++setPositionX(x: Int)
++setPositionY(y: Int)
++setContenu(contenu: String)
++setPolice(police: String)
++setTaillePolice(taille: Int)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>198</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>144</y>
+      <w>99</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>360</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>0</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Region
+--
+-idRegion: Long {unique, not null}
+-nom: String {not null}
+--
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>234</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>DirectionRegionale
+--
+-code: Long {unique, not null}
+-libille: String {not null}
+-adresse: String
+--
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>252</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Agence
+--
+-idAgence: Long {unique, not null}
+-nom: String {not null}
+-adresse: String {not null}
+-telephone: String {format telephone}
+--
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>90</y>
+      <w>45</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>90</y>
+      <w>81</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>486</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Personnel
+--
+-idPesonnel: Long {unique, not null}
+-nom: String {not null}
+-prenom: String {not null}
+-dateEmbauche: Date {not null}
+-poste: String {not null}
+-email: String {format email, unique}
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>342</y>
+      <w>27</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+</diagram>
