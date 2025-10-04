@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>90</y>
+      <x>60</x>
+      <y>70</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
@@ -22,8 +22,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>150</y>
+      <x>530</x>
+      <y>130</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
@@ -40,8 +40,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>300</y>
+      <x>50</x>
+      <y>280</y>
       <w>210</w>
       <h>180</h>
     </coordinates>
@@ -62,8 +62,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>330</y>
+      <x>390</x>
+      <y>310</y>
       <w>210</w>
       <h>120</h>
     </coordinates>
@@ -79,8 +79,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>800</y>
+      <x>30</x>
+      <y>780</y>
       <w>210</w>
       <h>120</h>
     </coordinates>
@@ -97,8 +97,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
-      <y>590</y>
+      <x>380</x>
+      <y>570</y>
       <w>210</w>
       <h>120</h>
     </coordinates>
@@ -113,8 +113,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>580</y>
+      <x>50</x>
+      <y>560</y>
       <w>210</w>
       <h>120</h>
     </coordinates>
@@ -130,12 +130,12 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>120</y>
+      <x>260</x>
+      <y>100</y>
       <w>290</w>
       <h>100</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-
 m1=1
 m2=*
 avoir &gt;</panel_attributes>
@@ -144,12 +144,12 @@ avoir &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>220</y>
+      <x>250</x>
+      <y>200</y>
       <w>300</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-
 m1=1
 m2=1
 fait par &gt;</panel_attributes>
@@ -158,12 +158,12 @@ fait par &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>350</y>
+      <x>250</x>
+      <y>330</y>
       <w>160</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-
 m1=1
 m2=1
 concerne &gt;</panel_attributes>
@@ -172,12 +172,12 @@ concerne &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>180</y>
+      <x>150</x>
+      <y>160</y>
       <w>100</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=-
 m1=*
 m2=1
 organise &gt;</panel_attributes>
@@ -186,8 +186,8 @@ organise &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>470</y>
+      <x>140</x>
+      <y>450</y>
       <w>110</w>
       <h>130</h>
     </coordinates>
@@ -200,12 +200,12 @@ comporte v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>630</y>
+      <x>250</x>
+      <y>610</y>
       <w>150</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-
 m1=1
 m2=1
 comporte &gt;</panel_attributes>
@@ -214,12 +214,12 @@ comporte &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>440</y>
+      <x>450</x>
+      <y>420</y>
       <w>80</w>
       <h>170</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=-
 m1=*
 m2=1
 avoir v</panel_attributes>
@@ -228,12 +228,12 @@ avoir v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
-      <y>690</y>
+      <x>130</x>
+      <y>670</y>
       <w>90</w>
       <h>130</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=-
 m1=1
 m2=1
 acheter ^</panel_attributes>

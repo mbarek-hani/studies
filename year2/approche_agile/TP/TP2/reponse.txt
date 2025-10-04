@@ -1,0 +1,12 @@
+Activite 1 :
+
+1) Le modèle en cascade (waterfall en anglais) est un modèle séquentiel où chaque phase de développement se déroule une après l'autre. Une phase commence lorsque la précédente est terminée.
+
+  Avantages:
+- chaque étape a des livrables clairs et des critères d’entrée/sortie
+- coûts et délais peuvent être estimés plus facilement car les exigences sont stables
+
+  Pourquoi moins adapté aux projets qui évoluent au fil du temps :
+- Faible flexibilité : les changements sont coûteux car ils nécessitent souvent de revenir sur des phases déjà terminées
+- Risque d’erreurs découvertes tard : les tests viennent après la construction, donc défauts importants peuvent être découverts tardivement.
+
