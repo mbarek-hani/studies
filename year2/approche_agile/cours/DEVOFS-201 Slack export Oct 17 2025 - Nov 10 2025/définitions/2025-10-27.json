@@ -1,0 +1,215 @@
+[
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1761553110.425279",
+        "client_msg_id": "1762822f-cca8-4346-a662-62fab85160d4",
+        "text": "*Incrément :*\n Le produit qui marche à la fin du sprint, prêt à être livré, qui respecte la Definition of Done et apporte de la valeur utilisateur.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IaQFW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Incrément :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n Le produit qui marche à la fin du sprint, prêt à être livré, qui respecte la Definition of Done et apporte de la valeur utilisateur."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1761553683.819779",
+        "client_msg_id": "4b28c000-6e74-48c7-bd86-722541296269",
+        "text": "*Sprint Review :*\n Réunion de fin de sprint avec les parties prenantes pour montrer l’incrément, obtenir du feedback business et ajuster le backlog.\n• Participants : dev team, product owner , Scrum Master, parties prenantes\n• Durée : ~1h\n• Résultat : feedback produit\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v5jHo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sprint Review :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n Réunion de fin de sprint avec les parties prenantes pour montrer l’incrément, obtenir du feedback business et ajuster le backlog.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Participants : dev team, product owner , Scrum Master, parties prenantes"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Durée : ~1h"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Résultat : feedback produit"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1761553684.085699",
+        "client_msg_id": "db227a03-a324-43e4-8a6d-1f41804307c4",
+        "text": "*Sprint Retrospective :*\n Réunion interne de l’équipe pour améliorer la façon de travailler. On identifie ce qui a bien \/ mal marché et on décide 1-2 actions concrètes pour le prochain sprint.\n• Participants : dev team, Scrum Master\n• Durée : ~45 min\n• Résultat : plan d’amélioration pour l’équipe\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zT8RR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Sprint Retrospective :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n Réunion interne de l’équipe pour améliorer la façon de travailler. On identifie ce qui a bien \/ mal marché et on décide 1-2 actions concrètes pour le prochain sprint.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Participants : dev team, Scrum Master"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Durée : ~45 min"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Résultat : plan d’amélioration pour l’équipe"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    }
+]

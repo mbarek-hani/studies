@@ -1,0 +1,158 @@
+[
+    {
+        "user": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761293736.195219",
+        "client_msg_id": "044a0d8a-7608-4832-bc0b-48663a2bfec8",
+        "text": "*Lien vers l'enregistrement de la réunion :*\n<https:\/\/drive.google.com\/file\/d\/1pJP7xRzmZ9wCvq6OOm04h_4hlR9tz7wp\/view?usp=sharing>",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gcd310c5ec03",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/cd310c5ec03e732e8f5722bc2f393864.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "Rida",
+            "real_name": "Rida",
+            "display_name": "Rida",
+            "team": "T09M779P03W",
+            "name": "mouhdi.reda1",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1RDwr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Lien vers l'enregistrement de la réunion :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/drive.google.com\/file\/d\/1pJP7xRzmZ9wCvq6OOm04h_4hlR9tz7wp\/view?usp=sharing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1761294820.702599",
+        "client_msg_id": "86a8713b-5d56-45c7-9429-145e3eb1494f",
+        "text": "<!here>\nEnvoyer le Sprint backlog et le product back log.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sW5pO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nEnvoyer le Sprint backlog et le product back log."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09MYC9J3UP",
+                "created": 1761295338,
+                "timestamp": 1761295338,
+                "name": "screencapture-yassinaz-atlassian-net-jira-software-projects-EE-boards-34-backlog-2025-10-24-09_40_37.png",
+                "title": "screencapture-yassinaz-atlassian-net-jira-software-projects-EE-boards-34-backlog-2025-10-24-09_40_37.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U09M07RFT0D",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 492557,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09MYC9J3UP\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37.png?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09MYC9J3UP\/download\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37.png?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_64.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_80.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_360.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_360_w": 245,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_480.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_480_w": 327,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_160.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_720.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_720_w": 491,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_800.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1174,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_960.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_960_w": 654,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MYC9J3UP-5b5da4388e\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37_1024.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_1024_w": 698,
+                "thumb_1024_h": 1024,
+                "original_w": 1366,
+                "original_h": 2004,
+                "thumb_tiny": "AwAwACGmzblGckjv603mlwcZ7UlAACQcgkGlywOQTk+9JT5YzFIUbGR6UAHnzf8APV\/++jR583\/PV\/8Avo1HRQA5XZcbTjFJzR2ooAOaV2Z2LMck9TQo3Hv+Ap0sZikKNjI9KAI6KKKAJEYKO\/f+VDPuPr7mmcetHHrQBJEcMfTHIziluWV53ZW3A96i49aOPWmAlFFFID\/\/2Q==",
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09MYC9J3UP\/screencapture-yassinaz-atlassian-net-jira-software-projects-ee-boards-34-backlog-2025-10-24-09_40_37.png",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09MYC9J3UP-3906d91f93",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09M07RFT0D",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761295353.939269",
+        "client_msg_id": "355158a2-1a89-4782-8774-e4af75957ddd"
+    }
+]

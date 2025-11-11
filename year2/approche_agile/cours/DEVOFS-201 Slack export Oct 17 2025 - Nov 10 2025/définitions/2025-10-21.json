@@ -1,0 +1,346 @@
+[
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1761056230.208029",
+        "client_msg_id": "0fbc41c9-24ae-4798-88a8-f79572509353",
+        "text": "La planification du sprint est la réunion qui ouvre un sprint dans la méthode Scrum. Elle a pour but de définir ce qui sera réalisé pendant le sprint et comment le travail sera accompli.\nDéroulement :\n1. Préparation :\n    ◦ Le Product Owner présente les éléments du Product Backlog les plus prioritaires.\n2. Choix des éléments :\n    ◦ L’équipe de développement sélectionne les éléments qu’elle s’engage à réaliser pendant le sprint (cela devient le Sprint Backlog).\n3. Définition de l’objectif du sprint (Sprint Goal) :\n    ◦ L’équipe et le Product Owner définissent un objectif commun qui donne du sens au sprint.\n4. Plan d’action :\n    ◦ L’équipe détaille les tâches techniques nécessaires pour livrer les éléments choisis.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1761056230.208029",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1761294562.104289",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1761294562.104289"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1761294562.104289",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xRICd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "La planification du sprint est la réunion qui ouvre un sprint dans la méthode Scrum. Elle a pour but de définir ce qui sera réalisé pendant le sprint et comment le travail sera accompli.\nDéroulement :\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Préparation :"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Le Product Owner présente les éléments du Product Backlog les plus prioritaires."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Choix des éléments :"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "L’équipe de développement sélectionne les éléments qu’elle s’engage à réaliser pendant le sprint (cela devient le Sprint Backlog)."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Définition de l’objectif du sprint (Sprint Goal) :"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 2,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "L’équipe et le Product Owner définissent un objectif commun qui donne du sens au sprint."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Plan d’action :"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "offset": 3,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "L’équipe détaille les tâches techniques nécessaires pour livrer les éléments choisis."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1761056271.243049",
+        "client_msg_id": "89010cf7-7d9b-4b2b-9966-f6d1979168d1",
+        "text": "Un sprint est une itération courte et fixe (souvent de 2 à 4 semaines) durant laquelle une équipe Scrum conçoit, développe, teste et livre un incrément de produit.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bJBlA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Un sprint est une itération courte et fixe (souvent de 2 à 4 semaines) durant laquelle une équipe Scrum conçoit, développe, teste et livre un incrément de produit."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1761056437.941609",
+        "client_msg_id": "af840557-0446-43c0-9586-b25c41eb92f6",
+        "text": "Le Sprint Backlog est la liste des éléments du Product Backlog sélectionnés pour le sprint.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1761056437.941609",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1761294604.406069",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1761294604.406069"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1761294604.406069",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xB1Pj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Le Sprint Backlog est la liste des éléments du Product Backlog sélectionnés pour le sprint."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09NKKP5L48",
+                "created": 1761061611,
+                "timestamp": 1761061611,
+                "name": "Untitled",
+                "title": "Untitled",
+                "mimetype": "application\/vnd.slack-docs",
+                "filetype": "quip",
+                "pretty_type": "Canvas",
+                "user": "U09M1JJ63E2",
+                "user_team": "T09M779P03W",
+                "editable": true,
+                "size": 0,
+                "mode": "quip",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NKKP5L48\/canvas?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NKKP5L48\/download\/canvas?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "permalink": "https:\/\/devofs-201.slack.com\/docs\/T09M779P03W\/F09NKKP5L48",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09NKKP5L48-d34f4b54d8",
+                "url_static_preview": "https:\/\/devofs-201.slack.com\/docs\/T09M779P03W\/F09NKKP5L48\/mobile",
+                "quip_thread_id": "fMe9AAdUYV9",
+                "update_notification": null,
+                "is_starred": false,
+                "skipped_shares": true,
+                "teams_shared_with": [],
+                "is_restricted_sharing_enabled": false,
+                "has_rich_preview": false,
+                "file_access": "visible",
+                "access": "owner",
+                "org_or_workspace_access": "none",
+                "canvas_creator_id": "U09M1JJ63E2",
+                "team_pref_version_history_enabled": true,
+                "canvas_printing_enabled": true,
+                "is_ai_suggested": false
+            }
+        ],
+        "upload": false,
+        "user": "U09M1JJ63E2",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761061613.151539"
+    }
+]

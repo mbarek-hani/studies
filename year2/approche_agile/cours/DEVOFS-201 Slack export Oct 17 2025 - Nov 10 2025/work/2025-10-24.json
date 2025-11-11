@@ -1,0 +1,91 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U09MY06T3PA",
+        "text": "<@U09MY06T3PA> has joined the channel",
+        "type": "message",
+        "ts": "1761305690.536349"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09LN7SBG2K",
+        "text": "<@U09LN7SBG2K> has joined the channel",
+        "inviter": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761305698.559439"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09M07RFT0D",
+        "text": "<@U09M07RFT0D> has joined the channel",
+        "inviter": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761305698.649729"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09M1JJ63E2",
+        "text": "<@U09M1JJ63E2> has joined the channel",
+        "inviter": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761305698.727999"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY0C2E3A",
+        "text": "<@U09MY0C2E3A> has joined the channel",
+        "inviter": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761305698.804629"
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09NTPVNNRF",
+                "created": 1761305813,
+                "timestamp": 1761305813,
+                "name": "front end.zip",
+                "title": "front end.zip",
+                "mimetype": "application\/zip",
+                "filetype": "zip",
+                "pretty_type": "Zip",
+                "user": "U09MY06T3PA",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 6171,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NTPVNNRF\/front_end.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NTPVNNRF\/download\/front_end.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09NTPVNNRF\/front_end.zip",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09NTPVNNRF-27fef92e9c",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09MY06T3PA",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761305820.540649",
+        "client_msg_id": "310edd6c-8d2d-4ce4-b9bf-f2398ff965ab",
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09M1JJ63E2"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

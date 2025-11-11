@@ -1,0 +1,75 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U09M1JJ63E2",
+        "text": "<@U09M1JJ63E2> has joined the channel",
+        "type": "message",
+        "ts": "1760700580.113669"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09M07RFT0D",
+        "text": "<@U09M07RFT0D> has joined the channel",
+        "type": "message",
+        "ts": "1760701012.918719"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09LN7SBG2K",
+        "text": "<@U09LN7SBG2K> has joined the channel",
+        "type": "message",
+        "ts": "1760701026.689109"
+    },
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760701092.689649",
+        "client_msg_id": "3027c10c-f204-4181-abf1-d8ef7dc21f70",
+        "text": "drari hadi hya channel fach na9cho lprojet w nfar9o les roles. channel docs dyal les documents safi",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "H\/WoP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "drari hadi hya channel fach na9cho lprojet w nfar9o les roles. channel docs dyal les documents safi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY06T3PA",
+        "text": "<@U09MY06T3PA> has joined the channel",
+        "type": "message",
+        "ts": "1760701367.916129"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY0C2E3A",
+        "text": "<@U09MY0C2E3A> has joined the channel",
+        "type": "message",
+        "ts": "1760701720.620069"
+    }
+]

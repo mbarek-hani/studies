@@ -1,0 +1,117 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U09M1JJ63E2",
+        "text": "<@U09M1JJ63E2> has joined the channel",
+        "type": "message",
+        "ts": "1760700580.351759"
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09LN6Z1P9V",
+                "created": 1760700583,
+                "timestamp": 1760700583,
+                "name": "____________",
+                "title": ":tada::heartpulse::stuck_out_tongue_winking_eye:",
+                "mimetype": "application\/vnd.slack-docs",
+                "filetype": "quip",
+                "pretty_type": "Canvas",
+                "user": "U09M1JJ63E2",
+                "user_team": "T09M779P03W",
+                "editable": true,
+                "size": 1666,
+                "mode": "quip",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09LN6Z1P9V\/canvas?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09LN6Z1P9V\/download\/canvas?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "permalink": "https:\/\/devofs-201.slack.com\/docs\/T09M779P03W\/F09LN6Z1P9V",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09LN6Z1P9V-5c8ca5a946",
+                "url_static_preview": "https:\/\/devofs-201.slack.com\/docs\/T09M779P03W\/F09LN6Z1P9V\/mobile",
+                "quip_thread_id": "RBM9AAD5BUr",
+                "updated": 1760707950,
+                "update_notification": 1760700584,
+                "canvas_readtime": 0.93697310317142,
+                "is_starred": false,
+                "skipped_shares": true,
+                "teams_shared_with": [],
+                "is_restricted_sharing_enabled": false,
+                "has_rich_preview": false,
+                "file_access": "visible",
+                "access": "owner",
+                "org_or_workspace_access": "none",
+                "title_blocks": [
+                    {
+                        "type": "rich_text",
+                        "block_id": "Ka8Jl",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "emoji",
+                                        "name": "tada",
+                                        "unicode": "1f389"
+                                    },
+                                    {
+                                        "type": "emoji",
+                                        "name": "heartpulse",
+                                        "unicode": "1f497"
+                                    },
+                                    {
+                                        "type": "emoji",
+                                        "name": "stuck_out_tongue_winking_eye",
+                                        "unicode": "1f61c"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "canvas_creator_id": "U09M1JJ63E2",
+                "team_pref_version_history_enabled": true,
+                "canvas_printing_enabled": true,
+                "is_ai_suggested": false
+            }
+        ],
+        "upload": false,
+        "user": "U09M1JJ63E2",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1760700584.831569"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09M07RFT0D",
+        "text": "<@U09M07RFT0D> has joined the channel",
+        "type": "message",
+        "ts": "1760701012.957149"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09LN7SBG2K",
+        "text": "<@U09LN7SBG2K> has joined the channel",
+        "type": "message",
+        "ts": "1760701026.709479"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY06T3PA",
+        "text": "<@U09MY06T3PA> has joined the channel",
+        "type": "message",
+        "ts": "1760701367.934859"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY0C2E3A",
+        "text": "<@U09MY0C2E3A> has joined the channel",
+        "type": "message",
+        "ts": "1760701720.654629"
+    }
+]

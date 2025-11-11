@@ -1,0 +1,143 @@
+[
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09NN4Y2N4B",
+                "created": 1761551100,
+                "timestamp": 1761551100,
+                "name": "controllers.zip",
+                "title": "controllers.zip",
+                "mimetype": "application\/zip",
+                "filetype": "zip",
+                "pretty_type": "Zip",
+                "user": "U09M07RFT0D",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 1356,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NN4Y2N4B\/controllers.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NN4Y2N4B\/download\/controllers.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09NN4Y2N4B\/controllers.zip",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09NN4Y2N4B-7c42513df5",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09M07RFT0D",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761551104.410879",
+        "client_msg_id": "ac10a229-42ad-4ede-83b4-d2659705cc18",
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09M1JJ63E2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09NUP2977U",
+                "created": 1761553249,
+                "timestamp": 1761553249,
+                "name": "email-verification.zip",
+                "title": "email-verification.zip",
+                "mimetype": "application\/zip",
+                "filetype": "zip",
+                "pretty_type": "Zip",
+                "user": "U09LN7SBG2K",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 1340,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NUP2977U\/email-verification.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NUP2977U\/download\/email-verification.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09NUP2977U\/email-verification.zip",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09NUP2977U-c6d717b3d5",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09LN7SBG2K",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761553255.853889",
+        "client_msg_id": "033f6bc5-bd02-45b4-9368-939aa416d3e8",
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09M1JJ63E2"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09NNFX6D0B",
+                "created": 1761554970,
+                "timestamp": 1761554970,
+                "name": "Dashboard.zip",
+                "title": "Dashboard.zip",
+                "mimetype": "application\/zip",
+                "filetype": "zip",
+                "pretty_type": "Zip",
+                "user": "U09MY06T3PA",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 4138,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NNFX6D0B\/dashboard.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09NNFX6D0B\/download\/dashboard.zip?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09NNFX6D0B\/dashboard.zip",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09NNFX6D0B-9541cd54b3",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09MY06T3PA",
+        "display_as_bot": false,
+        "type": "message",
+        "ts": "1761554974.679489",
+        "client_msg_id": "88ece893-42aa-4ac0-a769-b95aa3d25820"
+    }
+]

@@ -1,0 +1,184 @@
+[
+    {
+        "text": "Presentation",
+        "files": [
+            {
+                "id": "F09PL8JDSPN",
+                "created": 1761757215,
+                "timestamp": 1761757215,
+                "name": "Sprint Review – e-Commerce Project  Authentification et Connexion.pptx",
+                "title": "Sprint Review – e-Commerce Project  Authentification et Connexion.pptx",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U09LN7SBG2K",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 3075630,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09PL8JDSPN\/sprint_review_____e-commerce_project__authentification_et_connexion.pptx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09PL8JDSPN\/download\/sprint_review_____e-commerce_project__authentification_et_connexion.pptx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "converted_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09PL8JDSPN-7600627a92\/sprint_review_____e-commerce_project__authentification_et_connexion_converted.pdf?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09PL8JDSPN-7600627a92\/sprint_review_____e-commerce_project__authentification_et_connexion_thumb_pdf.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf_w": 2200,
+                "thumb_pdf_h": 1238,
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09PL8JDSPN\/sprint_review_____e-commerce_project__authentification_et_connexion.pptx",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09PL8JDSPN-798ba254e9",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09LN7SBG2K",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CY0IR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Presentation"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1761757247.671989",
+        "client_msg_id": "d671e535-b471-438a-9d34-3d00fd737742"
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1761757820.914629",
+        "client_msg_id": "9492740c-9628-4e1e-b658-25ab77c3be2f",
+        "text": "auto evaluation : <https:\/\/docs.google.com\/document\/d\/1VoeN3I1yimHM9gUhAQYK_-EarciZ9Q6vV_aGuELMAUY\/edit?usp=sharing>",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VWzsc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "auto evaluation : "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.google.com\/document\/d\/1VoeN3I1yimHM9gUhAQYK_-EarciZ9Q6vV_aGuELMAUY\/edit?usp=sharing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "text": "",
+        "files": [
+            {
+                "id": "F09QCF57P3J",
+                "created": 1761768761,
+                "timestamp": 1761768761,
+                "name": "Validation_Objectifs_Sprint1.docx",
+                "title": "Validation_Objectifs_Sprint1.docx",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U09MY06T3PA",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 37378,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09QCF57P3J\/validation_objectifs_sprint1.docx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09QCF57P3J\/download\/validation_objectifs_sprint1.docx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "converted_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09QCF57P3J-e08b5a8a83\/validation_objectifs_sprint1_converted.pdf?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09QCF57P3J-e08b5a8a83\/validation_objectifs_sprint1_thumb_pdf.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf_w": 935,
+                "thumb_pdf_h": 1210,
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09QCF57P3J\/validation_objectifs_sprint1.docx",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09QCF57P3J-99d121554b",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            },
+            {
+                "id": "F09QCF5Q8CQ",
+                "created": 1761768766,
+                "timestamp": 1761768766,
+                "name": "Commentaires_et_retours_utilisateurs.docx",
+                "title": "Commentaires_et_retours_utilisateurs.docx",
+                "mimetype": "application\/octet-stream",
+                "filetype": "binary",
+                "pretty_type": "Binary",
+                "user": "U09MY06T3PA",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 37029,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09QCF5Q8CQ\/commentaires_et_retours_utilisateurs.docx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09QCF5Q8CQ\/download\/commentaires_et_retours_utilisateurs.docx?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "converted_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09QCF5Q8CQ-e31e69693c\/commentaires_et_retours_utilisateurs_converted.pdf?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09QCF5Q8CQ-e31e69693c\/commentaires_et_retours_utilisateurs_thumb_pdf.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf_w": 935,
+                "thumb_pdf_h": 1210,
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09QCF5Q8CQ\/commentaires_et_retours_utilisateurs.docx",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09QCF5Q8CQ-d328c0d72a",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1761768774.725879",
+        "client_msg_id": "7a829ed4-5afe-45fd-ad32-bf75c0920bda"
+    }
+]

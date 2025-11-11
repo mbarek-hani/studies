@@ -1,0 +1,165 @@
+[
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1761294562.104289",
+        "client_msg_id": "78fa59bf-bd5d-4b41-b6dc-0ab158c675a7",
+        "text": "<@U09M1JJ63E2> <@U09MY06T3PA> <@U09LN7SBG2K>\n• C'est une Cérémonie SCRUM\n• Déroulement + Estimation de durée + presonnes présent  (pour Partie 1 \/ Partie 2 de la planification du sprint)? ",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1761056230.208029",
+        "parent_user_id": "U09M1JJ63E2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vzK\/x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U09M1JJ63E2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U09MY06T3PA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U09LN7SBG2K"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "C'est une Cérémonie SCRUM"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Déroulement + Estimation de durée + presonnes présent  (pour Partie 1 \/ Partie 2 de la planification du sprint)? "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1761294604.406069",
+        "client_msg_id": "47ad96ad-3013-40cf-b93e-e8a5bdca1d5c",
+        "text": "<@U09M1JJ63E2> <@U09MY06T3PA> <@U09LN7SBG2K>\n• C'est un Artefact SCRUM.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1761056437.941609",
+        "parent_user_id": "U09M1JJ63E2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TY3Kc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U09M1JJ63E2"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U09MY06T3PA"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U09LN7SBG2K"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "C'est un Artefact SCRUM."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

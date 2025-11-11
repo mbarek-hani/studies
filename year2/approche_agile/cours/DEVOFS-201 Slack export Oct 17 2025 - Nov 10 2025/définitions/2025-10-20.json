@@ -1,0 +1,1084 @@
+[
+    {
+        "subtype": "channel_join",
+        "user": "U09M1JJ63E2",
+        "text": "<@U09M1JJ63E2> has joined the channel",
+        "type": "message",
+        "ts": "1760947700.215829"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09LN7SBG2K",
+        "text": "<@U09LN7SBG2K> has joined the channel",
+        "inviter": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760947718.224279"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09M07RFT0D",
+        "text": "<@U09M07RFT0D> has joined the channel",
+        "inviter": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760947718.606509"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY06T3PA",
+        "text": "<@U09MY06T3PA> has joined the channel",
+        "inviter": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760947718.893189"
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U09MY0C2E3A",
+        "text": "<@U09MY0C2E3A> has joined the channel",
+        "inviter": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760947719.208059"
+    },
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1760947790.388599",
+        "client_msg_id": "028c5db7-030f-4981-926b-59cf0ba993a6",
+        "text": "JIRA:\n*Jira* est un *logiciel de gestion de projet* développé par *Atlassian*, très populaire dans les équipes de *développement logiciel*, notamment celles qui travaillent avec des *méthodes agiles* (Scrum, Kanban, etc.).",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xd2aH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "JIRA:\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Jira",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est un "
+                            },
+                            {
+                                "type": "text",
+                                "text": "logiciel de gestion de projet",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " développé par "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Atlassian",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", très populaire dans les équipes de "
+                            },
+                            {
+                                "type": "text",
+                                "text": "développement logiciel",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", notamment celles qui travaillent avec des "
+                            },
+                            {
+                                "type": "text",
+                                "text": "méthodes agiles",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (Scrum, Kanban, etc.)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1760948492.817499",
+        "client_msg_id": "c4ee9c05-d36c-4759-a719-2e13c42f5190",
+        "text": "Le backlog produit : est une *liste de tout ce qu’il faut faire* pour créer le produit : les fonctionnalités, les corrections, et les améliorations.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760948492.817499",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1760958724.985149",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1760958724.985149"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/o+52",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Le backlog produit : est une "
+                            },
+                            {
+                                "type": "text",
+                                "text": "liste de tout ce qu’il faut faire",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " pour créer le produit : les fonctionnalités, les corrections, et les améliorations."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1760948602.619869",
+        "client_msg_id": "976dfabb-018b-4903-addd-0d2ee7257893",
+        "text": "Le *Cahier des Charges* est un document qui décrit tout ce qu’on doit faire dans un projet. Il explique les objectifs, les fonctionnalités, la planification et les rôles de chaque membre de l’équipe. Il sert de guide pour bien comprendre le travail à réaliser et pour suivre l’avancement du projet.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gcd310c5ec03",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/cd310c5ec03e732e8f5722bc2f393864.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "Rida",
+            "real_name": "Rida",
+            "display_name": "Rida",
+            "team": "T09M779P03W",
+            "name": "mouhdi.reda1",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lLW1j",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Le "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Cahier des Charges",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est un document qui décrit tout ce qu’on doit faire dans un projet. Il explique les objectifs, les fonctionnalités, la planification et les rôles de chaque membre de l’équipe. Il sert de guide pour bien comprendre le travail à réaliser et pour suivre l’avancement du projet."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1760948603.653669",
+        "client_msg_id": "76c0d781-4449-4555-b53b-1439166b20de",
+        "text": "```Un Épic :  est une grande fonctionnalité ou un gros objectif qu'on découpe ensuite en plus petites histoires (user stories).```",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "d2CcH",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Un Épic :  est une grande fonctionnalité ou un gros objectif qu'on découpe ensuite en plus petites histoires (user stories)."
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09MY06T3PA",
+        "type": "message",
+        "ts": "1760948608.431999",
+        "client_msg_id": "df9a93a5-a572-409d-a15b-ad0fbd22f827",
+        "text": "Les *Story Points* sont une façon d’estimer le travail à faire dans un projet. Ils permettent de mesurer la difficulté et le temps approximatif d’une tâche sans parler d’heures. Plus le nombre de points est grand, plus la tâche est longue ou compliquée à faire.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gcd310c5ec03",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/cd310c5ec03e732e8f5722bc2f393864.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-72.png",
+            "first_name": "Rida",
+            "real_name": "Rida",
+            "display_name": "Rida",
+            "team": "T09M779P03W",
+            "name": "mouhdi.reda1",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N3Gob",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Les "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Story Points",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " sont une façon d’estimer le travail à faire dans un projet. Ils permettent de mesurer la difficulté et le temps approximatif d’une tâche sans parler d’heures. Plus le nombre de points est grand, plus la tâche est longue ou compliquée à faire."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09LN7SBG2K",
+        "type": "message",
+        "ts": "1760948608.445949",
+        "edited": {
+            "user": "U09LN7SBG2K",
+            "ts": "1760948772.000000"
+        },
+        "client_msg_id": "d259b373-a730-47a5-ac5d-d9e8fee720c4",
+        "text": "*User Story:*\n*User Story* est une description simple d’une fonctionnalité du projet, vue du point de vue de l’utilisateur.\n Autrement dit, elle décrit ce que l'utilisateur veut faire et pourquoi .",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "g019ac3fbbcb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019ac3fbbcbd30ecc371ef182c652c2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Ayoub",
+            "real_name": "Ayoub Jakouri",
+            "display_name": "Ayoub Jakouri",
+            "team": "T09M779P03W",
+            "name": "jakouriayoub08",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nV9Cp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "User Story:",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "User Story",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est une description simple d’une fonctionnalité du projet, vue du point de vue de l’utilisateur.\n Autrement dit, elle décrit ce que l'utilisateur veut faire et pourquoi ."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09M07RFT0D",
+        "type": "message",
+        "ts": "1760948744.819309",
+        "client_msg_id": "9d3baf0d-f3a4-4891-a168-706ed83a86e0",
+        "text": "*exemple d'Épic :* Épic :  « _*Authentification des utilisateurs*_ »\n• Story 1 : En tant qu’utilisateur, je veux créer un compte pour accéder à mes cours.\n• Story 2 : En tant qu’utilisateur, je veux me connecter pour utiliser la plateforme.\n• Story 3 : En tant qu’utilisateur, je veux réinitialiser mon mot de passe si je l’oublie\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "0d94c3b3e6d8",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9746023446288_0d94c3b3e6d87210aaf5_72.png",
+            "first_name": "Yassin",
+            "real_name": "Yassin Azarguy",
+            "display_name": "Yassin Azarguy",
+            "team": "T09M779P03W",
+            "name": "yassinazarguy12",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wcbm9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "exemple d'Épic : ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "Épic :  «"
+                            },
+                            {
+                                "type": "text",
+                                "text": " Authentification des utilisateurs ",
+                                "style": {
+                                    "bold": true,
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "»\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Story 1 : En tant qu’utilisateur, je veux créer un compte pour accéder à mes cours."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Story 2 : En tant qu’utilisateur, je veux me connecter pour utiliser la plateforme."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Story 3 : En tant qu’utilisateur, je veux réinitialiser mon mot de passe si je l’oublie"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09LN7SBG2K",
+        "type": "message",
+        "ts": "1760948753.200419",
+        "client_msg_id": "6a891d7f-7244-4104-8bed-814a89305f00",
+        "text": "*Exemples de User Story :*\n1. En tant qu’utilisateur, je veux créer un compte pour pouvoir accéder à mon espace personnel.\n2. En tant que client, je veux ajouter des produits à mon panier pour finaliser ma commande plus tard.\n3. En tant qu’administrateur, je veux voir la liste des utilisateurs pour gérer leurs comptes.\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "g019ac3fbbcb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019ac3fbbcbd30ecc371ef182c652c2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Ayoub",
+            "real_name": "Ayoub Jakouri",
+            "display_name": "Ayoub Jakouri",
+            "team": "T09M779P03W",
+            "name": "jakouriayoub08",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760948753.200419",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1760958897.958299",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1760958897.958299"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hEsd6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Exemples de User Story :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "En tant qu’utilisateur, je veux créer un compte pour pouvoir accéder à mon espace personnel."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "En tant que client, je veux ajouter des produits à mon panier pour finaliser ma commande plus tard."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "En tant qu’administrateur, je veux voir la liste des utilisateurs pour gérer leurs comptes."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "ordered",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09LN7SBG2K",
+        "type": "message",
+        "ts": "1760948917.476929",
+        "edited": {
+            "user": "U09LN7SBG2K",
+            "ts": "1760949316.000000"
+        },
+        "client_msg_id": "7afd53a9-4d1c-449c-ac64-cae3471a2b97",
+        "text": "*Tâche :*\nUne *Tâche* est une petite unité de travail nécessaire pour réaliser une *User Story*.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "g019ac3fbbcb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019ac3fbbcbd30ecc371ef182c652c2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Ayoub",
+            "real_name": "Ayoub Jakouri",
+            "display_name": "Ayoub Jakouri",
+            "team": "T09M779P03W",
+            "name": "jakouriayoub08",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WYXZa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Tâche :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nUne "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Tâche",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est une petite unité de travail nécessaire pour réaliser une "
+                            },
+                            {
+                                "type": "text",
+                                "text": "User Story",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "user": "U09LN7SBG2K",
+        "type": "message",
+        "ts": "1760949221.437569",
+        "edited": {
+            "user": "U09LN7SBG2K",
+            "ts": "1761810573.000000"
+        },
+        "client_msg_id": "40ef0fac-4750-4e3b-86e8-9a2f3b198eda",
+        "text": "*Issue :*\nUn *Issue* dans Jira représente tout élément qui nécessite une action.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "g019ac3fbbcb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019ac3fbbcbd30ecc371ef182c652c2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Ayoub",
+            "real_name": "Ayoub Jakouri",
+            "display_name": "Ayoub Jakouri",
+            "team": "T09M779P03W",
+            "name": "jakouriayoub08",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760949221.437569",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1760959011.010949",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1760959011.010949"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4iWw5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Issue :",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nUn "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Issue",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " dans Jira représente tout élément qui nécessite une action."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1760958724.985149",
+        "client_msg_id": "d93277eb-4d02-44db-95b2-73d39a015696",
+        "text": "C'est un Artefact du framework SCRUM :triangular_flag_on_post:",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760948492.817499",
+        "parent_user_id": "U09M07RFT0D",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "I\/Tpe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "C'est un Artefact du framework SCRUM "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "triangular_flag_on_post",
+                                "unicode": "1f6a9"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1760958897.958299",
+        "client_msg_id": "f9ac0068-a914-4369-95fa-346b5d0c7ae6",
+        "text": "vous pouvez utiliser Afin de a la place de pour.\nEn tant que .....\nJe veux .....\nAfin de .....",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760948753.200419",
+        "parent_user_id": "U09LN7SBG2K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QNU7N",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "vous pouvez utiliser Afin de a la place de pour.\nEn tant que .....\nJe veux .....\nAfin de ....."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1760958974.223559",
+        "client_msg_id": "45aa9992-7d31-4dd5-ba7a-4207883ddb41",
+        "text": "Difference ( entre Tache \/ User Story \/ Issue ) dans Jira ?",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1bbLz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Difference ( entre Tache \/ User Story \/ Issue ) dans Jira ?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1760959011.010949",
+        "client_msg_id": "44259279-a612-45ee-b904-4ae903986fd8",
+        "text": "dans JIRA qui nous interesse",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760949221.437569",
+        "parent_user_id": "U09LN7SBG2K",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ETpQV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "dans JIRA qui nous interesse"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09LN7SBG2K",
+        "type": "message",
+        "ts": "1760959419.037239",
+        "client_msg_id": "cc6f6b02-5025-409f-959a-042ace931c3f",
+        "text": "&gt; *Difference ( entre Tache \/ User Story \/ Issue ) dans Jira :*\n• *Issue :* catégorie générale (le conteneur de tout).\n• *User Story :*  ce que l’utilisateur veut.\n• *Tâche :* ce que l’équipe doit faire techniquement pour le réaliser.",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "g019ac3fbbcb",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/019ac3fbbcbd30ecc371ef182c652c2b.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-72.png",
+            "first_name": "Ayoub",
+            "real_name": "Ayoub Jakouri",
+            "display_name": "Ayoub Jakouri",
+            "team": "T09M779P03W",
+            "name": "jakouriayoub08",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9mkMw",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Difference ( entre Tache \/ User Story \/ Issue ) dans Jira :",
+                                "style": {
+                                    "bold": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Issue : ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "catégorie générale (le conteneur de tout)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "User Story : ",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " ce que l’utilisateur veut."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Tâche :",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " ce que l’équipe doit faire techniquement pour le réaliser."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U09M07RFT0D"
+                ],
+                "count": 1
+            },
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U09MY0C2E3A"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

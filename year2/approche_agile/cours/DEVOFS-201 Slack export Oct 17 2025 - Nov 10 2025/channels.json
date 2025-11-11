@@ -1,0 +1,152 @@
+[
+{
+    "id": "C09MJFAJCTE",
+    "name": "définitions",
+    "created": 1760947699,
+    "creator": "U09M1JJ63E2",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    }
+},
+{
+    "id": "C09MGHV3F25",
+    "name": "social",
+    "created": 1760700580,
+    "creator": "U09M1JJ63E2",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "Other channels are for work. This one’s just for fun. Get to know your teammates and show your lighter side. 🎈",
+        "creator": "U09M1JJ63E2",
+        "last_set": 1760700580
+    }
+},
+{
+    "id": "C09MGJMV0QZ",
+    "name": "new-channel",
+    "created": 1760700881,
+    "creator": "U09M1JJ63E2",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "This channel is for everything #new-channel. Hold meetings, share docs, and make decisions together with your team.",
+        "creator": "U09M1JJ63E2",
+        "last_set": 1760700881
+    }
+},
+{
+    "id": "C09NTPG77MF",
+    "name": "work",
+    "created": 1761305690,
+    "creator": "U09MY06T3PA",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    }
+},
+{
+    "id": "C09M1KE6NVC",
+    "name": "docs",
+    "created": 1760700906,
+    "creator": "U09M1JJ63E2",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    }
+},
+{
+    "id": "C09M3LW9JTC",
+    "name": "all-devofs-201",
+    "created": 1760700579,
+    "creator": "U09M1JJ63E2",
+    "is_archived": false,
+    "is_general": true,
+    "members": [
+        "U09LN7SBG2K",
+        "U09M07RFT0D",
+        "U09M1JJ63E2",
+        "U09MY06T3PA",
+        "U09MY0C2E3A"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "Share announcements and updates about company news, upcoming events, or teammates who deserve some kudos. ⭐",
+        "creator": "U09M1JJ63E2",
+        "last_set": 1760700579
+    }
+}
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1761815943.512629",
+        "client_msg_id": "90ea65a4-f044-4482-a7bf-27b506614240",
+        "text": "Demo: <https:\/\/drive.google.com\/file\/d\/1DQSTYzdl6yorlXGFLBCtISuSp2qzQLG3\/view?usp=sharing>",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dTwmJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Demo: "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/drive.google.com\/file\/d\/1DQSTYzdl6yorlXGFLBCtISuSp2qzQLG3\/view?usp=sharing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

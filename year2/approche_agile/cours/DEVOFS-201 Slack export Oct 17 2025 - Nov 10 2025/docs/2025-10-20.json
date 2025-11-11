@@ -1,0 +1,154 @@
+[
+    {
+        "text": "Cahier des charges",
+        "files": [
+            {
+                "id": "F09MTPA0P89",
+                "created": 1760946768,
+                "timestamp": 1760946768,
+                "name": "Untitled document.pdf",
+                "title": "Untitled document.pdf",
+                "mimetype": "application\/pdf",
+                "filetype": "pdf",
+                "pretty_type": "PDF",
+                "user": "U09M1JJ63E2",
+                "user_team": "T09M779P03W",
+                "editable": false,
+                "size": 109340,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09MTPA0P89\/untitled_document.pdf?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T09M779P03W-F09MTPA0P89\/download\/untitled_document.pdf?token=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "media_display_type": "unknown",
+                "thumb_pdf": "https:\/\/files.slack.com\/files-tmb\/T09M779P03W-F09MTPA0P89-cd352cea2e\/untitled_document_thumb_pdf.png?t=xoxe-9721247782132-9893669257057-9872495548163-7a3a30ea936b0f017e4eccde03cc4216",
+                "thumb_pdf_w": 935,
+                "thumb_pdf_h": 1210,
+                "permalink": "https:\/\/devofs-201.slack.com\/files\/U09M1JJ63E2\/F09MTPA0P89\/untitled_document.pdf",
+                "permalink_public": "https:\/\/slack-files.com\/T09M779P03W-F09MTPA0P89-bc1152acc1",
+                "is_starred": false,
+                "skipped_shares": true,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U09M1JJ63E2",
+        "display_as_bot": false,
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "umeTK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Cahier des charges"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "type": "message",
+        "ts": "1760946799.573269",
+        "client_msg_id": "2137973b-fe35-48c4-94a1-ea178430b1ac",
+        "thread_ts": "1760946799.573269",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1760959276.050079",
+        "reply_users": [
+            "U09MY0C2E3A"
+        ],
+        "replies": [
+            {
+                "user": "U09MY0C2E3A",
+                "ts": "1760959276.050079"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1760959276.050079"
+    },
+    {
+        "user": "U09MY0C2E3A",
+        "type": "message",
+        "ts": "1760959276.050079",
+        "client_msg_id": "8e109482-145e-440b-af14-5bf5c481349d",
+        "text": "@here\n• Detaillez un peux dans les taches puis dessiner le Diagramme de pert ou de Gantt \n• Comment ca marche pour les client B2C et aussi pour B2B ?\n• Equipe manque Reda",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "b7d25d04ddab",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2025-10-17\/9717802464306_b7d25d04ddabbb73e709_72.png",
+            "first_name": "Saad",
+            "real_name": "Saad Bentaleb",
+            "display_name": "Saad Bentaleb",
+            "team": "T09M779P03W",
+            "name": "bentaleb.ofppt",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1760946799.573269",
+        "parent_user_id": "U09M1JJ63E2",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uasfk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "@here\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Detaillez un peux dans les taches puis dessiner le Diagramme de pert ou de Gantt "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Comment ca marche pour les client B2C et aussi pour B2B ?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Equipe manque Reda"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

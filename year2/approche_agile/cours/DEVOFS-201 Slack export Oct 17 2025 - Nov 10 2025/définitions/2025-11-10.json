@@ -1,0 +1,272 @@
+[
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1762765193.279299",
+        "client_msg_id": "a48bf11c-43a8-4220-9766-8d63057fa64d",
+        "text": "*Burndown Chart (ou graphique d’avancement)*\nLe *Burndown Chart* est un graphique utilisé en *Scrum* (et en gestion agile de projets) pour *visualiser la quantité de travail restante* à accomplir au cours d’un *sprint* ou d’un *projet*.\n• *Axe horizontal (X)* : représente le temps (généralement les jours du sprint).\n• *Axe vertical (Y)* : représente le volume de travail restant (en points d’histoire, tâches ou heures).\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Mk9eG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Burndown Chart (ou graphique d’avancement)",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nLe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Burndown Chart",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est un graphique utilisé en "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Scrum",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " (et en gestion agile de projets) pour "
+                            },
+                            {
+                                "type": "text",
+                                "text": "visualiser la quantité de travail restante",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " à accomplir au cours d’un "
+                            },
+                            {
+                                "type": "text",
+                                "text": "sprint",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " ou d’un "
+                            },
+                            {
+                                "type": "text",
+                                "text": "projet",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Axe horizontal (X)",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " : représente le temps (généralement les jours du sprint)."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Axe vertical (Y)",
+                                        "style": {
+                                            "bold": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " : représente le volume de travail restant (en points d’histoire, tâches ou heures)."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U09M1JJ63E2",
+        "type": "message",
+        "ts": "1762765234.891339",
+        "client_msg_id": "4f89e82a-8c1d-4809-a395-6d24f80541ea",
+        "text": "*Definition of Done (DoD)*\nLa *Definition of Done* est une *liste de critères* qu’une tâche, une user story ou un incrément doit remplir pour être considérée comme *terminée*.\nElle garantit une compréhension commune de ce que signifie “fait” pour toute l’équipe.\nExemples de critères possibles :\n• Le code est écrit, revu et intégré.\n• Les tests unitaires et fonctionnels passent avec succès.\n• La documentation est mise à jour.\n• Le produit est déployé sur l’environnement de test.\n",
+        "team": "T09M779P03W",
+        "user_team": "T09M779P03W",
+        "source_team": "T09M779P03W",
+        "user_profile": {
+            "avatar_hash": "gfc22beeebec",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/fc22beeebec6f764db65375d8a0ccd35.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-72.png",
+            "first_name": "mbarek",
+            "real_name": "mbarek hani",
+            "display_name": "",
+            "team": "T09M779P03W",
+            "name": "mbarekhani30",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R3A6y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Definition of Done (DoD)",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nLa "
+                            },
+                            {
+                                "type": "text",
+                                "text": "Definition of Done",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " est une "
+                            },
+                            {
+                                "type": "text",
+                                "text": "liste de critères",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " qu’une tâche, une user story ou un incrément doit remplir pour être considérée comme "
+                            },
+                            {
+                                "type": "text",
+                                "text": "terminée",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ".\nElle garantit une compréhension commune de ce que signifie “fait” pour toute l’équipe.\nExemples de critères possibles :\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Le code est écrit, revu et intégré."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Les tests unitaires et fonctionnels passent avec succès."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "La documentation est mise à jour."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Le produit est déployé sur l’environnement de test."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ]
+    }
+]
