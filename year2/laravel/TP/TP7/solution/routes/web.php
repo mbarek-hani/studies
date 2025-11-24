@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-Route::get("/", fn() => view("welcome"))->middleware("work.time");
+Route::get("/", fn() => view("welcome"))->middleware("logger");
 
 Route::get("/form", fn() => view("csrf-form"));
 Route::post(
