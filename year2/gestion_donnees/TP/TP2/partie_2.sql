@@ -200,3 +200,5 @@ BEGIN
     GROUP BY c.idc;
 END $$
 DELIMITER ;
+
+CALL `ObservationClients`();
