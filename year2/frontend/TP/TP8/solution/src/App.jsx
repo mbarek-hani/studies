@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
+import ProductDetail from "@/pages/ProductDetail";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
