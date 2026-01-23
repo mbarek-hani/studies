@@ -1,0 +1,80 @@
+TP 1 : Introduction a Redux
+
+1. Installation
+
+npm install redux react-redux
+
+2. main.jsx Modifications
+
+import { Provider } from 'react-redux';
+import store from './store';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+3. Creating the Store (store.js)
+
+import { createStore } from 'redux';
+import panierReducer from './panierReducer';
+
+const store = createStore(panierReducer); [cite: 8, 9]
+export default store;
+
+
+4 & 5. Action Types
+
+ADDLIVRE: const ADDLIVRE = 'ADDLIVRE'
+
+REMOVELIVRE: const REMOVELIVRE = 'REMOVELIVRE'
+
+6. Action Creator
+
+export const addLivre = (isbn) => ({
+  type: 'ADDLIVRE',
+  payload: isbn [cite: 16]
+});
+
+7 & 8. panierReducer.js
+
+const initialState = { items: [] }; [cite: 20]
+
+const panierReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'ADDLIVRE':
+      return { ...state, items: [...state.items, action.payload] }; [cite: 21]
+    case 'REMOVELIVRE':
+      return { 
+        ...state, 
+        items: state.items.filter(isbn => isbn !== action.payload) [cite: 22]
+      };
+    default:
+      return state; [cite: 21]
+  }
+};
+export default panierReducer;
+
+9. Component Panier.jsx
+
+import { useSelector, useDispatch } from 'react-redux'; [cite: 26, 27]
+import { addLivre } from './actions';
+
+const Panier = () => {
+  const items = useSelector(state => state.items); [cite: 26]
+  const dispatch = useDispatch(); [cite: 27]
+
+  return (
+    <div>
+      <p>Nombre de livres: {items.length}</p> [cite: 28]
+      <button onClick={() => dispatch(addLivre('ISBN-001'))}>Ajouter ISBN-001</button> [cite: 29]
+      <button onClick={() => dispatch({ type: 'REMOVELIVRE', payload: 'ISBN-001' })}>Vider</button> [cite: 30]
+    </div>
+  );
+};
+
+
+
+
+

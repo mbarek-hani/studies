@@ -1,0 +1,80 @@
+TP 2: Redux Toolkit
+
+1. Installation
+
+npm install @reduxjs/toolkit react-redux
+
+
+2. Creating the Slice (panierSlice.js)
+
+
+import { createSlice } from '@reduxjs/toolkit';
+
+const panierSlice = createSlice({
+  name: 'panier', [cite: 66, 110]
+  initialState: { items: [] }, [cite: 67, 111]
+  reducers: {
+    addLivre: (state, action) => {
+      state.items.push(action.payload); [cite: 69, 112]
+    },
+    removeLivre: (state, action) => {
+      const index = state.items.indexOf(action.payload);
+      if (index !== -1) state.items.splice(index, 1); [cite: 73, 113]
+    },
+    clearPanier: (state) => {
+      state.items = []; [cite: 73]
+    }
+  }
+});
+
+export const { addLivre, removeLivre, clearPanier } = panierSlice.actions; [cite: 114]
+export default panierSlice.reducer;
+
+
+3. Configuring the Store (store.js)
+
+import { configureStore } from '@reduxjs/toolkit'; [cite: 116]
+import panierReducer from '../features/panier/panierSlice';
+
+export const store = configureStore({
+  reducer: {
+    panier: panierReducer [cite: 76, 117]
+  }
+});
+
+7 & 8. Components
+
+Panier.jsx
+
+import { useSelector, useDispatch } from 'react-redux';
+import { clearPanier } from '../features/panier/panierSlice';
+
+const Panier = () => {
+  const items = useSelector(state => state.panier.items); [cite: 83, 121]
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>Panier ({items.length} livres)</h2> [cite: 85, 121]
+      <ul>{items.map((isbn, i) => <li key={i}>{isbn}</li>)}</ul> [cite: 86]
+      <button onClick={() => dispatch(clearPanier())}>Vider le panier</button> [cite: 87]
+    </div>
+  );
+};
+
+LivreCard.jsx
+
+import { useDispatch } from 'react-redux';
+import { addLivre, removeLivre } from '../features/panier/panierSlice';
+
+const LivreCard = ({ isbn, titre }) => { [cite: 93, 123]
+  const dispatch = useDispatch();
+  return (
+    <div>
+      <h4>{titre}</h4>
+      <button onClick={() => dispatch(addLivre(isbn))}>Ajouter</button> [cite: 94, 124]
+      <button onClick={() => dispatch(removeLivre(isbn))}>Retirer</button> [cite: 94]
+    </div>
+  );
+};
+

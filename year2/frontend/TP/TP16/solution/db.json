@@ -1,0 +1,58 @@
+{
+  "stagiaires": [
+    {
+      "id": "1",
+      "nom": "Alami Ahmed",
+      "email": "ahmed@test.com",
+      "filiere": "DEVOWFS",
+      "groupe": "A",
+      "annee": 1,
+      "actif": true
+    },
+    {
+      "id": "2",
+      "nom": "Benani Sara",
+      "email": "sara@test.com",
+      "filiere": "DEVOWFS",
+      "groupe": "B",
+      "annee": 2,
+      "actif": true
+    },
+    {
+      "id": "4",
+      "nom": "Drissi Hoda",
+      "email": "hoda@test.com",
+      "filiere": "INFRA",
+      "groupe": "C",
+      "annee": 2,
+      "actif": true
+    },
+    {
+      "id": "5",
+      "nom": "Fikri Yassine",
+      "email": "yassine@test.com",
+      "filiere": "IDOSR",
+      "groupe": "B",
+      "annee": 1,
+      "actif": true
+    },
+    {
+      "id": "6",
+      "nom": "Ghazal Rania",
+      "email": "rania@test.com",
+      "filiere": "GCRH",
+      "groupe": "A",
+      "annee": 1,
+      "actif": true
+    },
+    {
+      "id": "f362",
+      "nom": "Yassine ait moubarik",
+      "email": "yassie@email.com",
+      "filiere": "DEVOWFS",
+      "groupe": "C",
+      "annee": "1",
+      "actif": true
+    }
+  ]
+}

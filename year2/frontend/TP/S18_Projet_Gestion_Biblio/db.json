@@ -1,0 +1,68 @@
+{
+  "books": [
+    {
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "genre": "Roman",
+      "year": 1945,
+      "available": false,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Science-Fiction",
+      "year": 1949,
+      "available": false
+    },
+    {
+      "id": "3",
+      "title": "Les Misérables",
+      "author": "Victor Hugo",
+      "genre": "Roman",
+      "year": 1862,
+      "available": true
+    },
+    {
+      "id": "4",
+      "title": "Une brève histoire du temps",
+      "author": "Stephen Hawking",
+      "genre": "Science",
+      "year": 1988,
+      "available": true
+    },
+    {
+      "id": "5",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "genre": "Informatique",
+      "year": 2008,
+      "available": false
+    },
+    {
+      "id": "6",
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "genre": "Histoire",
+      "year": 2011,
+      "available": true
+    },
+    {
+      "id": "7",
+      "title": "L'Étranger",
+      "author": "Albert Camus",
+      "genre": "Roman",
+      "year": 1942,
+      "available": true
+    },
+    {
+      "id": "8",
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "genre": "Informatique",
+      "year": 2008,
+      "available": true
+    }
+  ]
+}
