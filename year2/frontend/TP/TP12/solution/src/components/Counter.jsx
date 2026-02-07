@@ -4,7 +4,7 @@ import {
   decrement,
   incrementBy,
   reset,
-} from "../redux-toolkit/counterSlice";
+} from "../redux/actions/counterActions";
 
 function Counter() {
   const count = useSelector((state) => state.counter.count);

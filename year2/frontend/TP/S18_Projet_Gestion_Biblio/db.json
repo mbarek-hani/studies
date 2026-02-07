@@ -1,14 +1,6 @@
 {
   "books": [
     {
-      "title": "Le Petit Prince",
-      "author": "Antoine de Saint-Exupéry",
-      "genre": "Roman",
-      "year": 1945,
-      "available": false,
-      "id": "1"
-    },
-    {
       "id": "2",
       "title": "1984",
       "author": "George Orwell",

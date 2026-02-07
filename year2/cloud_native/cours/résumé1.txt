@@ -1,0 +1,55 @@
+1. Définition
+
+Une application Cloud Native est construite sous forme de microservices indépendants, déployés sur des plateformes basées sur
+des conteneurs plutôt que sur des infrastructures locales (On-Premises).
+Cette approche permet un développement plus rapide, une meilleure résilience et une scalabilité élevée.
+
+2. Fonctionnement (les piliers du Cloud Native)
+
+L’approche Cloud Native repose sur quatre piliers interdépendants :
+
+Microservices : chaque service réalise une fonction précise et peut évoluer indépendamment.
+
+Conteneurs : ils regroupent l’application avec toutes ses dépendances, garantissant la portabilité entre environnements.
+
+Continuous Delivery : automatisation des tests, intégrations et déploiements.
+
+Culture DevOps : collaboration étroite entre les équipes de développement (Dev) et d’exploitation (Ops).
+
+3. Avantages
+
+Flexibilité : les modifications d’un service n’impactent pas toute l’application.
+
+Évolutivité : possibilité de mettre à l’échelle uniquement les services nécessaires sans changer le matériel.
+
+Automatisation : réduction des erreurs humaines grâce aux pipelines automatisés.
+
+Déploiements rapides et fréquents.
+
+4. Exemples d’entreprises
+
+Des entreprises comme Netflix, Uber et WeChat utilisent le Cloud Native pour gérer des milliers de services avec des
+déploiements très fréquents, leur permettant de s’adapter rapidement aux besoins du marché.
+
+5. Caractéristiques principales
+
+	- l’architecture microservices.
+	
+	- l’utilisation des conteneurs.
+	
+	- la livraison continue (CI/CD).
+	
+	- l’Infrastructure as Code (IaC).
+	
+	- l’adoption des méthodes Agiles et de la culture DevOps.
+
+6. Microservices
+
+Les microservices remplacent les applications monolithiques par des composants simples et indépendants qui communiquent via des
+API REST (HTTP).
+Ils sont plus faciles à développer, tester, déployer et maintenir.
+
+7. Conteneurs
+
+Un conteneur est un package logiciel qui contient l’application, ses dépendances et sa configuration.
+Il permet un déploiement fiable et identique sur tous les environnements (développement, test, production).

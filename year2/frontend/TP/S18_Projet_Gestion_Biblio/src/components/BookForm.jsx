@@ -11,25 +11,12 @@ function BookForm({ existingBook = null }) {
 
   // State local pour le formulaire
   const [formData, setFormData] = useState({
-    title: '',
-    author: '',
-    genre: '',
-    year: '',
-    available: true
+    title: existingBook?.title || '',
+    author: existingBook?.author || '',
+    genre: existingBook?.genre || '',
+    year: existingBook?.year || '',
+    available: existingBook?.available || true
   })
-
-  // Pré-remplir si mode édition
-  useEffect(() => {
-    if (existingBook) {
-      setFormData({
-        title: existingBook.title,
-        author: existingBook.author,
-        genre: existingBook.genre,
-        year: existingBook.year,
-        available: existingBook.available
-      })
-    }
-  }, [existingBook])
 
   // Gestion des changements
   const handleChange = (e) => {
