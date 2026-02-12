@@ -1,0 +1,17 @@
+{
+  "name": "seri",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.52.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6"
+  }
+}
