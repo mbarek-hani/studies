@@ -4,13 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch index.js"
+    "dev": "node --watch --env-file=.env index.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.52.0",
     "express": "^5.2.1",
     "mongoose": "^9.1.6"
   }
