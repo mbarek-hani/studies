@@ -1,0 +1,19 @@
+{
+  "name": "tp7",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "http-proxy-middleware": "^3.0.5",
+    "keycloak-connect": "^26.1.1",
+    "morgan": "^1.10.1"
+  }
+}
