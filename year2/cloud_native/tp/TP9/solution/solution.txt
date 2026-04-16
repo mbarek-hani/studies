@@ -1,0 +1,156 @@
+Exercice 2 — Le fichier .env
+
+Pourquoi ne pas le commiter dans Git ?
+Le fichier .env contient des données sensibles (mots de passe, clés d'API).
+Le commiter exposerait ces secrets dans l'historique Git, accessibles à quiconque
+consulte le dépôt. Il faut l'ajouter dans .gitignore.
+
+MONGO_ROOT_USER=admin
+MONGO_ROOT_PASS=secret123
+RABBITMQ_USER=mquser
+RABBITMQ_PASS=mqpass456
+
+Exercice 3 — L'API Node.js
+npm install express mongoose amqplib
+
+mongodb://admin:secret123@mongodb:27017/produits?authSource=admin
+amqp://mquser:mqpass456@rabbitmq:5672
+
+Exercice 4 — Le Dockerfile
+
+| 1 | Image de base Node.js 20 (variante légère) | `FROM node:20-alpine` |
+| 2 | Répertoire de travail `/app` | `WORKDIR /app` |
+| 3 | Copier les fichiers `package*.json` | `COPY package*.json ./` |
+| 4 | Installer les dépendances (production) | `RUN npm install --omit=dev` |
+| 5 | Copier tout le code source | `COPY . .` |
+| 6 | Déclarer le port 3000 | `EXPOSE 3000` |
+| 7 | Lancer l'application | `CMD ["node", "app.js"]` |
+
+> Pourquoi copier `package*.json` avant le code ?
+  Docker met en cache chaque couche. Si `app.js` change mais pas les dépendances,
+  Docker réutilise la couche `npm install` sans la réexécuter → build plus rapide.
+
+Exercice 5 — Le fichier docker-compose.yml
+
+Volumes nommés déclarés :
+- `mongo-data` → monte `/data/db` dans MongoDB pour persister la base après arrêt
+- `rabbitmq-data` → monte `/var/lib/rabbitmq` pour persister les files de messages
+
+Nom du réseau interne : `reseau-tp` (driver: bridge)
+
+Exercice 6 — Démarrage et tests
+
+1. Construire et démarrer tous les services en arrière-plan :
+docker compose up --build -d
+
+2. Vérifier l'état de tous les services :
+docker compose ps
+
+4. Voir les logs si l'API ne démarre pas :
+docker compose logs api
+docker compose logs -f api
+
+5. Créer un produit (curl) :
+curl -X POST http://localhost:3000/api/produits \
+  -H "Content-Type: application/json" \
+  -d '{"nom": "Clavier mécanique", "prix": 89.99, "stock": 15}'
+
+6. Lister tous les produits :
+curl http://localhost:3000/api/produits
+
+7. Interface RabbitMQ Management :
+http://localhost:15672
+Identifiants : `mquser` / `mqpass456`
+
+Exercice 7 — Gestion du cycle de vie
+
+1. Arrêter sans supprimer :
+docker compose stop
+
+2. Redémarrer les services arrêtés :
+docker compose start
+
+3. Mécanisme de persistance :
+Les produits sont toujours présents car les données MongoDB sont stockées dans le
+volume nommé `mongo-data`, qui survit aux `stop/start`. Les données ne sont
+supprimées que par `docker compose down -v`.
+
+4. Reconstruire uniquement l'image de l'API :
+docker compose up --build -d api
+
+5. Entrer dans le conteneur MongoDB (shell interactif) :
+docker compose exec mongodb mongosh \
+  -u admin -p secret123 --authenticationDatabase admin
+
+6. Nettoyage complet (conteneurs + réseau + volumes) :
+docker compose down -v
+
+Après ce nettoyage, la base de données est définitivement perdue car le volume
+nommé `mongo-data` est supprimé par le flag `-v`.
+
+---
+
+## Exercice 8 — Questions de synthèse
+
+1. Pourquoi utiliser le nom du service plutôt que `localhost` ?
+
+Dans Docker Compose, chaque service est un conteneur distinct avec sa propre IP.
+`localhost` dans le conteneur `api` désigne l'API elle-même, pas MongoDB.
+Docker fournit un DNS interne : le nom du service (`mongodb`, `rabbitmq`)
+est automatiquement résolu vers l'IP du conteneur correspondant sur le réseau `reseau-tp`.
+
+2. Différences entre les commandes d'arrêt :
+
+| `docker compose stop` | Arrête les conteneurs, les conserve (données en mémoire préservées) |
+| `docker compose down` | Arrête ET supprime les conteneurs + le réseau, volumes conservés |
+| `docker compose down -v` | Tout supprime y compris les volumes → perte définitive des données |
+
+3. `depends_on` garantit-il que MongoDB est prêt ?
+
+Non. `depends_on` attend seulement que le conteneur MongoDB soit démarré,
+pas que le serveur MongoDB soit prêt à accepter des connexions.
+Il y a un délai d'initialisation (~2-5s) pendant lequel l'API peut échouer à se connecter.
+
+Solution recommandée : Coder une logique de retry dans l'API (boucle
+`setTimeout` de 5s) — c'est ce que fait notre `app.js`. On peut aussi utiliser
+`depends_on` avec `condition: service_healthy` si MongoDB a un healthcheck.
+
+4. Volume nommé vs bind mount :
+
+| Définition | `mongo-data:/data/db` | `./data:/data/db` |
+| Géré par | Docker | Système de fichiers hôte |
+| Portabilité | Oui (multi-plateforme) | Non (dépend du chemin hôte) |
+| Cas d'usage | Données de production | Développement (hot reload) |
+
+En production → volumes nommés. En développement → bind mounts pour voir
+les changements de code sans rebuild.
+
+5. Qui lit les messages RabbitMQ ? Intérêt de l'async ?
+
+Dans ce TP, personne ne consomme encore la queue
+En production, un service consommateur (ex: service de notifications, d'emails,
+de logs) lirait ces messages de façon indépendante.
+
+Intérêt de la communication asynchrone :
+- Découplage : l'API n'attend pas que le traitement soit terminé
+- Résilience : si le consommateur est en panne, les messages restent en queue
+- Scalabilité : plusieurs consommateurs peuvent traiter en parallèle
+- Performance : l'API répond immédiatement sans bloquer sur des traitements lents
+
+
+Exercice Bonus
+
+3. Vérifier l'état du healthcheck :
+docker compose ps
+
+4. Service consommateur dans Compose
+consumer:
+    build: ./api
+    restart: always
+    command: ["node", "consumer.js"]
+    environment:
+      RABBITMQ_URL: ${RABBITMQ_URL}
+    depends_on:
+      - rabbitmq
+    networks:
+      - reseau-tp

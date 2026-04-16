@@ -1,0 +1,56 @@
+networks:
+  reseau-tp:
+    driver: bridge
+
+volumes:
+  mongo-data:
+  rabbitmq-data:
+
+services:
+  mongodb:
+    image: mongo:7
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASS}
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - reseau-tp
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - reseau-tp
+
+  api:
+    build: ./api
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: ${PORT}
+      MONGO_URI: ${MONGO_URI}
+      RABBITMQ_URL: ${RABBITMQ_URL}
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - reseau-tp
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
